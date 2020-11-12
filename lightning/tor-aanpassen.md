@@ -37,17 +37,41 @@ sudo mkdir /var/lib/tor/lightning
 ```
 
 ```bash
+sudo mkdir /var/lib/tor/lightning/rest
+```
+
+```bash
 sudo mkdir /var/lib/tor/lightning/lnd
 ```
 
+```bash
+sudo mkdir /var/lib/tor/lightning/rpc
+```
+
 Geef de juiste rechten met:
+
+```bash
+sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/rest
+```
 
 ```bash
 sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/lnd
 ```
 
 ```bash
+sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/rpc
+```
+
+```bash
+sudo chmod 700 /var/lib/tor/lightning/rest
+```
+
+```bash
 sudo chmod 700 /var/lib/tor/lightning/lnd
+```
+
+```bash
+sudo chmod 700 /var/lib/tor/lightning/rpc
 ```
 
 Tor moet nu opnieuw opgestart worden.
@@ -56,8 +80,16 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
-Het onion-adres krijg je met:
+De onion-adressen krijg je met:
+
+```bash
+sudo cat /var/lib/tor/lightning/rest/hostname
+```
 
 ```bash
 sudo cat /var/lib/tor/lightning/lnd/hostname
+```
+
+```bash
+sudo cat /var/lib/tor/lightning/rpc/hostname
 ```
