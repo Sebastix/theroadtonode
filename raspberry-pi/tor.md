@@ -30,7 +30,7 @@ sudo rm /etc/tor/torrc
 sudo nano /etc/tor/torrc
 ```
 
-Eenmaal in dit bestand voeg je onderaan \(of bovenaan als je daar zin in hebt\) deze drie regels toe:
+Eenmaal in dit bestand voeg je onderaan \(of bovenaan als je daar zin in hebt\) deze regels toe:
 
 ```text
 ControlPort 9051
