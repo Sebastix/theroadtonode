@@ -62,9 +62,8 @@ Sla het op met Control + X en Y. Nadat het opgeslagen is kun je profile inladen.
 
 Om zeker van de te zijn dat alles werkt log je uit met "exit" en start je een nieuwe SSH verbinding. Check de Go versie met:
 
-```text
+```bash
 go version
 ```
 
 Als het goed is zie je "go version go1.15.4 linux/arm" verschijnen en niet meer versie 1.11.
-

@@ -15,10 +15,16 @@ In het torrc bestand zijn we [eerder geweest](https://node.bitdeal.nl/raspberry-
 ```text
 SOCKSPort 9050
 
-HiddenServiceDir /var/lib/tor/lightning/lnd
+HiddenServiceDir /var/lib/tor/lightning/rest
 HiddenServiceVersion 3
 HiddenServicePort 8080 127.0.0.1:8080
+
+HiddenServiceDir /var/lib/tor/lightning/lnd
+HiddenServiceVersion 3
 HiddenServicePort 9735 127.0.0.1:9735
+
+HiddenServiceDir /var/lib/tor/lightning/rpc
+HiddenServiceVersion 3
 HiddenServicePort 10009 127.0.0.1:10009
 ```
 
@@ -46,7 +52,7 @@ sudo chmod 700 /var/lib/tor/lightning/lnd
 
 Tor moet nu opnieuw opgestart worden.
 
-```text
+```bash
 sudo systemctl restart tor
 ```
 
@@ -55,4 +61,3 @@ Het onion-adres krijg je met:
 ```bash
 sudo cat /var/lib/tor/lightning/lnd/hostname
 ```
-
