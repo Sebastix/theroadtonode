@@ -23,6 +23,10 @@
 * [Automatisering](bitcoin-core/automatisering.md)
 * [Command line interface](bitcoin-core/command-line-interface.md)
 
+## Bitcoin Core
+
+* [Specter](bitcoin-core-extensies/specter.md)
+
 ## Lightning \(LND\) <a id="lightning"></a>
 
 * [Golang installatie](lightning/golang-installatie.md)
@@ -45,4 +49,3 @@
 ## Changelog
 
 * [Changelog](changelog/changelog.md)
-
