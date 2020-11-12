@@ -33,4 +33,5 @@ Om makkelijker gebruik te maken van het Lightning netwerk, kun je allerlei softw
 
 ## iOS
 
-Een verzameling apps en hoe ze te koppelen met jouw Bitcoin/Lightning node. test
+Een verzameling apps en hoe ze te koppelen met jouw Bitcoin/Lightning node.
+
