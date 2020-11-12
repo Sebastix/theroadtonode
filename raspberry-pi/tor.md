@@ -8,15 +8,15 @@ Het [Tor netwerk](https://nl.wikipedia.org/wiki/Tor_%28netwerk%29) zorgt voor ee
 
 SSH in je Pi en voer de volgende berg aan commando's uit.
 
-```text
+```bash
 sudo apt install tor -y
 ```
 
-```text
+```bash
 sudo systemctl enable tor
 ```
 
-```text
+```bash
 sudo systemctl start tor
 ```
 
@@ -26,7 +26,7 @@ Tor moet een beetje aangepast worden. Hiervoor moeten wij een bestand wijzigen. 
 sudo rm /etc/tor/torrc
 ```
 
-```text
+```bash
 sudo nano /etc/tor/torrc
 ```
 
@@ -66,13 +66,13 @@ sudo chmod 700 /var/lib/tor/bitcoin/bitcoind
 
 Tor moet nu opnieuw opgestart worden.
 
-```text
+```bash
 sudo systemctl restart tor
 ```
 
 De juiste rechten moeten toegekend worden aan onze gebruiker genaamd pi.
 
-```text
+```bash
 sudo usermod -a -G debian-tor pi
 ```
 
@@ -85,6 +85,3 @@ De adressen heb je later nodig als je wil communiceren met je node. De eerste is
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
 ```
-
-
-
