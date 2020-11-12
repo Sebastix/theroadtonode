@@ -80,7 +80,7 @@ Om alles van kracht te laten zijn log je uit door "exit" te typen en op enter te
 
 ## Onion adres
 
-De adressen heb je later nodig als je wil communiceren met je node. De eerste is voor het mainnet van Bitcoin, de tweede is voor Lightning.
+Dit adres heb je later nodig als je wil communiceren met je node. In vervolg onderdelen van de guide (zoals tijdens het opzetten van Lightning) zul je een soortgelijk commando moeten invoeren.
 
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
