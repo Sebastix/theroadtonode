@@ -89,7 +89,7 @@ Plak er dit in.
 }
 ```
 
-Sla het op met Control + X en bevestig met Y.
+Sla het op met `Control + X` en bevestig met `Y`.
 
 ## Automatiseren
 
@@ -116,7 +116,7 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
-Sla het weer op met Control + X en bevestig met Y.
+Sla het weer op met `Control + X` en bevestig met `Y`.
 
 Het systeem moet op de hoogte gesteld worden van de nieuwe service en kan daarna gestart worden.
 
@@ -147,4 +147,3 @@ Ga via je favoriete browser naar **&lt;het ip adres van je Pi&gt;:3000**. Bij mi
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
-

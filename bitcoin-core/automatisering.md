@@ -29,7 +29,7 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
-Sla het weer op met Control + X en bevestig met Y.
+Sla het weer op met `Control + X` en bevestig met `Y`.
 
 Het systeem moet op de hoogte gesteld worden van de nieuwe service en kan daarna gestart worden.
 
@@ -52,6 +52,3 @@ Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 ```bash
 sudo journalctl -f -u bitcoind
 ```
-
-
-

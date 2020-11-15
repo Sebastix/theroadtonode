@@ -50,11 +50,10 @@ bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 
 In de tekst hierboven staan 5 dingen die je zelf moet regelen.
 
-* **externalip**, verander DIT\_WEET\_JE\_A met het onion-adres wat je zojuist hebt aangemaakt. Je krijgt dan "externalip=xxx.onion:9735".
-* **color**, verander ZELF\_VERZINNEN\_A naar een kleur naar keuze. Het is een hexadecimale waarde. Je krijgt dan "color=\#123ABC".
-* **alias**, verander ZELF\_VERZINNEN\_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
-* **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_B naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
-* **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_C naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
+-   **externalip**, verander DIT_WEET_JE_A met het onion-adres wat je zojuist hebt aangemaakt. Je krijgt dan "externalip=xxx.onion:9735".
+-   **color**, verander ZELF_VERZINNEN_A naar een kleur naar keuze. Het is een hexadecimale waarde. Je krijgt dan "color=\#123ABC".
+-   **alias**, verander ZELF_VERZINNEN_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_C naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
 
-Sla het bestand op met Control + X en Y.
-
+Sla het bestand op met `Control + X` en `Y`.
