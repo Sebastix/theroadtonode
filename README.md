@@ -19,9 +19,13 @@ In het introductie onderdeel vind je informatie over het [doel en de waarom](htt
 
 De Raspberry Pi is een mini computer waar je de leukste dingen mee kunt. Maar om er gebruik van je maken, moet je hem eerst [aansluiten](https://node.bitdeal.nl/raspberry-pi/hardware-aansluiten) en een [besturingssysteem erop knallen](https://node.bitdeal.nl/raspberry-pi/software-flashen). Ook wil je natuurlijk [de beste prestaties](https://node.bitdeal.nl/raspberry-pi/boot-vanaf-ssd) uit je Pi halen. Als je interesse hebt in het anoniem gebruiken van Bitcoin, dan kan dat met [Tor](https://node.bitdeal.nl/raspberry-pi/tor).
 
-## Bitcoin
+## Bitcoin Core
 
 Het kloppend hart van deze guide. Allereerst halen we zelf de broncode van Bitcoin Core binnen en [installeren](https://node.bitdeal.nl/bitcoin-core/installatie) het. Om er gebruik van te maken en de rest van de guide te volgen, heb je [bepaalde instellingen](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten) nodig. De instellingen zijn bepalend voor latere apps en Lightning.
+
+## Bitcoin Core extensies
+
+[Specter](https://node.bitdeal.nl/bitcoin-core-extensies/specter) is een gebruiksvriendelijke manier om een multisig contructie op te zetten.
 
 ## Lightning
 
@@ -34,4 +38,3 @@ Om makkelijker gebruik te maken van het Lightning netwerk, kun je allerlei softw
 ## iOS
 
 Een verzameling apps en hoe ze te koppelen met jouw Bitcoin/Lightning node.
-
