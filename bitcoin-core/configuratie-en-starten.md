@@ -52,7 +52,7 @@ zmqpubrawblock=tcp://127.0.0.1:28332
 zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-Wacht even met gulzig op `Control + X` drukken om op te slaan! Op regel 24 en 25 staan twee waardes die je zelf moet invullen. Verander dus de woorden **ZELF_VERZINNEN_A** en **ZELF_VERZINNEN_B** naar iets wat je zelf leuk vindt. Druk daarna op `Control + X` en daarna `Y`om op te slaan.
+Wacht even met gulzig op `Control + X` drukken om op te slaan! Op regel 24 en 25 staan twee waardes die je zelf moet invullen. Verander dus de woorden **ZELF\_VERZINNEN\_A** en **ZELF\_VERZINNEN\_B** naar iets wat je zelf leuk vindt. Druk daarna op `Control + X` en daarna `Y`om op te slaan.
 
 ## Starten
 
@@ -115,7 +115,8 @@ Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet 
 
 Hieraan zie je het volgende:
 
--   IPv4 is niet bereikbaar
--   IPv6 is niet bereikbaar
--   Onion is wel bereikbaar \(Tor\)
--   Jouw .onion-adres binnen het "localaddresses" blok
+* IPv4 is niet bereikbaar
+* IPv6 is niet bereikbaar
+* Onion is wel bereikbaar \(Tor\)
+* Jouw .onion-adres binnen het "localaddresses" blok
+

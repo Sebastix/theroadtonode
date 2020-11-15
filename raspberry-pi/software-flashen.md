@@ -32,5 +32,3 @@ In de guide wordt gebruik gemaakt van Raspberry Pi OS Lite 32-bit als besturings
 In de toekomst wordt de guide eventueel geüpdate om gebruik te maken van 64-bits architectuur.
 {% endhint %}
 
-
-

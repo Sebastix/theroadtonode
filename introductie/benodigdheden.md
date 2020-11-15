@@ -18,7 +18,7 @@ Wat betreft de microSD kaart kun je ook gaan voor een versie met meer opslag. De
 
 Verder is uit het boodschappenlijstje op te maken dat we gebruik maken van bedraad internet.
 
-### Solid state drive
+## Solid state drive
 
 Iedere node moet het grote Bitcoin kasboek bijhouden. In de afgelopen jaren is dat uitgegroeid tot 360 GB. Hier komt de SSD om de hoek kijken. Het is verstandig om ruim te gaan zitten en voor 1 TB te gaan. De blockchain blijft immers groeien en later in het proces komen de nodige gigabytes hier bovenop. Je hebt een paar opties:
 
@@ -29,7 +29,7 @@ Een kant en klare externe SSD is het simpelst. Zoek een beetje rond op je favori
 
 Maar het is ook mogelijk om voor een losse SSD te gaan en daar een [adapter](https://www.bol.com/nl/p/professional-sata-naar-usb-3-0-kabel-adapter-2-5-inch-ssd-harde-schijf-uitbreiden-connector/9200000104702554/) bij te kopen à **€6,25**. De losse SSD kun je nieuw aanschaffen voor **€100,00** of tweedehands scoren via marktplaats. Dat laatste is helemaal geen verkeerde optie, gezien een SSD [tientallen jaren mee kan](https://youtu.be/__ebnRd3TEQ?t=723) gaan. Koop je tweedehands moet je rekening houden met een bedrag van **€75,00**.
 
-### Totaal
+## Totaal
 
 Het hele feestje zal tussen de **€180,00** en **€220,00** zitten.
 

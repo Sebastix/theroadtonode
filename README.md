@@ -1,10 +1,7 @@
 # Overzicht
 
 {% hint style="info" %}
-The Road to Node versie: 1.2.0
-Bitcoin Core versie: 0.20.99
-Lightning Network Daemon versie: 0.11.99
-Tor versie: 0.3.5.10
+The Road to Node versie: 1.2.0 Bitcoin Core versie: 0.20.99 Lightning Network Daemon versie: 0.11.99 Tor versie: 0.3.5.10
 
 Hulp nodig? Check [Telegram](https://t.me/theroadtonode).
 {% endhint %}
@@ -38,3 +35,4 @@ Om makkelijker gebruik te maken van het Lightning netwerk, kun je allerlei softw
 ## iOS
 
 Een verzameling apps en hoe ze te koppelen met jouw Bitcoin/Lightning node.
+

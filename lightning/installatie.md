@@ -30,5 +30,3 @@ En installeer LND.
 make install
 ```
 
-
-

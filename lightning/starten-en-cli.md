@@ -45,3 +45,4 @@ Om een overzicht te krijgen van jouw node met onder andere de public key en de U
 ```bash
 lncli getinfo
 ```
+

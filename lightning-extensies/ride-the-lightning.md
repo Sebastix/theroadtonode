@@ -147,3 +147,4 @@ Ga via je favoriete browser naar **&lt;het ip adres van je Pi&gt;:3000**. Bij mi
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
+
