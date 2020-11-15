@@ -1,5 +1,3 @@
-# Specter
-
 {% hint style="info" %}
 Tijd: 5 minuten
 {% endhint %}
