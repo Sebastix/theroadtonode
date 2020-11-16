@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1 - 2020 / november / 17
+
+### Verbeteringen
+
+-   Los trekken van Tor installatie en opzet voor Bitcoin Core
+
 ## 1.2.0 - 2020 / november / 15
 
 ### Toevoegingen
