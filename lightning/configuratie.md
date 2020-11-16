@@ -50,8 +50,8 @@ bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 
 In de tekst hierboven staan 5 dingen die je zelf moet regelen.
 
-* **externalip**, verander DIT\_WEET\_JE\_A met het onion-adres wat je zojuist hebt aangemaakt. Je krijgt dan "externalip=xxx.onion:9735".
-* **color**, verander ZELF\_VERZINNEN\_A naar een kleur naar keuze. Het is een hexadecimale waarde. Je krijgt dan "color=\#123ABC".
+* **externalip**, verander DIT\_WEET\_JE\_A met het lnd onion-adres wat je in de [Lightning tor configuratie](https://node.bitdeal.nl/lightning/tor-aanpassen) hebt aangemaakt. Voer `sudo cat /var/lib/tor/lightning/lnd/hostname` uit om dit adres op te halen. Je krijgt dan "externalip=xxx.onion:9735". Let op dat je hier dus ook het poortnummer erbij vermeldt.
+* **color**, verander ZELF\_VERZINNEN\_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld "color=\#123ABC" voor de kleur blauw.
 * **alias**, verander ZELF\_VERZINNEN\_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
 * **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_B naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
 * **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_C naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
