@@ -4,7 +4,13 @@
 Tijd: 5 minuten
 {% endhint %}
 
-Het mooiste is al bitcoind automatisch opstart, in plaats van dat je het handmatig moet doen. Linux heeft daar systemd services voor. Maak er 1 aan met het volgende commando:
+Het mooiste is als bitcoind automatisch opstart, in plaats van dat je het handmatig moet doen. Dit kan handig zijn na het opnieuw opstarten van je Pi of als bitcoind crasht. Linux heeft daar systemd services voor. Zorg voordat je aan de slag gaat met de automatisering, dat Bitcoin Core (bitcoind) uit staat. Doe dit met:
+
+```bash
+bitcoin-cli stop
+```
+
+Zodra bitcoind uit staat kunnen we een service aanmaken.
 
 ```bash
 sudo nano /etc/systemd/system/bitcoind.service
@@ -52,4 +58,3 @@ Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 ```bash
 sudo journalctl -f -u bitcoind
 ```
-

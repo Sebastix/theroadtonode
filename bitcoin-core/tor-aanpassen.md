@@ -1,25 +1,3 @@
-# Tor
-
-{% hint style="info" %}
-Tijd: 5 minuten
-{% endhint %}
-
-Het [Tor netwerk](https://nl.wikipedia.org/wiki/Tor_%28netwerk%29) zorgt voor een extra laagje privacy bij het gebruik van Bitcoin.
-
-SSH in je Pi en voer de volgende berg aan commando's uit.
-
-```bash
-sudo apt install tor -y
-```
-
-```bash
-sudo systemctl enable tor
-```
-
-```bash
-sudo systemctl start tor
-```
-
 Tor moet een beetje aangepast worden. Hiervoor moeten wij een bestand wijzigen. Er staat veel troep in dus het is handig om het bestand eerst weg te gooien.
 
 ```bash
@@ -70,12 +48,6 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
-De juiste rechten moeten toegekend worden aan onze gebruiker genaamd pi.
-
-```bash
-sudo usermod -a -G debian-tor pi
-```
-
 Om alles van kracht te laten zijn log je uit door "exit" te typen en op enter te drukken. **Vergeet dit niet!**
 
 ## Onion adres
@@ -85,4 +57,3 @@ Met onderstaand commando krijg je het Onion adres terug van je bitcoin node. Dit
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
 ```
-
