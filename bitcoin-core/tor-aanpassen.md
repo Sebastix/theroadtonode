@@ -1,3 +1,7 @@
+{% hint style="info" %}
+Tijd: 5 minuten
+{% endhint %}
+
 Tor moet een beetje aangepast worden. Hiervoor moeten wij een bestand wijzigen. Er staat veel troep in dus het is handig om het bestand eerst weg te gooien.
 
 ```bash

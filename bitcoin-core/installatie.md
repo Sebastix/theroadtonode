@@ -6,10 +6,10 @@ Tijd: bijna 2 uur \(waarvan 95% wachten\)
 
 Ga er maar even goed voor zitten, want met dit onderdeel ben je wel even zoet. Het doel is om Bitcoin Core zelf samen te stellen. Wat moeten we daar voor doen?
 
-* **Dependencies installeren**, er is wat software nodig om Bitcoin Core samen te stellen.
-* **Broncode ophalen**, door middel van Git kunnen we de nieuwste broncode ophalen.
-* **Database installeren**
-* **Bitcoin Core samenstellen**
+-   **Dependencies installeren**, er is wat software nodig om Bitcoin Core samen te stellen.
+-   **Broncode ophalen**, door middel van Git kunnen we de nieuwste broncode ophalen.
+-   **Database installeren**
+-   **Bitcoin Core samenstellen**
 
 ## Dependencies
 
@@ -31,7 +31,9 @@ git clone https://github.com/bitcoin/bitcoin
 cd bitcoin
 ```
 
-Voor de mensen die iets van Git afweten: ja, we blijven op de master branch zitten. Hier zit ondersteuning voor [onion v3 adressen](https://bitcoinmagazine.nl/2020/10/bitcoin-core-tor-v3/) in, wat pas in een latere versie echt uitgebracht wordt. Wil je dat niet, kun je met het volgende commando kiezen welke versie van Core je wil. Op het moment van schrijven is [0.20](https://github.com/bitcoin/bitcoin/tags) de meest recente versie.
+Voor de mensen die iets van Git afweten: ja, we blijven op de `master` branch zitten. Hier zit ondersteuning voor [onion v3 adressen](https://bitcoinmagazine.nl/2020/10/bitcoin-core-tor-v3/) in, wat pas in een latere versie echt uitgebracht wordt. Wil je dat niet, kun je met het volgende commando kiezen welke versie van Core je wil. Op het moment van schrijven is [0.20](https://github.com/bitcoin/bitcoin/tags) de meest recente versie.
+
+Gezien de [git-flow van Bitcoin Core](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#decision-making-process), kun je er vanuit gaan dat alles in de `master` branch correct en foutloos funtioneert. Het release proces van Bitcoin Core hakt de `master` branch af op een vaste datum. Alles wat op die branch zat op moment van afhakken, zal meegenomen in de release. Alles dat daarna in de branch komt, zal in een volgende release komen.
 
 ```bash
 # Dit is dus optioneel
@@ -40,7 +42,7 @@ git checkout 0.20
 
 ## Database
 
-In de repository van Core is een script aanwezig waarmee de database geïnstalleerd kan worden. Voer het script uit met:
+In de repository van Core is een script aanwezig waarmee de database geïnstalleerd kan worden. Blijf dus in de huidige map (`/home/pi/bitcoin`) zitten en voer het script uit met het onderstaande. Blijf overigens voor alle volgende commando's binnen dit onderdeel ook in deze map zitten.
 
 ```bash
 ./contrib/install_db4.sh `pwd`
@@ -83,4 +85,3 @@ Dat was het voor het installeren van Core. Je kunt terug naar de home directory 
 ```bash
 cd ~
 ```
-
