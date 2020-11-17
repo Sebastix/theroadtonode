@@ -4,7 +4,7 @@
 Tijd: 5 minuten
 {% endhint %}
 
-De map waar LND gebruik wil maken, bestaat nog niet. Maak hem dus eerst aan.
+De map waar LND gebruik van wil maken, bestaat nog niet. Maak hem dus eerst aan. Let op: deze configuratie map verschilt van de map waar je LND zojuist in hebt [geïnstalleerd](https://node.bitdeal.nl/lightning/installatie), dat was namelijk `/home/pi/lnd`.
 
 ```bash
 mkdir ~/.lnd

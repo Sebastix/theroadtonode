@@ -46,7 +46,7 @@ Om Go lekker te laten werken moeten we wat paden aanpassen. Daarvoor passen we h
 nano ~/.profile
 ```
 
-Plak er het volgende in:
+Plak er het volgende onderaan erin:
 
 ```bash
 export GOPATH=$HOME/go
@@ -67,4 +67,3 @@ go version
 ```
 
 Als het goed is zie je "go version go1.15.4 linux/arm" verschijnen en niet meer versie 1.11.
-
