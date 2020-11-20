@@ -69,7 +69,7 @@ Plak er dit in.
   "nodes": [
     {
       "index": 1,
-      "lnNode": "Bitdeal.nl",
+      "lnNode": "JOUW_ALIAS",
       "lnImplementation": "LND",
       "Authentication": {
         "macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
@@ -89,6 +89,7 @@ Plak er dit in.
 }
 ```
 
+Vul bij `JOUW_ALIAS` de [alias](https://node.bitdeal.nl/lightning/configuratie) van jouw Lightning node in.
 Sla het op met `Control + X` en bevestig met `Y`.
 
 ## Automatiseren
@@ -147,4 +148,3 @@ Ga via je favoriete browser naar **&lt;het ip adres van je Pi&gt;:3000**. Bij mi
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
-
