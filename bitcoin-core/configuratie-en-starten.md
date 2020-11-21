@@ -52,7 +52,7 @@ zmqpubrawblock=tcp://127.0.0.1:28332
 zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-Wacht even met gulzig op `Control + X` drukken om op te slaan! Op regel 24 en 25 staan twee waardes die je zelf moet invullen. Verander dus de woorden **ZELF\_VERZINNEN\_A** en **ZELF\_VERZINNEN\_B** naar iets wat je zelf leuk vindt. Druk daarna op `Control + X` en daarna `Y`om op te slaan.
+Wacht even met gulzig op `control + X` drukken om op te slaan! Op regel 24 en 25 staan twee waardes die je zelf moet invullen. Verander dus de woorden **ZELF_VERZINNEN_A** en **ZELF_VERZINNEN_B** naar iets wat je zelf leuk vindt. Druk daarna op `control + X` en daarna `Y`om op te slaan.
 
 ## Starten
 
@@ -68,7 +68,7 @@ Done! Je kunt live bijhouden wat er gebeurt met:
 tail -n 200 -f ~/.bitcoin/debug.log
 ```
 
-Per block dat gecontroleerd wordt, zie je de tekst "progress=xxxxx" voorbij komen. Dit is een getal van 0 tot 1. Nul betekent dat je nog niets gesynchroniseerd hebt, 1 betekent dat je klaar bent. Met `Control + C` zet je de live feed weer stop.
+Per block dat gecontroleerd wordt, zie je de tekst "progress=xxxxx" voorbij komen. Dit is een getal van 0 tot 1. Nul betekent dat je nog niets gesynchroniseerd hebt, 1 betekent dat je klaar bent. Met `control + C` zet je de live feed weer stop.
 
 De initiële block download \(IBD\) zal zo'n 60 uur duren.
 
@@ -115,8 +115,7 @@ Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet 
 
 Hieraan zie je het volgende:
 
-* IPv4 is niet bereikbaar
-* IPv6 is niet bereikbaar
-* Onion is wel bereikbaar \(Tor\)
-* Jouw .onion-adres binnen het "localaddresses" blok
-
+-   IPv4 is niet bereikbaar
+-   IPv6 is niet bereikbaar
+-   Onion is wel bereikbaar \(Tor\)
+-   Jouw .onion-adres binnen het "localaddresses" blok

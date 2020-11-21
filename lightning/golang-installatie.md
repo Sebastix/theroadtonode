@@ -54,7 +54,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 ```
 
-Sla het op met `Control + X` en `Y`. Nadat het opgeslagen is kun je profile inladen.
+Sla het op met `control + X` en `Y`. Nadat het opgeslagen is kun je profile inladen.
 
 ```bash
 . ~/.profile

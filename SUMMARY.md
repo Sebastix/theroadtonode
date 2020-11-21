@@ -15,6 +15,7 @@
 -   [Wachtwoord wijzigen](raspberry-pi/wachtwoord-wijzigen.md)
 -   [Updaten](raspberry-pi/updaten.md)
 -   [Tor installatie](raspberry-pi/tor-installeren.md)
+-   [Monitoring](raspberry-pi/monitoring.md)
 
 ## Bitcoin Core
 

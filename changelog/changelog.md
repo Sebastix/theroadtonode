@@ -1,11 +1,13 @@
 # Changelog
 
-## 1.2.1 - 2020 / november / 17
+## 1.3.0 - 2020 / november / 17
 
 ### Verbeteringen
 
 -   Los trekken van Tor installatie en opzet voor Bitcoin Core
 -   Het `externalip` veld verwijderd uit `lnd.conf` wegens het verkrijgen van twee tor adressen
+-   [Boot vanaf SSD](https://node.bitdeal.nl/raspberry-pi/boot-vanaf-ssd) screenshots aangepast met nieuwe benaming in de `raspi-config`
+-   [Monitoring](https://node.bitdeal.nl/raspberry-pi/monitoring)
 
 ## 1.2.0 - 2020 / november / 15
 

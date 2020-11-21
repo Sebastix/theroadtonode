@@ -54,4 +54,4 @@ In de tekst hierboven staan 5 dingen die je zelf moet regelen.
 -   **bitcoind.rpcuser**, verander DIT_WEET_JE_A naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
 -   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
 
-Sla het bestand op met `Control + X` en `Y`.
+Sla het bestand op met `control + X` en `Y`.
