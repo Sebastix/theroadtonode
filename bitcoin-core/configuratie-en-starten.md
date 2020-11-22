@@ -1,26 +1,24 @@
-# Configuratie en starten
-
 {% hint style="info" %}
 Tijd: 5 minuten
 {% endhint %}
 
 Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind). Net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide.
 
-## Configuratie
+# Configuratie
 
-Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de brondcode. Naast deze map hebben we een map nodig genaamd `.bitcoin`. Maak hem aan.
+Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de brondcode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
 
 ```bash
 mkdir ~/.bitcoin
 ```
 
-De instellingen van Bitcoin Core zetten we in een bestand in de `.bitcoin` map genaamd `bitcoin.conf`.
+De instellingen van Bitcoin Core zetten we in een bestand in de .bitcoin map genaamd bitcoin.conf.
 
 ```bash
 nano ~/.bitcoin/bitcoin.conf
 ```
 
-Net als bij het [torrc bestand](https://node.bitdeal.nl/bitcoin-core/tor-aanpassen) moeten we wat regels copy-pasten. Je kunt alle, inclusief de commentaar regels aangegeven met een `#`, kopieëren en plakken.
+Net als bij het [torrc bestand](https://node.bitdeal.nl/bitcoin-core/tor-aanpassen) moeten we wat regels copy-pasten. Je kunt alle regels, inclusief de commentaar regels aangegeven met een `#`, kopiëren en plakken.
 
 ```bash
 # Maak het mogelijk JSON-RPC commando's te accepteren
@@ -92,7 +90,7 @@ nano ~/.bitcoin/bitcoin.conf
 
 Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `control + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`.
 
-## Starten
+# Starten
 
 Dan is het nu tijd om deel te nemen aan het Bitcoin netwerk! Knal dit je Pi in:
 

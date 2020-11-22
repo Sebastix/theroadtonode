@@ -63,7 +63,11 @@ Tot slot het samenstellen van Bitcoin Core.
 ```
 
 {% hint style="info" %}
-Met het volgende commando configureren we de installatie van Bitcoin Core. Het is mogelijk om Bitcoin Core te draaien zonder wallet functionaliteit en dus puur te gebruiken als backend voor je andere wallets. Weet je zeker dat je de ingebouwde wallet functionaliteit van Core niet zal gebruiken, draai dan `./configure --enable-upnp-default --without-gui --disable-wallet BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"`. Aan dit commando is de instelling `--disable-wallet` meegegeven. Weet je het niet zeker, draai dan onderstaand commando. Heb je Bitcoin Core geconfigureerd zónder wallet functionaliteit en wil je dit later toch toevoegen, voer dan alles vanaf onderstaand commando nog een keer uit.
+Met het volgende commando configureren we de installatie van Bitcoin Core. Het is mogelijk om Bitcoin Core te draaien zonder wallet functionaliteit en dus puur te gebruiken als backend voor je andere wallets. Weet je zeker dat je de ingebouwde wallet functionaliteit van Core niet zal gebruiken, draai dan:
+
+`./configure --enable-upnp-default --without-gui --disable-wallet BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"`
+
+Aan dit commando is de instelling `--disable-wallet` meegegeven. Weet je het niet zeker, draai dan onderstaand commando. Heb je Bitcoin Core geconfigureerd zónder wallet functionaliteit en wil je dit later toch toevoegen, voer dan alles vanaf onderstaand commando nog een keer uit.
 {% endhint %}
 
 ```bash
