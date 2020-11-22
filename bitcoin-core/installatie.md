@@ -1,7 +1,7 @@
 # Installatie
 
 {% hint style="info" %}
-Tijd: bijna 2 uur \(waarvan 95% wachten\)
+Tijd: bijna 2 uur \(waarvan 95% wachten tijdens het `make` commando\)
 {% endhint %}
 
 Ga er maar even goed voor zitten, want met dit onderdeel ben je wel even zoet. Het doel is om Bitcoin Core zelf samen te stellen. Wat moeten we daar voor doen?
@@ -21,13 +21,13 @@ sudo apt install git automake autoconf autotools-dev build-essential make pkg-co
 
 ## Broncode
 
-Zorg allereerst dat je in de "home directory" zit. Om er zeker van te zijn voer je `cd ~` uit. De tilde (`~`) is een afkorting voor `/home/pi` in dit geval. Voer daarna het volgende uit om de broncode binnen te halen en in je home directory neer te zetten. Automatisch zal hier een map aangemaakt worden genaamd "bitcoin" met daarin de broncode.
+Zorg allereerst dat je in de "home directory" zit. Om er zeker van te zijn voer je `cd ~` uit. De tilde \(`~`\) is een afkorting voor `/home/pi` in dit geval. Voer daarna het volgende uit om de broncode binnen te halen en in je home directory neer te zetten. Automatisch zal hier een map aangemaakt worden genaamd "bitcoin" met daarin de broncode.
 
 ```bash
 git clone https://github.com/bitcoin/bitcoin
 ```
 
-Duik de bitcoin map in.
+Duik de bitcoin map in. Dit is nodig tijdens de volledige installatie van Core.
 
 ```bash
 cd bitcoin
@@ -44,7 +44,7 @@ git checkout 0.20
 
 ## Database
 
-In de repository van Core is een script aanwezig waarmee de database geïnstalleerd kan worden. Dit heeft Bitcoin Core nodig om te werken. Blijf in de huidige map (`/home/pi/bitcoin`) zitten en voer het script uit met het onderstaande. Blijf overigens voor alle volgende commando's ook in deze map zitten.
+In de repository van Core is een script aanwezig waarmee de database geïnstalleerd kan worden. Dit heeft Bitcoin Core nodig om te werken. Blijf in de huidige map \(`/home/pi/bitcoin`\) zitten en voer het script uit met het onderstaande commando. Alle volgende commando's moeten ook uitgevoerd worden vanuit deze map.
 
 ```bash
 ./contrib/install_db4.sh `pwd`
@@ -70,13 +70,13 @@ Met het volgende commando configureren we de installatie van Bitcoin Core. Het i
 ./configure --enable-upnp-default --without-gui BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"
 ```
 
-Na op enter drukken van het volgende commando kun je wat voor jezelf gaan doen. Uit ervaring blijkt deze stap bijna anderhalf uur te duren.
+Na op enter drukken van het volgende commando kun je wat voor jezelf gaan doen. **Uit ervaring blijkt deze stap bijna anderhalf uur te duren.**
 
 ```bash
 make
 ```
 
-Als je wat testjes wil draaien om te kijken of alles goed zit, kun je `make check` uitvoeren. Dit is optioneel en duurt zo'n 15 minuten.
+Als je wat testjes wil draaien om te kijken of alles goed zit, kun je `make check` uitvoeren. Dit is optioneel en duurt zo'n vijftien minuten.
 
 Rond het geheel af met:
 
@@ -84,4 +84,4 @@ Rond het geheel af met:
 sudo make install
 ```
 
-Dat was het voor het installeren van Core. Je kunt terug naar de home directory met `cd ~`.
+Dat was het voor het installeren van Core! Je kunt terug naar de home directory met `cd ~`.
