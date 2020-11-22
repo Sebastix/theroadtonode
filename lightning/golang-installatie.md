@@ -8,7 +8,7 @@ Golang \(Go\) is een programmeertaal ontwikkeld door Google. Het is een vrij jon
 
 ## Oude Go versie verwijderen \(optioneel\)
 
-Dit deel is alleen nodig als je Go al een keer geïnstalleerd had op je Pi middels `sudo apt install`. De versie die je op die manier hebt geïnstalleerd, dient eerst te worden verwijderd.
+Dit deel is alleen nodig als je Go al een keer geïnstalleerd had op je Pi middels `sudo apt install`. De versie die je op die manier hebt geïnstalleerd dient eerst te worden verwijderd.
 
 ```bash
 sudo apt remove golang-go
@@ -24,7 +24,7 @@ sudo apt purge golang-go
 
 ## Nieuwe Go versie installeren
 
-Nadat de oude versie verwijderd is, kunnen we de nieuwe installeren. Op moment van schrijven is [v1.15.4](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download.
+Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.15.5](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download.
 
 ```bash
 wget https://golang.org/dl/go1.15.5.linux-armv6l.tar.gz
