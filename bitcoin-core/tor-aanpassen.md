@@ -54,8 +54,6 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
-Om alles van kracht te laten zijn log je uit door "exit" te typen en op enter te drukken. **Vergeet dit niet!**
-
 ## Onion-adres
 
 Met onderstaand commando krijg je het onion-adres terug van je Bitcoin node. Dit adres heb je later nodig als je wil communiceren met je node via het tor netwerk. In vervolg onderdelen van de guide \(zoals tijdens het opzetten van Lightning\) zul je een soortgelijk commando moeten invoeren.

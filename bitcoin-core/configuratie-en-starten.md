@@ -67,7 +67,11 @@ Wacht even met gulzig op `control + X` drukken om op te slaan! Wil je dat jouw n
 -   Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
 -   Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
 
-Druk na alle veranderingen op `control + X` en daarna `Y` om op te slaan. Hierna kunnen we een gebruiker toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
+Druk na alle veranderingen op `control + X` en daarna `Y` om op te slaan.
+
+# Authenticatie
+
+We een gebruiker toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
 
 ```bash
 python3 ~/bitcoin/share/rpcauth/rpcauth.py xxx
@@ -89,6 +93,8 @@ nano ~/.bitcoin/bitcoin.conf
 ```
 
 Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `control + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`.
+
+Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aanmaken en toegang geven.
 
 # Starten
 

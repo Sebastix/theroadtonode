@@ -21,7 +21,7 @@ sudo apt install git automake autoconf autotools-dev build-essential make pkg-co
 
 ## Broncode
 
-Zorg allereerst dat je in de "home directory" zit. Om er zeker van te zijn voer je `cd ~` uit. De tilde \(`~`\) is een afkorting voor `/home/pi` in dit geval. Voer daarna het volgende uit om de broncode binnen te halen en in je home directory neer te zetten. Automatisch zal hier een map aangemaakt worden genaamd "bitcoin" met daarin de broncode.
+Zorg allereerst dat je in de "home directory" zit. Om er zeker van te zijn voer je `cd ~` uit. De tilde \(`~`\) is een afkorting voor `/home/pi` in dit geval. Voer daarna het volgende uit om de broncode binnen te halen en in je home directory neer te zetten. Automatisch zal hier een map aangemaakt worden genaamd bitcoin met daarin de broncode.
 
 ```bash
 git clone https://github.com/bitcoin/bitcoin
@@ -33,9 +33,9 @@ Duik de bitcoin map in. Dit is nodig tijdens de volledige installatie van Core.
 cd bitcoin
 ```
 
-Voor de mensen die iets van Git afweten: ja, we blijven op de `master` branch zitten. Hier zit ondersteuning voor [onion v3 adressen](https://bitcoinmagazine.nl/2020/10/bitcoin-core-tor-v3/) in, wat pas in een latere versie echt uitgebracht wordt. Wil je dat niet, kun je met het volgende commando kiezen welke versie van Core je wil. Op het moment van schrijven is [0.20](https://github.com/bitcoin/bitcoin/tags) de meest recente versie.
+Voor de mensen die iets van Git afweten: ja, we blijven op de master branch zitten. Hier zit ondersteuning voor [onion v3 adressen](https://bitcoinmagazine.nl/2020/10/bitcoin-core-tor-v3/) in, wat pas in een latere versie echt uitgebracht wordt. Wil je dat niet, kun je met het volgende commando kiezen welke versie van Core je wil. Op het moment van schrijven is [0.20](https://github.com/bitcoin/bitcoin/tags) de meest recente versie.
 
-Gezien de [git-flow van Bitcoin Core](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#decision-making-process) kun je er vanuit gaan dat alles in de `master` branch correct en foutloos funtioneert. Het release proces van Bitcoin Core hakt de `master` branch af op een vaste datum. Alles wat op die branch zat op moment van afhakken, zal meegenomen in de release. Alles dat daarna in de branch komt, zal in een volgende release komen.
+Gezien de [git-flow van Bitcoin Core](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#decision-making-process) kun je er vanuit gaan dat alles in de master branch correct en foutloos funtioneert. Het release proces van Bitcoin Core hakt de master branch af op een vaste datum. Alles wat op die branch zat op moment van afhakken, zal meegenomen in de release. Alles dat daarna in de branch komt, zal in een volgende release komen.
 
 ```bash
 # Dit is dus optioneel
@@ -67,7 +67,9 @@ Met het volgende commando configureren we de installatie van Bitcoin Core. Het i
 
 `./configure --enable-upnp-default --without-gui --disable-wallet BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"`
 
-Aan dit commando is de instelling `--disable-wallet` meegegeven. Weet je het niet zeker, draai dan onderstaand commando. Heb je Bitcoin Core geconfigureerd zónder wallet functionaliteit en wil je dit later toch toevoegen, voer dan alles vanaf onderstaand commando nog een keer uit.
+Aan dit commando is de instelling `--disable-wallet` meegegeven. Weet je het niet zeker, draai dan onderstaand commando.
+
+Heb je Bitcoin Core geconfigureerd zónder wallet functionaliteit en wil je dit later toch toevoegen, voer dan alles vanaf onderstaand commando nog een keer uit.
 {% endhint %}
 
 ```bash

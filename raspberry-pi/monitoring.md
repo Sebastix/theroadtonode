@@ -10,7 +10,7 @@ Wil je weten hoe veel resources je Pi verbruikt, kun je dat bekijken met `htop`.
 
 Wat zie je op dit scherm? Bovenaan staan de vier cores van de processor van de Pi. Daaronder staat het geheugengebruik. Je kunt met `control + C` het scherm verlaten.
 
-Je Pi wordt ook warm, vandaar de heatsink. Wil je weten hoe warm de Pi wordt, voor dan het volgende uit:
+Je Pi wordt ook warm, vandaar de heatsink. Wil je weten hoe warm de Pi wordt, voer dan het volgende uit:
 
 ```bash
 vcgencmd measure_temp

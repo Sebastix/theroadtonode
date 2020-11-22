@@ -20,6 +20,8 @@ De juiste rechten moeten toegekend worden aan onze gebruiker genaamd pi.
 sudo usermod -a -G debian-tor pi
 ```
 
+Om de `usermod` van kracht te laten zijn, log je uit door "exit" te typen en op enter te drukken. **Vergeet dit niet!** SSH daarna weer je Pi in.
+
 Tot slot kunnen we Tor activeren en opstarten.
 
 ```bash

@@ -12,8 +12,7 @@ Allereerst download je Fully Noded uit de [App Store](https://apps.apple.com/us/
 
 Deze gegevens heb je nodig:
 
-* **RPCUSER + RPCPASSWORD**, dat is hetzelfde als [hier](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#configuratie) op regel 24 en 25 van bitcoin.conf
-* **Onion adres voor main inclusief :8332**, zoals [eerder](https://node.bitdeal.nl/raspberry-pi/tor#onion-adressen) besproken
+-   **Inlog gegeven Bitcoin Core RPC**, dat is hetzelfde als je [hier](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie) hebt gedaan
+-   **Onion-adres voor Bitcoin Core RPC inclusief :8332**, zoals [eerder](https://node.bitdeal.nl/bitcoin-core/tor-aanpassen#onion-adres) besproken
 
 Nadat je alles goed hebt ingevuld druk je op "Save". Met een beetje geluk werkt alles in 1 keer. Zo niet, wil het meestal wel lukken nadat je de app hebt afgesloten.
-
