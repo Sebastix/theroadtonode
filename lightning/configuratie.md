@@ -51,7 +51,7 @@ In de tekst hierboven staan 5 dingen die je zelf moet regelen.
 
 -   **color**, verander ZELF_VERZINNEN_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld "color=\#123ABC" voor de kleur blauw.
 -   **alias**, verander ZELF_VERZINNEN_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
--   **bitcoind.rpcuser**, verander DIT_WEET_JE_A naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
--   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_A naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie).
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie). Dit wachtwoord heb je dus toebedeeld gekregen.
 
 Sla het bestand op met `control + X` en `Y`.

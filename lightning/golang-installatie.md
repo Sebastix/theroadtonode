@@ -66,4 +66,4 @@ Om zeker van de te zijn dat alles werkt log je uit met "exit" en start je een ni
 go version
 ```
 
-Als het goed is zie je "go version go1.15.5 linux/arm" verschijnen.
+Als het goed is zie je `go version go1.15.5 linux/arm` verschijnen.

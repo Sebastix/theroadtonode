@@ -92,7 +92,7 @@ Wat staat hier? De eerste regel geeft aan dat we iets moeten toevoegen aan het `
 nano ~/.bitcoin/bitcoin.conf
 ```
 
-Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `control + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`.
+Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `control + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`. Sla dit wachtwoord dus op, je zal het later nodig hebben.
 
 Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aanmaken en toegang geven.
 

@@ -10,7 +10,7 @@ Tor heeft een paar aanpassingen nodig zodat LND hierover kan communiceren. Open 
 sudo nano /etc/tor/torrc
 ```
 
-In het torrc bestand zijn we [eerder geweest](https://node.bitdeal.nl/raspberry-pi/tor). Voeg de volgende regels toe aan hetgeen dat er al staat.
+In het torrc bestand zijn we [eerder geweest](https://node.bitdeal.nl/bitcoin-core/tor-aanpassen). Voeg de volgende regels toe aan hetgeen dat er al staat.
 
 ```text
 SOCKSPort 9050
@@ -18,10 +18,6 @@ SOCKSPort 9050
 HiddenServiceDir /var/lib/tor/lightning/rest
 HiddenServiceVersion 3
 HiddenServicePort 8080 127.0.0.1:8080
-
-HiddenServiceDir /var/lib/tor/lightning/lnd
-HiddenServiceVersion 3
-HiddenServicePort 9735 127.0.0.1:9735
 
 HiddenServiceDir /var/lib/tor/lightning/rpc
 HiddenServiceVersion 3
@@ -41,10 +37,6 @@ sudo mkdir /var/lib/tor/lightning/rest
 ```
 
 ```bash
-sudo mkdir /var/lib/tor/lightning/lnd
-```
-
-```bash
 sudo mkdir /var/lib/tor/lightning/rpc
 ```
 
@@ -55,19 +47,11 @@ sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/rest
 ```
 
 ```bash
-sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/lnd
-```
-
-```bash
 sudo chown -R debian-tor:debian-tor /var/lib/tor/lightning/rpc
 ```
 
 ```bash
 sudo chmod 700 /var/lib/tor/lightning/rest
-```
-
-```bash
-sudo chmod 700 /var/lib/tor/lightning/lnd
 ```
 
 ```bash
@@ -80,14 +64,12 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
+# Onion-adressen
+
 De onion-adressen krijg je met:
 
 ```bash
 sudo cat /var/lib/tor/lightning/rest/hostname
-```
-
-```bash
-sudo cat /var/lib/tor/lightning/lnd/hostname
 ```
 
 ```bash
