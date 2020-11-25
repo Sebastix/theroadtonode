@@ -6,7 +6,7 @@ Tijd: 5 minuten
 
 Zap is een Lightning wallet [app voor iOS](https://apps.apple.com/nl/app/zap-bitcoin-lightning-wallet/id1406311960). De app is uiterst gebruiksvriendelijk en daarom iedereen aan te raden. En het mooiste is: je kunt hem aan je eigen node hangen via Tor.
 
-Als je de app installeert en voor het eerst opent, wordt je gevraagd een PIN te bedenken. Direct daarna verschijnt een scherm waarmee jij jouw node kunt connecten. Hier komt [lndconnect](https://node.bitdeal.nl/lightning-extensies/lnd-connect) om de hoek kijken. SSH je Pi in en typ:
+Als je de app installeert en voor het eerst opent, wordt je gevraagd een PIN te bedenken. Direct daarna verschijnt een scherm waarmee jij jouw node kunt connecten. Hiervoor moet je [lndconnect](https://node.bitdeal.nl/lightning-extensies/lnd-connect) installeren op je Pi. SSH je Pi in en typ:
 
 ```bash
 lndconnect --host=xxx.onion --port=8080 --nocert -j
