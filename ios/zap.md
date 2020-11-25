@@ -12,7 +12,7 @@ Als je de app installeert en voor het eerst opent, wordt je gevraagd een PIN te 
 lndconnect --host=xxx.onion --port=8080 --nocert -j
 ```
 
-Waar **xxx.onion** staat, vul je natuurlijk [jouw onion-adres](https://node.bitdeal.nl/lightning/tor-aanpassen) in voor de **REST** API van LND. Er zal een lap tekst verschijnen dat iets weg heeft van het volgende.
+Waar **xxx.onion** staat, vul je natuurlijk [jouw onion-adres](https://node.bitdeal.nl/lightning/tor-aanpassen#onion-adressen) in voor de **REST** API van LND. Er zal een lap tekst verschijnen dat iets weg heeft van het volgende.
 
 ```bash
 lndconnect://xxx.onion:8080?macaroon=heel_veel_tekens
@@ -27,4 +27,3 @@ Klik op "Paste" en Zap vult alles automatisch voor je in.
 ![Alles wordt automatisch ingevuld](../.gitbook/assets/img_4ea8cbfa09b2-1.jpeg)
 
 Druk op "Connect" en de connectie komt tot stand.
-

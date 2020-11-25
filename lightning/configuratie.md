@@ -27,7 +27,6 @@ listen=127.0.0.1:9735
 maxpendingchannels=5
 color=ZELF_VERZINNEN_A
 alias=ZELF_VERZINNEN_B
-minchansize=50000
 
 [Tor]
 tor.active=true
@@ -47,10 +46,10 @@ bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
 bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-In de tekst hierboven staan 5 dingen die je zelf moet regelen.
+In de tekst hierboven staan vier dingen die je zelf moet regelen.
 
--   **color**, verander ZELF_VERZINNEN_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld "color=\#123ABC" voor de kleur blauw.
--   **alias**, verander ZELF_VERZINNEN_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
+-   **color**, verander ZELF_VERZINNEN_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld `color=#123ABC` voor de kleur blauw.
+-   **alias**, verander ZELF_VERZINNEN_B naar een naam naar keuze. Je krijgt dan `alias=nickname`.
 -   **bitcoind.rpcuser**, verander DIT_WEET_JE_A naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie).
 -   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie). Dit wachtwoord heb je dus toebedeeld gekregen.
 

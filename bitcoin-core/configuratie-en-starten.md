@@ -126,7 +126,7 @@ bitcoin-cli getnetworkinfo
 
 Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet het er ongeveer zo uit als je enkel van tor gebruik maakt.
 
-```bash
+```json
 "networks": [
 	{
 		"name": "ipv4",
@@ -168,7 +168,7 @@ Hieraan zie je het volgende:
 
 Heb je zowel tor als clearnet aan staan, dan zal je output er zo uit zien:
 
-```bash
+```json
 "networks": [
 	{
 		"name": "ipv4",

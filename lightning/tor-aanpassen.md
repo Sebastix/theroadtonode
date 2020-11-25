@@ -2,7 +2,7 @@
 Tijd: 5 minuten
 {% endhint %}
 
-Tor heeft een paar aanpassingen nodig zodat LND hierover kan communiceren. Open torrc.
+Tor heeft een paar aanpassingen nodig zodat jij van buitenaf met LND kan communiceren. Op deze manier kun je een mobiele wallet aan je Lightning node koppelen en overal gebruiken. Open torrc.
 
 ```bash
 sudo nano /etc/tor/torrc

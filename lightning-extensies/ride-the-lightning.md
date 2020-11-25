@@ -1,14 +1,14 @@
 # Ride The Lightning
 
 {% hint style="info" %}
-Tijd: 20 minuten
+Tijd: 15 minuten
 {% endhint %}
 
 De Lightnig Network CLI \(lncli\) is wel geinig, maar niet heel praktisch. Daarom gaan we Ride The Lightning \(RTL\) installeren. Een gebruiksvriendelijk voorkantje voor LND.
 
 ## NodeJS
 
-RTL is gebouwd met NodeJS. Net als dat Golang binnengehaald moest worden voor LND, gaan we nu NodeJS binnenhalen voor RTL. We willen de nieuwste versie, dus draaien eerst een scriptje.
+RTL is gebouwd met NodeJS. Net als dat Golang binnengehaald moest worden voor LND, gaan we nu NodeJS binnenhalen voor RTL. We willen de nieuwste versie, dus draaien eerst een scriptje. Zorg allereerst dat je in de home directory zit met `cd ~` commando. Voer daarna het script uit.
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
@@ -24,7 +24,7 @@ Check of je de juiste versie hebt met:
 
 ```bash
 node --version
-# Verwachte output: v14.15.0
+# Verwachte output: v14.15.1
 ```
 
 ## Installatie
@@ -41,7 +41,7 @@ Duik de code in.
 cd RTL
 ```
 
-Installeer nu RTL. Let op, dit kan zo'n 15 minuten duren.
+Installeer nu RTL. Let op, dit kan zo'n 10 minuten duren.
 
 ```bash
 npm install --only=prod
@@ -57,35 +57,36 @@ nano RTL-Config.json
 
 Plak er dit in.
 
-```bash
+```json
 {
-  "port": "3000",
-  "defaultNodeIndex": 1,
-  "SSO": {
-    "rtlSSO": 0,
-    "rtlCookiePath": "",
-    "logoutRedirectLink": ""
-  },
-  "nodes": [
-    {
-      "index": 1,
-      "lnNode": "JOUW_ALIAS",
-      "lnImplementation": "LND",
-      "Authentication": {
-        "macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
-        "configPath": "/home/pi/.lnd/lnd.conf"
-      },
-      "Settings": {
-        "userPersona": "OPERATOR",
-        "themeMode": "NIGHT",
-        "themeColor": "TEAL",
-        "bitcoindConfigPath": "/home/pi/.bitcoin/bitcoin.conf",
-        "enableLogging": true,
-        "fiatConversion": false,
-        "lnServerUrl": "https://127.0.0.1:8080"
-      }
-    }
-  ]
+	"multiPass": "password",
+	"port": "3000",
+	"defaultNodeIndex": 1,
+	"SSO": {
+		"rtlSSO": 0,
+		"rtlCookiePath": "",
+		"logoutRedirectLink": ""
+	},
+	"nodes": [
+		{
+			"index": 1,
+			"lnNode": "JOUW_ALIAS",
+			"lnImplementation": "LND",
+			"Authentication": {
+				"macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
+				"configPath": "/home/pi/.lnd/lnd.conf"
+			},
+			"Settings": {
+				"userPersona": "OPERATOR",
+				"themeMode": "NIGHT",
+				"themeColor": "TEAL",
+				"bitcoindConfigPath": "/home/pi/.bitcoin/bitcoin.conf",
+				"enableLogging": true,
+				"fiatConversion": false,
+				"lnServerUrl": "https://127.0.0.1:8080"
+			}
+		}
+	]
 }
 ```
 
@@ -143,7 +144,7 @@ sudo journalctl -f -u rtl
 
 ## Gebruik
 
-Ga via je favoriete browser naar **&lt;het ip adres van je Pi&gt;:3000**. Bij mij is dat 192.168.1.6:3000. De RTL interface zal verschijnen en vragen om een wachtwoord. Mocht LND net opgestart zijn, zal RTL ook vragen om dat wachtwoord.
+Ga via je favoriete browser naar `het ip adres van je Pi:3000`. Bij mij is dat 192.168.1.6:3000. De RTL interface zal verschijnen en vragen om een wachtwoord. Het standaard wachtwoord is "password". Na de eerste keer inloggen mag je zelf een wachtwoord instellen. Mocht LND net opgestart zijn, zal RTL ook vragen om dát wachtwoord.
 
 ## Bereikbaar over Tor
 
