@@ -71,7 +71,7 @@ Druk na alle veranderingen op `control + X` en daarna `Y` om op te slaan.
 
 # Authenticatie
 
-We een gebruiker toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
+We willen een gebruiker aanmaken om deze toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
 
 ```bash
 python3 ~/bitcoin/share/rpcauth/rpcauth.py xxx
