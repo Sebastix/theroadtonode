@@ -1,4 +1,4 @@
-# Tor installeren
+# Tor installatie
 
 {% hint style="info" %}
 Tijd: 5 minuten
@@ -33,3 +33,4 @@ sudo systemctl start tor
 ```
 
 Tor is nu geïnstalleerd en opgestart. We zullen meerdere keren in deze guide terug komen op de configuratie van Tor, maar dat kom je vanzelf tegen in andere hoofdstukken.
+

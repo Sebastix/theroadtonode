@@ -29,3 +29,4 @@ En installeer LND.
 ```bash
 make install
 ```
+

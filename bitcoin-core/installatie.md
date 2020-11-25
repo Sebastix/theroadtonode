@@ -6,10 +6,10 @@ Tijd: bijna 2 uur \(waarvan 95% wachten tijdens het `make` commando\)
 
 Ga er maar even goed voor zitten, want met dit onderdeel ben je wel even zoet. Het doel is om Bitcoin Core zelf samen te stellen. Wat moeten we daar voor doen?
 
--   **Dependencies installeren**, er is wat software nodig om Bitcoin Core samen te stellen.
--   **Broncode ophalen**, door middel van Git kunnen we de nieuwste broncode ophalen.
--   **Database installeren**
--   **Bitcoin Core samenstellen**
+* **Dependencies installeren**, er is wat software nodig om Bitcoin Core samen te stellen.
+* **Broncode ophalen**, door middel van Git kunnen we de nieuwste broncode ophalen.
+* **Database installeren**
+* **Bitcoin Core samenstellen**
 
 ## Dependencies
 
@@ -91,3 +91,4 @@ sudo make install
 ```
 
 Dat was het voor het installeren van Core! Je kunt terug naar de home directory met `cd ~`.
+

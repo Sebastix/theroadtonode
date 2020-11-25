@@ -1,10 +1,12 @@
+# Configuratie en starten
+
 {% hint style="info" %}
 Tijd: 5 minuten
 {% endhint %}
 
 Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind). Net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide.
 
-# Configuratie
+## Configuratie
 
 Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de brondcode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
 
@@ -61,15 +63,15 @@ zmqpubrawtx=tcp://127.0.0.1:28333
 
 Wacht even met gulzig op `control + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor voor maximale anonimiteit? Doe dan het volgende:
 
--   Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
--   Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
--   Zet een `#` voor `onion=127.0.0.1:9050`. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
--   Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
--   Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
+* Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
+* Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
+* Zet een `#` voor `onion=127.0.0.1:9050`. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
+* Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
+* Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
 
 Druk na alle veranderingen op `control + X` en daarna `Y` om op te slaan.
 
-# Authenticatie
+## Authenticatie
 
 We willen een gebruiker aanmaken om deze toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
 
@@ -96,7 +98,7 @@ Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met al
 
 Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aanmaken en toegang geven.
 
-# Starten
+## Starten
 
 Dan is het nu tijd om deel te nemen aan het Bitcoin netwerk! Knal dit je Pi in:
 
@@ -116,7 +118,7 @@ De initiële block download \(IBD\) zal zo'n 60 uur duren.
 
 Met de installatie van Core heb je ook een tool geïstalleerd genaamd `bitcoin-cli`. Hiermee kun je met bitcoind praten.
 
-# Instellingen checken
+## Instellingen checken
 
 Maak gebruik van de `bitcoin-cli` om netwerk informatie op te halen van jouw node.
 
@@ -126,90 +128,91 @@ bitcoin-cli getnetworkinfo
 
 Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet het er ongeveer zo uit als je enkel van tor gebruik maakt.
 
-```json
+```javascript
 "networks": [
-	{
-		"name": "ipv4",
-		"limited": true,
-		"reachable": false,
-		"proxy": "127.0.0.1:9050",
-		"proxy_randomize_credentials": true
-	},
-	{
-		"name": "ipv6",
-		"limited": true,
-		"reachable": false,
-		"proxy": "127.0.0.1:9050",
-		"proxy_randomize_credentials": true
-	},
-	{
-		"name": "onion",
-		"limited": false,
-		"reachable": true,
-		"proxy": "127.0.0.1:9050",
-		"proxy_randomize_credentials": true
-	},
+    {
+        "name": "ipv4",
+        "limited": true,
+        "reachable": false,
+        "proxy": "127.0.0.1:9050",
+        "proxy_randomize_credentials": true
+    },
+    {
+        "name": "ipv6",
+        "limited": true,
+        "reachable": false,
+        "proxy": "127.0.0.1:9050",
+        "proxy_randomize_credentials": true
+    },
+    {
+        "name": "onion",
+        "limited": false,
+        "reachable": true,
+        "proxy": "127.0.0.1:9050",
+        "proxy_randomize_credentials": true
+    },
 ],
 "localaddresses": [
-	{
-		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion",
-		"port": 8333,
-		"score": 4
-	}
+    {
+        "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion",
+        "port": 8333,
+        "score": 4
+    }
 ]
 ```
 
 Hieraan zie je het volgende:
 
--   IPv4 is niet bereikbaar
--   IPv6 is niet bereikbaar
--   Onion is wel bereikbaar \(tor\)
--   Jouw onion-adres binnen het "localaddresses" blok
+* IPv4 is niet bereikbaar
+* IPv6 is niet bereikbaar
+* Onion is wel bereikbaar \(tor\)
+* Jouw onion-adres binnen het "localaddresses" blok
 
 Heb je zowel tor als clearnet aan staan, dan zal je output er zo uit zien:
 
-```json
+```javascript
 "networks": [
-	{
-		"name": "ipv4",
-		"limited": false,
-		"reachable": true,
-		"proxy": "",
-		"proxy_randomize_credentials": false
-	},
-	{
-		"name": "ipv6",
-		"limited": false,
-		"reachable": true,
-		"proxy": "",
-		"proxy_randomize_credentials": false
-	},
-	{
-		"name": "onion",
-		"limited": false,
-		"reachable": true,
-		"proxy": "127.0.0.1:9050",
-		"proxy_randomize_credentials": true
-	}
+    {
+        "name": "ipv4",
+        "limited": false,
+        "reachable": true,
+        "proxy": "",
+        "proxy_randomize_credentials": false
+    },
+    {
+        "name": "ipv6",
+        "limited": false,
+        "reachable": true,
+        "proxy": "",
+        "proxy_randomize_credentials": false
+    },
+    {
+        "name": "onion",
+        "limited": false,
+        "reachable": true,
+        "proxy": "127.0.0.1:9050",
+        "proxy_randomize_credentials": true
+    }
 ],
 "localaddresses": [
-	{
-		"address": "69.69.69.69",
-		"port": 8333,
-		"score": 3
-	},
-	{
-		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion",
-		"port": 8333,
-		"score": 4
-	}
+    {
+        "address": "69.69.69.69",
+        "port": 8333,
+        "score": 3
+    },
+    {
+        "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion",
+        "port": 8333,
+        "score": 4
+    }
 ]
 ```
 
 Hieraan zie je het volgende:
 
--   IPv4, IPv6 en onion \(tor\) zijn bereikbaar
--   Jouw IP-adres binnen het "localaddresses" blok
--   Jouw onion-adres binnen het "localaddresses" blok
+* IPv4, IPv6 en onion \(tor\) zijn bereikbaar
+* Jouw IP-adres binnen het "localaddresses" blok
+* Jouw onion-adres binnen het "localaddresses" blok
 
 Wijkt jouw output af? Ga terug naar start.
+

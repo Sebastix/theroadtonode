@@ -82,3 +82,4 @@ Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 ```bash
 sudo journalctl -f -u bitcoind
 ```
+

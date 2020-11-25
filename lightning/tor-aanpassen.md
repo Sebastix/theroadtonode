@@ -1,3 +1,5 @@
+# Tor aanpassen
+
 {% hint style="info" %}
 Tijd: 5 minuten
 {% endhint %}
@@ -62,7 +64,7 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
-# Onion-adressen
+## Onion-adressen
 
 De onion-adressen krijg je met:
 
@@ -73,3 +75,4 @@ sudo cat /var/lib/tor/lightning/rest/hostname
 ```bash
 sudo cat /var/lib/tor/lightning/rpc/hostname
 ```
+
