@@ -15,25 +15,25 @@ sudo apt install -y python3 python3-pip
 sudo pip3 install setuptools
 ```
 
-Check dat er in bitcoin.conf een regel staat disablewallet = 0.
+Check dat er in `bitcoin.conf` een regel staat `disablewallet = 0`.
 
 ```bash
-sudo nano /home/bitcoin/.bitcoin/bitcoin.conf
+nano /home/bitcoin/.bitcoin/bitcoin.conf
 ```
 
-Als dat nog niet het geval is voeg je deze toe, sla je het bestand op (met Ctrl-X) en herstart je de bitcoind service.
+Als dat nog niet het geval is voeg je deze toe, sla je het bestand op (met `Ctrl-X`) en herstart je de bitcoind service.
 
 ```bash
 sudo systemctl restart bitcoind
 ```
 
-## Installatie
-Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server.
-
 ```bash
 mkdir .eps
 cd .eps
 ```
+
+## Installatie
+Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server.
 
 Download vanaf de Github de [nieuwste release](https://github.com/chris-belcher/electrum-personal-server/releases) van Electrum Personal Server. Kopiëer de link van Source code (tar.gz), pak deze uit en gooi de download weg.
 
@@ -41,7 +41,6 @@ Download vanaf de Github de [nieuwste release](https://github.com/chris-belcher/
 wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.1.1.tar.gz
 tar -xvf eps-v0.2.1.1.tar.gz
 rm eps-v0.2.1.1.tar.gz
-
 ```
 
 Maak een kopie van het configuratie bestand en pas deze aan.
@@ -52,11 +51,13 @@ nano config.cfg
 ```
 Deze config-file bevat veel commentaar en tips wat je waar moet invullen. Kijk in ieder geval even naar de volgende secties:
 
-[master-public-keys] — zoek in Electrum je master public key op via het menu Wallet > Information
-[bitcoin-rpc] — kies voor de methode rpcuser en rpcpassword deze kun je opzoeken in je bitcoin.conf bestand
-[electrum-server] — kies hier voor 0.0.0.0 ipv 127.0.0.1
+* `[master-public-keys]` — zoek in Electrum je xpub op via het menu `Wallet` > `Information`
+* `[bitcoin-rpc]` — `datadir = /home/pi/.bitcoin`
+* `[electrum-server]` — kies hier voor `host = 0.0.0.0` (ipv 127.0.0.1)
 
+{% hint style="info" %}
 let bij het laatste commando in onderstaand blokje op de punt (.) aan het einde van de regel
+{% endhint %}
 
 ```bash
 cd electrum-personal-server-eps-v0.2.0
@@ -95,6 +96,7 @@ Nu moeten we alleen nog zorgen de EPS als een Service gaat draaien. Je hebt als 
 sudo nano /etc/systemd/system/eps.service
 ```
 
+```bash
 [Unit]
 Description=Electrum Personal Server
 After=bitcoind.service
@@ -111,6 +113,7 @@ RestartSec=60
 
 [Install]
 WantedBy=multi-user.target
+```
 
 Sluit het bestand af en sla de wijzigingen op. Vervolgens de service inschakelen en starten.
 
@@ -124,16 +127,16 @@ sudo tail -f -n 200 /tmp/electrumpersonalserver.log
 ```
 
 ## Electrum Wallet
-Start nu Electrum Wallet op je PC met "C:\Program Files (x86)\Electrum\electrum-4.0.5.exe" --server 192.168.2.1:50002:s --oneserver
-Kies in het Tools-menu voor Network
-Open de Server-tab
-Haal het vinkje weg bij “select server automatically”
-Vul bij server het IP-adres in van je RPi4
-Klik op Close
+1. Start nu Electrum Wallet op je PC met `"C:\Program Files (x86)\Electrum\electrum-4.0.5.exe" --server IP-ADRES VAN PI:50002:s --oneserver`
+2. Kies in het Tools-menu voor Network
+3. Open de Server-tab
+4. Haal het vinkje weg bij “select server automatically”
+5. Vul bij server het IP-adres in van je RPi4
+6. Klik op Close
 
 Als alles goed is gegaan heb je rechtsonder in het venster van Electrum een groene cirkel die aangeeft verbonden te zijn. Je kunt ook nog
 
-Kies in het View-menu voor Show Console
-Klik op de Console tab
+1. Kies in het View-menu voor Show Console
+2. Klik op de Console tab
 
 Hier zie je nu dat je bent verbonden met een EPS en jouw Bitcoin Node!
