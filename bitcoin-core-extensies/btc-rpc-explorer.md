@@ -17,7 +17,7 @@ Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te
 3. Je moet een recente versie van Node.js hebben draaien.
 
 ### Full node
-Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core]https://node.bitdeal.nl/bitcoin-core/installatie inmiddels geinstalleerd. Zo niet doe dat dan eerst.
+Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://node.bitdeal.nl/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
 
 ### Transactieindex
 
