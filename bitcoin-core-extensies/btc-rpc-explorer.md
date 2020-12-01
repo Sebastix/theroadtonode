@@ -134,7 +134,7 @@ HiddenServiceVersion 3
 HiddenServicePort 80 IP-ADRES VAN JE PI:3002
 ```
 
-In de bovenstaande tekst zie je IP-ADRES VAN JE PI staan. Dit is iets wat je zelf moet invullen. De regel zou op HiddenServicePort 80 192.168.1.6:3002 moeten lijken.
+In de bovenstaande tekst zie je IP-ADRES VAN JE PI staan. Dit is iets wat je zelf moet invullen. De regel zou op `HiddenServicePort 80 192.168.1.6:3002` moeten lijken.
 
 Nadat tor is geconfigureerd moeten we de juiste mappen aanmaken.
 
