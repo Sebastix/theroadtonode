@@ -28,6 +28,7 @@
 ## Bitcoin Core Extensies
 
 * [Specter](bitcoin-core-extensies/specter.md)
+* [Electrum Personal Server](bitcoin-core-extensies/electrum-personal-server.md)
 
 ## Lightning \(LND\) <a id="lightning"></a>
 
