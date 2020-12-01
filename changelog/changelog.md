@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.4.0 - 2020 / november / 17
+## 1.4.0 - 2020 / december / 1
 
 ### Toevoegingen
 
