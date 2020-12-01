@@ -19,6 +19,5 @@ sudo rpi-update
 ```
 
 ```bash
-sudo reboot
+sudo reboot now
 ```
-

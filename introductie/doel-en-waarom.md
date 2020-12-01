@@ -14,5 +14,3 @@ Het is trouwens niet nodig om een node te hebben voordat je gebruik kunt maken v
 
 Daarnaast is het opzetten van een node ook heel leerzaam. Je krijgt een beter idee van de technische kant van Bitcoin. Hoe diep je wil gaan is aan jou. Je hoeft niet alle onderdelen van de guide te volgen en de volgorde maakt niet altijd uit. ~~Mocht een onderdeel leunen op een voorgaande, staat dat aangegeven.~~ \(wordt later toegevoegd\)
 
-
-

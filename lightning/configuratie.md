@@ -4,7 +4,7 @@
 Tijd: 5 minuten
 {% endhint %}
 
-De map waar LND gebruik wil maken, bestaat nog niet. Maak hem dus eerst aan.
+De map waar LND gebruik van wil maken, bestaat nog niet. Maak hem dus eerst aan. Let op: deze configuratie map verschilt van de map waar je LND zojuist in hebt [geïnstalleerd](https://node.bitdeal.nl/lightning/installatie), dat was namelijk `/home/pi/lnd`.
 
 ```bash
 mkdir ~/.lnd
@@ -24,11 +24,9 @@ tlsautorefresh=true
 restlisten=0.0.0.0:8080
 rpclisten=0.0.0.0:10009
 listen=127.0.0.1:9735
-externalip=DIT_WEET_JE_A
 maxpendingchannels=5
 color=ZELF_VERZINNEN_A
 alias=ZELF_VERZINNEN_B
-minchansize=50000
 
 [Tor]
 tor.active=true
@@ -42,19 +40,17 @@ bitcoin.node=bitcoind
 
 [bitcoind]
 bitcoind.dir=/home/pi/.bitcoin
-bitcoind.rpcuser=DIT_WEET_JE_B
-bitcoind.rpcpass=DIT_WEET_JE_C
+bitcoind.rpcuser=DIT_WEET_JE_A
+bitcoind.rpcpass=DIT_WEET_JE_B
 bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
 bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-In de tekst hierboven staan 5 dingen die je zelf moet regelen.
+In de tekst hierboven staan vier dingen die je zelf moet regelen.
 
-* **externalip**, verander DIT\_WEET\_JE\_A met het onion-adres wat je zojuist hebt aangemaakt. Je krijgt dan "externalip=xxx.onion:9735".
-* **color**, verander ZELF\_VERZINNEN\_A naar een kleur naar keuze. Het is een hexadecimale waarde. Je krijgt dan "color=\#123ABC".
-* **alias**, verander ZELF\_VERZINNEN\_B naar een naam naar keuze. Je krijgt dan "alias=nickname".
-* **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_B naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
-* **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_C naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten).
+-   **color**, verander ZELF_VERZINNEN_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld `color=#123ABC` voor de kleur blauw.
+-   **alias**, verander ZELF_VERZINNEN_B naar een naam naar keuze. Je krijgt dan `alias=nickname`.
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_A naar [de juiste user](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie).
+-   **bitcoind.rpcuser**, verander DIT_WEET_JE_B naar [het juiste wachtwoord](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie). Dit wachtwoord heb je dus toebedeeld gekregen.
 
-Sla het bestand op met Control + X en Y.
-
+Sla het bestand op met `control + X` en `Y`.
