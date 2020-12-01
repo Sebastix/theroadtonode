@@ -18,7 +18,7 @@ sudo pip3 install setuptools
 Check dat er in `bitcoin.conf` een regel staat `disablewallet = 0`.
 
 ```bash
-nano /home/bitcoin/.bitcoin/bitcoin.conf
+nano /home/pi/.bitcoin/bitcoin.conf
 ```
 
 Als dat nog niet het geval is voeg je deze toe, sla je het bestand op (met `Ctrl-X`) en herstart je de bitcoind service.
@@ -72,21 +72,21 @@ Electrum Personal Server is nu geïnstalleerd (in ~/.local/bin) en klaar om voor
 ~/.local/bin/electrum-personal-server ~/.eps/config.cfg
 ```
 
-Nu moeten EPS de blockchain van scannen op zoek naar adressen en transacties horend bij de public keys die je in de config-file hebt opgenomen. Als er wordt gevraagd naar de startdatum is het handig als je de datum opgeeft van de eerste transactie naar een adres horend bij die wallet.
+Nu moeten EPS de blockchain scannen op zoek naar adressen en transacties horend bij de xpubs die je in de `config.cfg` hebt opgenomen. Als er wordt gevraagd naar de startdatum is het handig dat je de datum opgeeft van de eerste transactie naar een adres horend bij die wallet. Dan hoeft EPS geen blokken te scannen waar toch geen transacties in staan die horen bij jouw xpub.
 
 ```bash
-~/.local/bin/electrum-personal-server-rescan ~/.eps/electrum-personal-server/config.cfg
+~/.local/bin/electrum-personal-server-rescan ~/.eps/config.cfg
 ```
 
 Je kunt de voorgang monitoren door de log-file van bitcoin in de gaten te houden via een tweede Putty venster:
 
 ```bash
-sudo tail -f -n 200 /home/bitcoin/.bitcoin/bitcoin/debug.log
+sudo tail -f -n 200 /home/pi/.bitcoin/bitcoin/debug.log
 ```
-Als deze klaar is start je EPS nog een keer
+Als deze klaar is start je EPS nog een keer.
 
 ```bash
-~/.local/bin/electrum-personal-server ~/.eps/electrum-personal-server/config.cfg
+~/.local/bin/electrum-personal-server ~/.eps/config.cfg
 ```
 
 ## Automatisering
@@ -117,8 +117,10 @@ WantedBy=multi-user.target
 
 Sluit het bestand af en sla de wijzigingen op. Vervolgens de service inschakelen en starten.
 
+```bash
 sudo systemctl enable eps.service
 sudo systemctl start eps.service
+```
 
 Je kunt de voortgang van het opstarten van EPS volgen door het log-bestand te bekijken:
 
