@@ -17,6 +17,7 @@ Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te
 3. Je moet een recente versie van Node.js hebben draaien.
 
 ### Full node
+
 Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://node.bitdeal.nl/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
 
 ### Transactieindex
@@ -36,9 +37,11 @@ sudo systemctl restart bitcoind.service
 ```
 
 ### Node.js
+
 Zie [NodeJS](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning#nodejs) op de Ride the Lightning pagina.
 
 ## Installatie
+
 Zorg dat je in de home directory bent.
 
 ```bash
@@ -63,7 +66,8 @@ Installeer BTC RPC Explorer, maak het configuratie bestand `.env` en pas deze aa
 npm install
 nano .env
 ```
-Plak daar in de volgende regels. 
+
+Plak daar in de volgende regels.
 
 {% hint style="info" %}
 Open de file .env-sample om te zien welke opties er nog meer zijn.
@@ -80,9 +84,11 @@ BTCEXP_BITCOIND_RPC_TIMEOUT=5000
 
 BTCEXP_PRIVACY_MODE=true
 ```
+
 Sla het bestand op met `Ctrl-X` gevolgd door `y`.
 
 ## Service
+
 Zorg er nu voor dat de BTC-RPC-Explorer automatisch start en draait als een service wanneer je Pi opnieuw opstart.
 
 ```bash
@@ -110,6 +116,7 @@ RestartSec=30
 [Install]
 WantedBy=multi-user.target
 ```
+
 Sla het bestand op met `Ctrl-X` gevolgd door `y`.
 
 ```bash
@@ -120,6 +127,7 @@ sudo systemctl start btc-rpc-explorer.service
 Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te zien of het werkt. Bijvoorbeeld `http://192.168.1.6:3002`.
 
 ## Tor
+
 De service kun je ook beschikbaar maken via tor. Alleerst passen we de tor configuratie aan om een nieuwe hidden service te maken.
 
 ```bash
@@ -149,10 +157,12 @@ Herstart tor met:
 ```bash
 sudo systemctl restart tor
 ```
+
 Het onion-adres vind je met het volgende commando:
 
 ```bash
 sudo cat /var/lib/tor/btc-rpc-explorer/hostname
 ```
 
-Vul deze (zonder portnummer) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
+Vul deze \(zonder portnummer\) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
+

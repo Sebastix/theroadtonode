@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 - 2020 / november / 17
+
+### Toevoegingen
+
+* [Electrum Personal Server](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-personal-server) \(Bitcoin Core Extensies\)
+* [BTC RPC Explorer](https://node.bitdeal.nl/bitcoin-core-extensies/btc-rpc-explorer) \(Bitcoin Core Extensies\)
+
 ## 1.3.0 - 2020 / november / 17
 
 ### Verbeteringen
