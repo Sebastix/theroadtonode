@@ -66,7 +66,7 @@ make install
 ## LND configureren voor Loop
 We gaan er vanuit dat je LND al hebt geïnstalleerd en geconfigureerd. 
 Je moet de .macaroon bestanden verwijderen in de lnd map en daarna lnd herstarten.   
-*Als je LND nog niet hebt geinstalleerd, volg dan [deze stappen](../lightning/installatie.md) en voer `make install tags="signrpc walletrpc chainrpc invoicesrpc"` bij de installatie stap.*
+*Als je LND nog niet hebt geinstalleerd, volg dan [deze stappen](lightning/installatie.md) en voer `make install tags="signrpc walletrpc chainrpc invoicesrpc"` bij de installatie stap.*
 
 Stop LND indien deze actief is.
 ```bash

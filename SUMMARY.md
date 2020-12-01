@@ -36,6 +36,7 @@
 
 * [LND Connect](lightning-extensies/lnd-connect.md)
 * [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
+* [Lightning Terminal](lightning-extensies/lightning-terminal.md)
 
 ## IOS
 
