@@ -117,4 +117,42 @@ sudo systemctl enable btc-rpc-explorer.service
 sudo systemctl start btc-rpc-explorer.service
 ```
 
-Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te zien of het werkt.
+Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te zien of het werkt. Bijvoorbeeld `http://192.168.1.6:3002`.
+
+## Tor
+De service kun je ook beschikbaar maken via tor. Alleerst passen we de tor configuratie aan om een nieuwe hidden service te maken.
+
+```bash
+sudo nano /etc/tor/torrc
+```
+
+In het bestand dat zich opent voeg je onderaan de volgende drie regels toe.
+
+```bash
+HiddenServiceDir /var/lib/tor/btc-rpc-explorer
+HiddenServiceVersion 3
+HiddenServicePort 80 IP-ADRES VAN JE PI:3002
+```
+
+In de bovenstaande tekst zie je IP-ADRES VAN JE PI staan. Dit is iets wat je zelf moet invullen. De regel zou op HiddenServicePort 80 192.168.1.6:3002 moeten lijken.
+
+Nadat tor is geconfigureerd moeten we de juiste mappen aanmaken.
+
+```bash
+sudo mkdir /var/lib/tor/btc-rpc-explorer
+sudo chown -R debian-tor:debian-tor /var/lib/tor/btc-rpc-explorer
+sudo chmod 700 /var/lib/tor/btc-rpc-explorer
+```
+
+Herstart tor met:
+
+```bash
+sudo systemctl restart tor
+```
+Het onion-adres vind je met het volgende commando:
+
+```bash
+sudo cat /var/lib/tor/btc-rpc-explorer/hostname
+```
+
+Vul deze (zonder portnummer) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
