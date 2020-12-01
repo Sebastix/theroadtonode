@@ -36,7 +36,7 @@ sudo systemctl restart bitcoind.service
 ```
 
 ### Node.js
-Zie NodeJS(https://node.bitdeal.nl/lightning-extensies/ride-the-lightning#nodejs) op de Ride the Lightning pagina
+Zie [NodeJS](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning#nodejs) op de Ride the Lightning pagina.
 
 ## Installatie
 Zorg dat je in de home directory bent.
