@@ -28,6 +28,7 @@
 ## Bitcoin Core Extensies
 
 * [Specter](bitcoin-core-extensies/specter.md)
+* [BTC RPC Explorer](bitcoin-core-extensies/btc-rpc-explorer.md)
 
 ## Lightning \(LND\) <a id="lightning"></a>
 
