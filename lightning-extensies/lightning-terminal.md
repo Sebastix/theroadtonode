@@ -71,7 +71,7 @@ Je moet de .macaroon bestanden verwijderen in de lnd map en daarna lnd herstarte
 
 Stop LND indien deze actief is.
 ```bash
-lncli stop
+sudo systemctl stop lnd
 ```
 
 Ga naar de bronbestanden map van LND om LND opnieuw te installeren.
@@ -100,9 +100,9 @@ rm -i ~/.lnd/data/chain/bitcoin/mainnet/*.macaroon
 ```
 Beantwoord de vragen met `yes` om elk bestand te verwijderen.
 
-Start lnd
+Start lnd opnieuw.
 ```bash
-lnd
+sudo systemctl start lnd
 ```
 Open een tweede terminal scherm om je wallet te unlocken.
 
@@ -113,7 +113,12 @@ Vul je wallet wachtwoord in.
 
 ## Installatie Loop
 Om kanalen te kunnen balanceren, hebben we de Loop software nodig.  
-Download de broncode
+Ga naar je home directory.
+```bash
+cd ~
+```
+
+Download de broncode.
 ```bash
 git clone https://github.com/lightninglabs/loop.git
 ``` 
@@ -122,6 +127,7 @@ Ga naar `loop/cmd`.
 ```bash
 cd loop/cmd
 ```
+
 Installeer de `loopd` software.
 ```bash
 go install ./...
@@ -132,14 +138,14 @@ Test of het gelukt is.
 loopd
 ```
 In de output zul je lezen dat Loop verbonden is met je LND. 
-```
+```bash
 2020-12-01 09:53:40.186 [INF] LOOP: Connected to lnd node '<jouw_node_naam>' with pubkey <public_key_van_jouw_node> (version v0.11.99-beta, build tags 'signrpc,walletrpc,chainrpc,invoicesrpc')
 ```
 
 ## Automatisch opstarten
 
-Lightning Terminal automatisch opstarten.  
-Maak het Lightning Terminal service bestand.
+Hoe laat je Lightning Terminal automatisch opstarten?  
+Daarvoor maken we een Lightning Terminal service bestand aan.
 ```bash
 sudo nano /etc/systemd/system/lit.service
 ```
@@ -165,7 +171,7 @@ WantedBy=multi-user.target
 
 Vervang `<JOUW_WACHTWOORD_MET_MINIMAAL_8_KARATERS>` met een door jouw gekozen wachtwoord. Dit wachtwoord gebruik je om in te loggen in Lightning Terminal.
 
-Sla de wijzigingen op met Control + X en bevestig met Y.
+Sla de wijzigingen op met `Control + X` en bevestig met `Y`.
 
 Breng het systeem op de hoogte gesteld van de nieuwe service.
 
