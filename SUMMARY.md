@@ -28,7 +28,11 @@
 ## Bitcoin Core Extensies
 
 * [Specter](bitcoin-core-extensies/specter.md)
+<<<<<<< HEAD
 * [Electrum Personal Server](bitcoin-core-extensies/electrum-personal-server.md)
+=======
+* [BTC RPC Explorer](bitcoin-core-extensies/btc-rpc-explorer.md)
+>>>>>>> Update SUMMARY.md
 
 ## Lightning \(LND\) <a id="lightning"></a>
 
