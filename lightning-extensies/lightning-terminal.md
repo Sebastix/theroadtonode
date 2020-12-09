@@ -1,7 +1,7 @@
 # Lightning Terminal (LiT)
 
 {% hint style="info" %}
-Tijd: 25 minuten
+Tijd: 35 minuten
 {% endhint %}
 
 ### Use case
@@ -14,25 +14,13 @@ Tijd: 25 minuten
 Demo video: https://lightning.engineering/static/terminal-2c00f93b062f44e5c2d1db067f7ee8cd.mp4
 
 ### Benodigdheden
-* [golang](../lightning/golang-installatie.md)
+* [golang](../raspberry-pi/algemene-dependencies-installeren#nodejs)
 * protoc
-* nodejs
+* [nodejs](../raspberry-pi/algemene-dependencies-installeren#nodejs)
 * yarn
+* minimaal 250.000 sats per kanaal om gebruik te kunnen maken van Loop
 
 ## Installatie Lightning Terminal
-
-#### NodeJS
-Download en installeer NodeJS.
-```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt install nodejs -y
-```
-
-Controleer of NodeJS is geïnstalleerd.
-```bash
-node --version
-# Verwachte output: v14.15.0
-```
 
 #### Yarn
 
@@ -141,6 +129,62 @@ In de output zul je lezen dat Loop verbonden is met je LND.
 ```bash
 2020-12-01 09:53:40.186 [INF] LOOP: Connected to lnd node '<jouw_node_naam>' with pubkey <public_key_van_jouw_node> (version v0.11.99-beta, build tags 'signrpc,walletrpc,chainrpc,invoicesrpc')
 ```
+
+## Installatie Faraday
+
+Download de broncode.
+```bash
+git clone https://github.com/lightninglabs/faraday.git
+```
+
+Ga naar de faraday map.
+```bash
+cd faraday
+```
+
+Installeer de faraday software.
+```bash
+make && make install
+```
+
+Test of het gelukt is.
+```bash
+faraday --version
+Verwachte output: faraday version 0.2.2-alpha commit=v0.2.2-alpha-17-gfa65f48c9172e601bbfc89dab7ab68de1564a346
+```
+
+Configureer de faraday software.
+```bash
+faraday --lnd.macaroondir=/home/pi/.lnd/data/chain/bitcoin/mainnet --lnd.tlscertpath=/home/pi/.lnd/tls.cert --lnd.rpcserver=127.0.0.0:10009
+```
+
+## Installatie Pool
+
+Download de broncode.
+```bash
+git clone https://github.com/lightninglabs/pool
+```
+
+Ga naar de pool map.
+```bash
+cd pool
+```
+
+Installeer de Pool software.
+```bash
+make install
+```
+
+Test of het gelukt is
+```bash
+poold 
+```
+
+## Het geheel integreren met LND
+
+Nu we alle software hebben geïnstalleerd, is het tijd voor de laatste en meest complexe stap.
+
+// TODO
 
 ## Automatisch opstarten
 
