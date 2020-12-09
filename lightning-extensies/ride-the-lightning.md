@@ -57,41 +57,40 @@ nano RTL-Config.json
 
 Plak er dit in.
 
-```json
+```javascript
 {
-	"multiPass": "password",
-	"port": "3000",
-	"defaultNodeIndex": 1,
-	"SSO": {
-		"rtlSSO": 0,
-		"rtlCookiePath": "",
-		"logoutRedirectLink": ""
-	},
-	"nodes": [
-		{
-			"index": 1,
-			"lnNode": "JOUW_ALIAS",
-			"lnImplementation": "LND",
-			"Authentication": {
-				"macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
-				"configPath": "/home/pi/.lnd/lnd.conf"
-			},
-			"Settings": {
-				"userPersona": "OPERATOR",
-				"themeMode": "NIGHT",
-				"themeColor": "TEAL",
-				"bitcoindConfigPath": "/home/pi/.bitcoin/bitcoin.conf",
-				"enableLogging": true,
-				"fiatConversion": false,
-				"lnServerUrl": "https://127.0.0.1:8080"
-			}
-		}
-	]
+    "multiPass": "password",
+    "port": "3000",
+    "defaultNodeIndex": 1,
+    "SSO": {
+        "rtlSSO": 0,
+        "rtlCookiePath": "",
+        "logoutRedirectLink": ""
+    },
+    "nodes": [
+        {
+            "index": 1,
+            "lnNode": "JOUW_ALIAS",
+            "lnImplementation": "LND",
+            "Authentication": {
+                "macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
+                "configPath": "/home/pi/.lnd/lnd.conf"
+            },
+            "Settings": {
+                "userPersona": "OPERATOR",
+                "themeMode": "NIGHT",
+                "themeColor": "TEAL",
+                "bitcoindConfigPath": "/home/pi/.bitcoin/bitcoin.conf",
+                "enableLogging": true,
+                "fiatConversion": false,
+                "lnServerUrl": "https://127.0.0.1:8080"
+            }
+        }
+    ]
 }
 ```
 
-Vul bij `JOUW_ALIAS` de [alias](https://node.bitdeal.nl/lightning/configuratie) van jouw Lightning node in.
-Sla het op met `control + X` en bevestig met `Y`.
+Vul bij `JOUW_ALIAS` de [alias](https://node.bitdeal.nl/lightning/configuratie) van jouw Lightning node in. Sla het op met `control + X` en bevestig met `Y`.
 
 ## Automatiseren
 
@@ -149,3 +148,4 @@ Ga via je favoriete browser naar `het ip adres van je Pi:3000`. Bij mij is dat 1
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
+

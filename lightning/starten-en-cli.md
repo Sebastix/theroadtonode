@@ -48,13 +48,14 @@ lncli getinfo
 
 Het onderstaande is een deel van de output die je te zien krijgt.
 
-```json
+```javascript
 {
-	"identity_pubkey": "JOUW_PUBLIC_KEY",
-	"alias": "JOUW_ZELF_VERZONNEN_B",
-	"color": "JOUW_ZELF_VERZONNEN_A",
-	"uris": ["JOUW_PUBLIC_KEY@JOUW_TOR_URL.onion:9735"]
+    "identity_pubkey": "JOUW_PUBLIC_KEY",
+    "alias": "JOUW_ZELF_VERZONNEN_B",
+    "color": "JOUW_ZELF_VERZONNEN_A",
+    "uris": ["JOUW_PUBLIC_KEY@JOUW_TOR_URL.onion:9735"]
 }
 ```
 
 In de output is onder andere jouw public key en onion-adres te zien. Deze dingen kun je met mensen delen om te verbinden.
+

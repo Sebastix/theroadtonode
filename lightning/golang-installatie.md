@@ -67,3 +67,4 @@ go version
 ```
 
 Als het goed is zie je `go version go1.15.5 linux/arm` verschijnen.
+

@@ -61,3 +61,4 @@ Met onderstaand commando krijg je het onion-adres terug van je Bitcoin node. Dit
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
 ```
+

@@ -29,3 +29,4 @@ De tool zal nu in de achtergrond draaien op poortnummer `:25441`. Open je browse
 ## Gebruik van Specter
 
 {% embed url="https://www.youtube.com/watch?v=ZQvCncdFMPo" caption="Een uitgebreide video over het gebruik van Specter" %}
+

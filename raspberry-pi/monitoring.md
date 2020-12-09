@@ -15,3 +15,4 @@ Je Pi wordt ook warm, vandaar de heatsink. Wil je weten hoe warm de Pi wordt, vo
 ```bash
 vcgencmd measure_temp
 ```
+
