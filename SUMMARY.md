@@ -42,14 +42,9 @@
 
 ## Lightning extensies
 
-<<<<<<< HEAD
-* [LND Connect](lightning-extensies/lnd-connect.md)
-* [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
-* [Lightning Terminal](lightning-extensies/lightning-terminal.md)
-=======
--   [LND Connect](lightning-extensies/lnd-connect.md)
--   [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
->>>>>>> [TRTN-049] Guide aangepast om gebruik te maken van algemene dependencies
+- [LND Connect](lightning-extensies/lnd-connect.md)
+- [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
+- [Lightning Terminal](lightning-extensies/lightning-terminal.md)
 
 ## iOS
 
