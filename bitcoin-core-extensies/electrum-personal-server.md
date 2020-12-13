@@ -57,7 +57,7 @@ Deze config-file bevat veel commentaar en tips wat je waar moet invullen. Kijk i
 * `[bitcoin-rpc]` — `datadir = /home/pi/.bitcoin`
 * `[electrum-server]` — kies hier voor `host = 0.0.0.0` \(ipv 127.0.0.1\)
 
-{% hint style="tip" %}
+{% hint style="info" %}
 let bij het laatste commando in onderstaand blokje op de punt \(.\) aan het einde van de regel
 {% endhint %}
 
