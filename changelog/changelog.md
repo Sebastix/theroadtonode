@@ -6,6 +6,10 @@
 
 -   [Port overzicht](https://node.bitdeal.nl/raspberry-pi/port-overzicht) \(Raspberry Pi\)
 
+### Verbeteringen
+
+-   De homepage aangepast zodat ook Electrum Personal Server en BTC RPC Explorer genoemd worden.
+
 ## 1.5.0 - 2020 / december / 13
 
 ### Toevoegingen
