@@ -33,7 +33,7 @@ Controleer of er een regel `txindex = 1` in voorkomt. Zo niet, voeg deze dan toe
 Herstart vervolgens `bitcoind`.
 
 ```bash
-sudo systemctl restart bitcoind.service
+sudo systemctl restart bitcoind
 ```
 
 {% hint style="info" %}
@@ -120,8 +120,8 @@ WantedBy=multi-user.target
 Sla het bestand op met `Ctrl-X` gevolgd door `y`.
 
 ```bash
-sudo systemctl enable btc-rpc-explorer.service
-sudo systemctl start btc-rpc-explorer.service
+sudo systemctl enable btc-rpc-explorer
+sudo systemctl start btc-rpc-explorer
 ```
 
 Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te zien of het werkt. Bijvoorbeeld `http://192.168.1.6:3002`.
@@ -166,3 +166,6 @@ sudo cat /var/lib/tor/btc-rpc-explorer/hostname
 
 Vul deze \(zonder portnummer\) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
 
+## Koppeling met Electrum X
+
+Als je de [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten.
