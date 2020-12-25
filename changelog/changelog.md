@@ -6,6 +6,10 @@
 
 -   [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x) \(Bitcoin Core Extensies\)
 
+### Aanpassingen
+
+-   Aan BTC RPC Explorer de mogelijkheid toegevoegd om gebruik te maken van je eigen Electrum X backend.
+
 ## 1.5.0 - 2020 / december / 13
 
 ### Toevoegingen

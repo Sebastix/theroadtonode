@@ -6,6 +6,8 @@ Tijd: 15 minuten en 7 dagen wachten op synchronisatie/indexering
 
 Met behulp van Electrum X kun je gebruik maken van het [Electrum protocol](https://electrumx-spesmilo.readthedocs.io/en/latest/protocol-basics.html). Dit protocol laat wallets en andere software met nodes communiceren. Op andere plekken in de guide kun je tools en wallets die via het Electrum protocol communiceren direct aansluiten op je node. Een functionaliteit die de privacy bevordert. Zo kun je de [BTC RPC Explorer](https://node.bitdeal.nl/bitcoin-core-extensies/btc-rpc-explorer#koppeling-met-electrum-x) ook aansluiten op je eigen Electrum X server. Als je dan in het vervolg informatie over je transacties of adressen van jezelf opzoekt, zal niemand dat kunnen zien. Zo kan niemand transacties aan jou linken en geniet je meer privacy.
 
+Het kan zo'n 7 dagen duren voordat Electrum X volledig geïndexeerd en bruikbaar is. Tot die tijd kan je er niks mee.
+
 ## Installatie
 
 Zorg dat je in de home directory zit.
