@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.6.0 - 2020 / december / 17
+## 1.6.0 - 2020 / december / 25
 
 ### Toevoegingen
 
