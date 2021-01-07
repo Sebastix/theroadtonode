@@ -44,6 +44,7 @@
 
 * [LND Connect](lightning-extensies/lnd-connect.md)
 * [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
+* [Thunderhub](lightning-extensies/thunderhub.md)
 
 ## iOS
 
