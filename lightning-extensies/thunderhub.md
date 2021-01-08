@@ -66,7 +66,7 @@ accounts:
   - name: '<kies_een_naam>'
     serverUrl: '127.0.0.1:10009'
     # network: Leave without network and it will use the default network
-    lndDir: '/home/pi/lnd'
+    lndDir: '/home/pi/.lnd'
 ```
 Sla het op met `control + X` en bevestig met `Y`.
 Het masterPassword kun je naar wens aanpassen en heb je nodig om in te loggen in Thunderhub in je browser straks.
@@ -74,6 +74,12 @@ Nadat je Thunderhub voor de eerste keer hebt opgestart, wordt dit wachtwoord her
 
 ## Installatie
 
+We gaan weer terug naar de map met de Thunderhub software:
+```bash
+cd ~
+cd thunderhub
+```
+Installeer Thunderhub:
 ```bash
 npm run build
 ````
