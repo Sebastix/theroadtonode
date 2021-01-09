@@ -33,7 +33,7 @@ Bitcoin zijn tweede laag, het Lightning netwerk, moet het schaalbaarheidsproblee
 
 ### Lightning extensies
 
-Om makkelijker gebruik te maken van het Lightning netwerk, kun je er allerlei software aan vastklikken. Met een user interface zoals [Ride The Lightning](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning) maak je op een prettige manier gebruik van LND.
+Om makkelijker gebruik te maken van het Lightning netwerk, kun je er allerlei software aan vastklikken. Met een user interface zoals [Ride The Lightning](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning) maak je op een prettige manier gebruik van LND. Ben je opzoek naar het mooiere broertje van RTL, kun je eens kijken naar [Thunderhub](https://node.bitdeal.nl/lightning-extensies/thunderhub). Het bied vrijwel dezelfde functionaliteiten maar dan mooier.
 
 ### iOS
 

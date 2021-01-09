@@ -1,9 +1,10 @@
 # Changelog
 
-## 1.6.0 - 2020 / december / 25
+## 1.6.0 - 2021 / januari / 09
 
 ### Toevoegingen
 
+-   [Thunderhub](https://node.bitdeal.nl/lightning-extensies/thunderhub) \(Lightning Extensies\)
 -   [Port overzicht](https://node.bitdeal.nl/raspberry-pi/port-overzicht) \(Raspberry Pi\)
 
 ### Verbeteringen
