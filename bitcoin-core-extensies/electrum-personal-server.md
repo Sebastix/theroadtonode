@@ -21,7 +21,7 @@ Check dat er in `bitcoin.conf` een regel staat `disablewallet = 0`.
 nano /home/pi/.bitcoin/bitcoin.conf
 ```
 
-Als dat nog niet het geval is voeg je deze toe, sla je het bestand op \(met `Ctrl-X`\) en herstart je de bitcoind service.
+Als dat nog niet het geval is voeg je deze toe, sla je het bestand op \(met `Ctrl + X`\) en herstart je de bitcoind service.
 
 ```bash
 sudo systemctl restart bitcoind

@@ -32,7 +32,7 @@ Login op je Pi en open het bitcoin configuratiebestand.
 nano /home/pi/.bitcoin/bitcoin.conf
 ```
 
-Controleer of er een regel `txindex = 1` in voorkomt. Zo niet, voeg deze dan toe en sla je wijzigingen op met `Ctrl-X` gevolgd door `y`.
+Controleer of er een regel `txindex = 1` in voorkomt. Zo niet, voeg deze dan toe en sla je wijzigingen op met `Ctrl + X` gevolgd door `Y`.
 
 Herstart vervolgens `bitcoind`.
 
@@ -85,7 +85,7 @@ BTCEXP_BITCOIND_RPC_TIMEOUT=5000
 BTCEXP_PRIVACY_MODE=true
 ```
 
-Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl-X` gevolgd door `Y`.
+Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
 ## Service
 
@@ -117,7 +117,7 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
-Sla het bestand op met `Ctrl-X` gevolgd door `y`.
+Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
 ```bash
 sudo systemctl enable btc-rpc-explorer

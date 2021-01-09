@@ -8,8 +8,8 @@ Thunderhub is net als Ride The Lightning een beheertool voor jouw node. Bezoek [
 
 ### Benodigdheden
 
-* NPM of [Yarn](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#yarn)
-* [nodejs](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs)
+-   NPM of [Yarn](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#yarn)
+-   [nodejs](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs)
 
 ## Broncode
 
@@ -56,7 +56,7 @@ CURRENCY='sat'
 ACCOUNT_CONFIG_PATH='/home/pi/.thunderhub/config.yaml'
 ```
 
-Sla het op met `control + X` en bevestig met `Y`. Dit is een minimale setup qua configuratie. Meer parameters die je kunt gebruiken vind je in het `.env` bestand.
+Sla het op met `Ctrl + X` en bevestig met `Y`. Dit is een minimale setup qua configuratie. Meer parameters die je kunt gebruiken vind je in het `.env` bestand.
 
 Nu gaan we terug naar je home directory en maken daar een map aan met de naam .thunderhub. In deze map maken we een config bestand aan voor Thunderhub.
 
@@ -79,7 +79,7 @@ accounts:
     lndDir: '/home/pi/.lnd'
 ```
 
-Sla het op met `control + X` en bevestig met `Y`. Het masterPassword kun je naar wens aanpassen en heb je nodig om in te loggen in Thunderhub in je browser straks. Nadat je Thunderhub voor de eerste keer hebt opgestart, wordt dit wachtwoord herschreven met een hashed waarde.
+Sla het op met `Ctrl + X` en bevestig met `Y`. Het masterPassword kun je naar wens aanpassen en heb je nodig om in te loggen in Thunderhub in je browser straks. Nadat je Thunderhub voor de eerste keer hebt opgestart, wordt dit wachtwoord herschreven met een hashed waarde.
 
 ## Installatie
 
@@ -131,7 +131,7 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
-Sla het weer op met `control + X` en bevestig met `Y`. De applicatie wordt gestart op poort 4000. Standaard is dit poort 3000, maar deze poort wordt ook gebruikt voor de [Ride The Lightning](ride-the-lightning.md) applicatie.
+Sla het weer op met `Ctrl + X` en bevestig met `Y`. De applicatie wordt gestart op poort 4000. Standaard is dit poort 3000, maar deze poort wordt ook gebruikt voor de [Ride The Lightning](ride-the-lightning.md) applicatie.
 
 Het systeem moet op de hoogte gesteld worden van de nieuwe service en kan daarna gestart worden.
 
@@ -159,4 +159,3 @@ sudo journalctl -f -u thunderhub
 
 Ga naar `het ip adres van je Pi:4000` in je browser om Thunderhub te openen.  
 Gebruik het wachtwoord `password` om in te loggen tenzij je een ander wachtwoord hebt ingevuld in het `config.yaml` bestand.
-
