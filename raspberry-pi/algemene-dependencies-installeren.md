@@ -95,3 +95,17 @@ node --version
 # Verwachte output: v14.15.1
 ```
 
+## Yarn
+
+Download en installeer [Yarn](https://classic.yarnpkg.com/en/docs/install).
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+```
+
+Controleer of Yarn is geïnstalleerd.
+```bash
+yarn --version
+Verwachte output: 1.22.5
+
