@@ -10,6 +10,10 @@
 
 -   Aan BTC RPC Explorer de mogelijkheid toegevoegd om gebruik te maken van je eigen Electrum X backend.
 
+### Verbeteringen
+
+-   Uniformiteit omtrent commando's
+
 ## 1.6.0 - 2021 / januari / 09
 
 ### Toevoegingen
