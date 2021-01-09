@@ -8,6 +8,10 @@ Een eigen block explorer helpt je privacy omdat je nu geen publieke block explor
 
 De Block Explorer die we gaan gebruiken is [BTC RPC Explorer](https://github.com/janoside/btc-rpc-explorer) van Dan Janosik.
 
+{% hint style="info" %}
+Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
+{% endhint %}
+
 ## Voorbereiding
 
 Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te kunnen draaien:
@@ -22,7 +26,7 @@ Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen
 
 ### Transactieindex
 
-Login op je PI en open het bitcoin configuratiebestand
+Login op je Pi en open het bitcoin configuratiebestand.
 
 ```bash
 nano /home/pi/.bitcoin/bitcoin.conf
@@ -35,10 +39,6 @@ Herstart vervolgens `bitcoind`.
 ```bash
 sudo systemctl restart bitcoind
 ```
-
-{% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
-{% endhint %}
 
 ## Installatie
 

@@ -25,7 +25,7 @@ Het kloppend hart van deze guide. Allereerst halen we zelf de broncode van Bitco
 
 ### Bitcoin Core extensies
 
-Het "extensies" hoofdstuk met betrekking op Bitcoin Core, heeft voornamelijk te maken met tools die rechtstreeks leunen op Core. Neem bijvoorbeeld [Specter](https://node.bitdeal.nl/bitcoin-core-extensies/specter), een gebruiksvriendelijke manier om een multisig contructie op te zetten. Met behulp van [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x) kun je gebruik maken van het Electrum protocol. Dit protocol laat wallets en andere software met nodes communiceren. Verderop in de guide kun je tools en wallets die via het Electrum protocol communiceren direct aansluiten op je node. Een functionaliteit die de privacy bevordert.
+Het "extensies" hoofdstuk met betrekking op Bitcoin Core, heeft voornamelijk te maken met tools die rechtstreeks leunen op Core. Neem bijvoorbeeld [Specter](https://node.bitdeal.nl/bitcoin-core-extensies/specter), een gebruiksvriendelijke manier om een multisig contructie op te zetten. Je kunt met deze guide ook een Electrum server opzetten aan de hand van tools zoals [Electrum Personal Server](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-personal-server) of [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x). Of misschien wil je je eigen blockchain explorer? Dat kan met [BTC RPC Explorer](https://node.bitdeal.nl/bitcoin-core-extensies/btc-rpx-explorer).
 
 ### Lightning
 
@@ -33,7 +33,7 @@ Bitcoin zijn tweede laag, het Lightning netwerk, moet het schaalbaarheidsproblee
 
 ### Lightning extensies
 
-Om makkelijker gebruik te maken van het Lightning netwerk, kun je er allerlei software aan vastklikken. Met een user interface zoals [Ride The Lightning](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning) maak je op een prettige manier gebruik van LND.
+Om makkelijker gebruik te maken van het Lightning netwerk, kun je er allerlei software aan vastklikken. Met een user interface zoals [Ride The Lightning](https://node.bitdeal.nl/lightning-extensies/ride-the-lightning) maak je op een prettige manier gebruik van LND. Ben je opzoek naar het mooiere broertje van RTL, kun je eens kijken naar [Thunderhub](https://node.bitdeal.nl/lightning-extensies/thunderhub). Het bied vrijwel dezelfde functionaliteiten maar dan mooier.
 
 ### iOS
 

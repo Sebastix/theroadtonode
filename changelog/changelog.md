@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.6.0 - 2020 / december / 25
+## 1.7.0 - 2021 / januari / 10
 
 ### Toevoegingen
 
@@ -9,6 +9,17 @@
 ### Aanpassingen
 
 -   Aan BTC RPC Explorer de mogelijkheid toegevoegd om gebruik te maken van je eigen Electrum X backend.
+
+## 1.6.0 - 2021 / januari / 09
+
+### Toevoegingen
+
+-   [Thunderhub](https://node.bitdeal.nl/lightning-extensies/thunderhub) \(Lightning Extensies\)
+-   [Port overzicht](https://node.bitdeal.nl/raspberry-pi/port-overzicht) \(Raspberry Pi\)
+
+### Verbeteringen
+
+-   De homepage aangepast zodat ook Electrum Personal Server en BTC RPC Explorer genoemd worden.
 
 ## 1.5.0 - 2020 / december / 13
 

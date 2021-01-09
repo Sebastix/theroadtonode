@@ -17,6 +17,7 @@
 -   [Tor installatie](raspberry-pi/tor-installeren.md)
 -   [Monitoring](raspberry-pi/monitoring.md)
 -   [Algemene dependencies installeren](raspberry-pi/algemene-dependencies-installeren.md)
+-   [Port overzicht](raspberry-pi/port-overzicht.md)
 
 ## Bitcoin Core
 
@@ -45,6 +46,7 @@
 
 -   [LND Connect](lightning-extensies/lnd-connect.md)
 -   [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
+-   [Thunderhub](lightning-extensies/thunderhub.md)
 
 ## iOS
 
