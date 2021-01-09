@@ -27,4 +27,3 @@ Klik op "Paste" en Zap vult alles automatisch voor je in.
 ![Alles wordt automatisch ingevuld](../.gitbook/assets/img_4ea8cbfa09b2-1.jpeg)
 
 Druk op "Connect" en de connectie komt tot stand.
-
