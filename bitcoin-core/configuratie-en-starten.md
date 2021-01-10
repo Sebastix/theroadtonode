@@ -61,15 +61,15 @@ zmqpubrawblock=tcp://127.0.0.1:28332
 zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-Wacht even met gulzig op `control + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor voor maximale anonimiteit? Doe dan het volgende:
+Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor voor maximale anonimiteit? Doe dan het volgende:
 
-* Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
-* Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
-* Zet een `#` voor `onion=127.0.0.1:9050`. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
-* Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
-* Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
+-   Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
+-   Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
+-   Zet een `#` voor `onion=127.0.0.1:9050`. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
+-   Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
+-   Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
 
-Druk na alle veranderingen op `control + X` en daarna `Y` om op te slaan.
+Druk na alle veranderingen op `Ctrl + X` en daarna `Y` om op te slaan.
 
 ## Authenticatie
 
@@ -94,7 +94,7 @@ Wat staat hier? De eerste regel geeft aan dat we iets moeten toevoegen aan het `
 nano ~/.bitcoin/bitcoin.conf
 ```
 
-Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `control + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`. Sla dit wachtwoord dus op, je zal het later nodig hebben.
+Voeg onderaan het bestand de `rpcauth=user:salt$hash` regel toe, maar dan met alle cijfers en letters zoals het commando je gaf. Sla het op met `Ctrl + X` en bevestig met `Y`. We hebben nu aan bitcoind verteld dat de gebruiker genaamd `xxx` mag inloggen met het wachtwoord `sdflkashf93hfhalfhasdfjh3ejfhb=`. Sla dit wachtwoord dus op, je zal het later nodig hebben.
 
 Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aanmaken en toegang geven.
 
@@ -163,10 +163,10 @@ Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet 
 
 Hieraan zie je het volgende:
 
-* IPv4 is niet bereikbaar
-* IPv6 is niet bereikbaar
-* Onion is wel bereikbaar \(tor\)
-* Jouw onion-adres binnen het "localaddresses" blok
+-   IPv4 is niet bereikbaar
+-   IPv6 is niet bereikbaar
+-   Onion is wel bereikbaar \(tor\)
+-   Jouw onion-adres binnen het "localaddresses" blok
 
 Heb je zowel tor als clearnet aan staan, dan zal je output er zo uit zien:
 
@@ -210,9 +210,8 @@ Heb je zowel tor als clearnet aan staan, dan zal je output er zo uit zien:
 
 Hieraan zie je het volgende:
 
-* IPv4, IPv6 en onion \(tor\) zijn bereikbaar
-* Jouw IP-adres binnen het "localaddresses" blok
-* Jouw onion-adres binnen het "localaddresses" blok
+-   IPv4, IPv6 en onion \(tor\) zijn bereikbaar
+-   Jouw IP-adres binnen het "localaddresses" blok
+-   Jouw onion-adres binnen het "localaddresses" blok
 
 Wijkt jouw output af? Ga terug naar start.
-

@@ -26,7 +26,7 @@ HiddenServiceVersion 3
 HiddenServicePort 8332 127.0.0.1:8332
 ```
 
-Sla het bestand op met de toestencombinatie `control + X`. Geef `Y` als antwoord op de vraag of je op wil slaan.
+Sla het bestand op met de toestencombinatie `Ctrl + X`. Geef `Y` als antwoord op de vraag of je op wil slaan.
 
 Maak mappen aan met:
 
@@ -61,4 +61,3 @@ Met onderstaand commando krijg je het onion-adres terug van je Bitcoin node. Dit
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
 ```
-

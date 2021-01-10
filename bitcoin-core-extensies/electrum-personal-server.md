@@ -21,7 +21,7 @@ Check dat er in `bitcoin.conf` een regel staat `disablewallet = 0`.
 nano /home/pi/.bitcoin/bitcoin.conf
 ```
 
-Als dat nog niet het geval is voeg je deze toe, sla je het bestand op \(met `Ctrl-X`\) en herstart je de bitcoind service.
+Als dat nog niet het geval is voeg je deze toe, sla je het bestand op \(met `Ctrl + X`\) en herstart je de bitcoind service.
 
 ```bash
 sudo systemctl restart bitcoind
@@ -53,9 +53,9 @@ nano config.cfg
 
 Deze config-file bevat veel commentaar en tips wat je waar moet invullen. Kijk in ieder geval even naar de volgende secties:
 
-* `[master-public-keys]` — zoek in Electrum je xpub op via het menu `Wallet` &gt; `Information`
-* `[bitcoin-rpc]` — `datadir = /home/pi/.bitcoin`
-* `[electrum-server]` — kies hier voor `host = 0.0.0.0` \(ipv 127.0.0.1\)
+-   `[master-public-keys]` — zoek in Electrum je xpub op via het menu `Wallet` &gt; `Information`
+-   `[bitcoin-rpc]` — `datadir = /home/pi/.bitcoin`
+-   `[electrum-server]` — kies hier voor `host = 0.0.0.0` \(ipv 127.0.0.1\)
 
 {% hint style="info" %}
 let bij het laatste commando in onderstaand blokje op de punt \(.\) aan het einde van de regel
@@ -123,8 +123,8 @@ WantedBy=multi-user.target
 Sluit het bestand af en sla de wijzigingen op. Vervolgens de service inschakelen en starten.
 
 ```bash
-sudo systemctl enable eps.service
-sudo systemctl start eps.service
+sudo systemctl enable eps
+sudo systemctl start eps
 ```
 
 Je kunt de voortgang van het opstarten van EPS volgen door het log-bestand te bekijken:
@@ -148,4 +148,3 @@ Als alles goed is gegaan heb je rechtsonder in het venster van Electrum een groe
 2. Klik op de Console tab
 
 Hier zie je nu dat je bent verbonden met een EPS en jouw Bitcoin Node!
-
