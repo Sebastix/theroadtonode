@@ -8,8 +8,8 @@ Thunderhub is net als Ride The Lightning een beheertool voor jouw node. Bezoek [
 
 ### Benodigdheden
 
--   NPM of [Yarn](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#yarn)
--   [nodejs](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs)
+* NPM of [Yarn](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#yarn)
+* [nodejs](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs)
 
 ## Broncode
 
@@ -159,3 +159,4 @@ sudo journalctl -f -u thunderhub
 
 Ga naar `het ip adres van je Pi:4000` in je browser om Thunderhub te openen.  
 Gebruik het wachtwoord `password` om in te loggen tenzij je een ander wachtwoord hebt ingevuld in het `config.yaml` bestand.
+

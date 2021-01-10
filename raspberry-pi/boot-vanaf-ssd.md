@@ -102,7 +102,7 @@ Om te controleren of alles goed is gegaan moet je weer de Pi in SSH'en. Voer het
 vcgencmd bootloader_config
 ```
 
-Op de onderste regel moet staan **BOOT_ORDER=0xf41**. Als er **BOOT_ORDER=0x0** staat, heb je iets fout gedaan.
+Op de onderste regel moet staan **BOOT\_ORDER=0xf41**. Als er **BOOT\_ORDER=0x0** staat, heb je iets fout gedaan.
 
 ![](../.gitbook/assets/screenshot-2020-11-01-at-12.35.32.png)
 
@@ -133,3 +133,4 @@ Host key verification failed.
 ```
 
 Zoiets van gemakkelijk op te lossen door op je computer het commando `nano .ssh/known_hosts` in te voeren. In het scherm dat volgt staan bekende computers voor jouw computer. Verwijder de regel met het IP-adres van jouw Pi. Sla het bestand op met `Ctrl + X` en bevestig met `Y`. Je hebt nu tegen jouw computer gezegd dat hij de eerdere relatie met de Pi mag vergeten en een nieuwe relatie mag opbouwen.
+

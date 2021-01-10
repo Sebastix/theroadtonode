@@ -178,3 +178,4 @@ Als je output lijkt op het onderstaande ben je klaar!
     "version": "ElectrumX 1.15.0"
 }
 ```
+

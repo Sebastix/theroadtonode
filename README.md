@@ -1,7 +1,7 @@
 # Overzicht
 
 {% hint style="info" %}
-The Road to Node versie: 1.6.0  
+The Road to Node versie: 1.7.0  
 Bitcoin Core versie: 0.20.99  
 Lightning Network Daemon versie: 0.11.99  
 Tor versie: 0.3.5.10
@@ -47,7 +47,8 @@ Het Android gedeelte van de guide richt zich op apps voor het Android besturings
 
 Wil je ook iets toevoegen aan de guide? Dat kan! En graag zelfs. Om het zo gestroomlijnd mogelijk te maken, is er een flow bedacht:
 
--   Maak een issue aan op de [Github](https://github.com/bitdeal-nl/theroadtonode/issues) pagina. Het woord "issue" kun je hier wat breder interpreteren dan alleen "fouten" of "problemen". Een nieuwe feature kun je ook kenbaar maken middels een issue.
--   Zet het issue op jouw naam, zo pakt niet iemand anders het per ongeluk op.
--   Tak een branch af van `master`. Wil je iets verbeteren, begin je branchnaam dan met `hotfix/` gevolgd door TRTN \(The Road to Node\) en het issuenummer. Wil je een nieuwe feature toevoegen, begin je branchnaam dan met `feature/`. Voorbeelden: `feature/TRTN-022-sparrow-wallet` of `hotfix/TRTN-030-missende-instructie-bitcoin-installatie`.
--   Is je feature of hotfix klaar? Maak hem dan kenbaar middels een pull request. Koppel deze meteen aan de eerder aangemaakte issue.
+* Maak een issue aan op de [Github](https://github.com/bitdeal-nl/theroadtonode/issues) pagina. Het woord "issue" kun je hier wat breder interpreteren dan alleen "fouten" of "problemen". Een nieuwe feature kun je ook kenbaar maken middels een issue.
+* Zet het issue op jouw naam, zo pakt niet iemand anders het per ongeluk op.
+* Tak een branch af van `master`. Wil je iets verbeteren, begin je branchnaam dan met `hotfix/` gevolgd door TRTN \(The Road to Node\) en het issuenummer. Wil je een nieuwe feature toevoegen, begin je branchnaam dan met `feature/`. Voorbeelden: `feature/TRTN-022-sparrow-wallet` of `hotfix/TRTN-030-missende-instructie-bitcoin-installatie`.
+* Is je feature of hotfix klaar? Maak hem dan kenbaar middels een pull request. Koppel deze meteen aan de eerder aangemaakte issue.
+

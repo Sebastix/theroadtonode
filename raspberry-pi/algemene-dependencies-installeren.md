@@ -108,3 +108,4 @@ sudo apt update && sudo apt install yarn
 Controleer of Yarn is geïnstalleerd.
 
 \`\`\`bash yarn --version Verwachte output: 1.22.5
+
