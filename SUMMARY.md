@@ -38,7 +38,7 @@
   * [Thunderhub](lightning-extensies/thunderhub.md)
 * [Android](android/README.md)
   * [Zap](android/zap.md)
-* [IOS](ios/README.md)
+* [iOS](ios/README.md)
   * [Fully Noded](ios/fully-noded.md)
   * [Zap](ios/zap.md)
 * [Changelog](changelog-1.md)

@@ -1,4 +1,4 @@
-# IOS
+# iOS
 
 Onder iOS vallen de volgende twee hoofdstukken.
 
