@@ -155,8 +155,55 @@ Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 sudo journalctl -f -u thunderhub
 ```
 
-## Thunderhub gebruiken
+## Gebruiken
 
-Ga naar `het ip adres van je Pi:4000` in je browser om Thunderhub te openen.  
+Ga naar `http://[het ip adres van je Pi]:4000` in je browser om Thunderhub te openen.  
 Gebruik het wachtwoord `password` om in te loggen tenzij je een ander wachtwoord hebt ingevuld in het `config.yaml` bestand.
+
+## Updaten
+
+Stop de Thunderhub service.
+
+```bash
+sudo systemctl stop thunderhub
+```
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/thunderhub
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie / tag.
+
+```text
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.12.4
+```
+
+Installeer de software.
+
+```text
+npm install
+npm run build
+```
+
+Start de Thunderhub service.
+
+```bash
+sudo systemctl start thunderhub
+```
+
+Thunderhub is nu bijgewerkt!
 

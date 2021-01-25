@@ -1,10 +1,7 @@
 # Overzicht
 
 {% hint style="info" %}
-The Road to Node versie: 1.7.0  
-Bitcoin Core versie: 0.20.99  
-Lightning Network Daemon versie: 0.11.99  
-Tor versie: 0.3.5.10
+The Road to Node versie: 2.0.0
 
 Hulp nodig? Check [Telegram](https://t.me/theroadtonode).
 {% endhint %}

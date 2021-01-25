@@ -126,6 +126,18 @@ sudo systemctl start btc-rpc-explorer
 
 Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te zien of het werkt. Bijvoorbeeld `http://192.168.1.6:3002`.
 
+## Updaten
+
+Als er een nieuwe versie beschikbaar is voor BTC RPC Explorer, kun je eenvoudig updaten door de nieuwe source uit git op te halen en deze te installeren. Wel eerst even de service stoppen en naderhand weer starten zoals hieronder staat aangegeven.
+
+```text
+sudo systemctl stop btc-rpc-explorer
+cd ~/btc-rpc-explorer
+git pull
+npm install
+sudo systemctl start btc-rpc-explorer
+```
+
 ## Tor
 
 De service kun je ook beschikbaar maken via tor. Alleerst passen we de tor configuratie aan om een nieuwe hidden service te maken.
