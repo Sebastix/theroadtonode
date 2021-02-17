@@ -32,6 +32,7 @@
   * [Configuratie](lightning/configuratie.md)
   * [Starten en CLI](lightning/starten-en-cli.md)
   * [Automatisering](lightning/automatisering.md)
+  * [Updaten](lightning/updaten.md)  
 * [Lightning Extensies](lightning-extensies/README.md)
   * [LND Connect](lightning-extensies/lnd-connect.md)
   * [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
