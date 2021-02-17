@@ -58,6 +58,10 @@ sudo systemctl restart tor
 
 Met onderstaand commando krijg je het onion-adres terug van je Bitcoin node. Dit adres heb je later nodig als je wil communiceren met je node via het tor netwerk. In vervolg onderdelen van de guide \(zoals tijdens het opzetten van Lightning\) zul je een soortgelijk commando moeten invoeren.
 
+{% hint style="info" %}
+Dit onion-adres maakt het mogelijk om vanaf buitenaf bepaalde commando's uit te voeren op je node. Dit adres is niet gelijk aan [het adres](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) dat bitcoind gebruikt om met andere nodes te communiceren!
+{% endhint %}
+
 ```bash
 sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
 ```

@@ -1,7 +1,7 @@
 # Overzicht
 
 {% hint style="info" %}
-The Road to Node versie: 2.0.0
+The Road to Node versie: 2.0.1
 
 Hulp nodig? Check [Telegram](https://t.me/theroadtonode).
 {% endhint %}

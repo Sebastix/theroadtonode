@@ -46,12 +46,14 @@ dbcache=3000
 # Wil je jouw node enkel op tor en maximale anonimiteit? Doe dan het volgende:
 # - Haal # weg voor onlynet=onion. Je zegt hiermee dat alleen tor toegestaan is.
 # - Haal # weg voor proxy=127.0.0.1:9050. Je zegt hiermee dat alles via tor moet lopen.
+# - Haal # weg voor bind=127.0.0.1.
 # - Zet # voor onion=127.0.0.1:9050. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
 # - Zet # voor discover=1. Je zet hiermee de discover functie uit.
 # - Zet # voor upnp=1. Je zet hiermee de UPnP functie uit.
 
-# onlynet=onion
-# proxy=127.0.0.1:9050
+#onlynet=onion
+#proxy=127.0.0.1:9050
+#bind=127.0.0.1
 onion=127.0.0.1:9050
 discover=1
 upnp=1
@@ -65,6 +67,7 @@ Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node
 
 * Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
 * Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
+* Haal de `#` weg voor `bind=127.0.0.1`.
 * Zet een `#` voor `onion=127.0.0.1:9050`. Je hebt immers met proxy aangegeven dat ALLES via tor moet.
 * Zet een `#` voor `discover=1`. Je zet hiermee de discover functie uit.
 * Zet een `#` voor `upnp=1`. Je zet hiermee de UPnP functie uit.
@@ -127,6 +130,10 @@ bitcoin-cli getnetworkinfo
 ```
 
 Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet het er ongeveer zo uit als je enkel van tor gebruik maakt.
+
+{% hint style="info" %}
+Het onion-adres wijkt af van het adres dat je in [de vorige stap](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) hebt aangemaakt! Dat is goed. Het onion-adres uit de vorige stap is enkel voor het uitvoeren van commando's op je node van buitenaf en gaat over port 8332. Het onderstaande onion-adres wordt door bitcoind zelf aangemaakt en gaat over port 8333. Dit wordt gebruikt om met andere nodes te communiceren.
+{% endhint %}
 
 ```javascript
 "networks": [

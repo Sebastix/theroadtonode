@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.1 - 2021 / februari / 17
+
+### Verbeteringen
+
+* Bitcoin [configuratie bestand](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#configuratie) aangepast met betrekking tot tor.
+* Verduidelijking wat het RPC [onion-adres](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) doet voor bitcoind.
+* Verduidelijking toegevoegd omtrent het onion-adres dat bitcoind [zelf genereert](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#instellingen-checken).
+
 ## 2.0.0 - 2021 / januari / 25
 
 ### Toevoegingen
