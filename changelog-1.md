@@ -2,6 +2,10 @@
 
 ## 2.0.1 - 2021 / februari / 17
 
+### Toevoegingen
+
+* [Updaten van LND](https://docs.theroadtonode.com/lightning/updaten) \(Lightning\) \(Dirk\)
+
 ### Verbeteringen
 
 * Bitcoin [configuratie bestand](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#configuratie) aangepast met betrekking tot tor.
