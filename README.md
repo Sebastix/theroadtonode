@@ -14,7 +14,7 @@ In het introductie onderdeel vind je informatie over het [doel en de waarom](htt
 
 ### Raspberry Pi
 
-De Raspberry Pi is een mini computer waar je de leukste dingen mee kunt. Maar om er gebruik van je maken, moet je hem eerst [aansluiten](https://node.bitdeal.nl/raspberry-pi/hardware-aansluiten) en een [besturingssysteem op knallen](https://node.bitdeal.nl/raspberry-pi/software-flashen). Ook wil je natuurlijk [de beste prestaties](https://node.bitdeal.nl/raspberry-pi/boot-vanaf-ssd) uit je Pi halen. Als je interesse hebt in het anoniem gebruiken van Bitcoin, dan kan dat met [Tor](https://node.bitdeal.nl/raspberry-pi/tor).
+De Raspberry Pi is een mini computer waar je de leukste dingen mee kunt. Maar om er gebruik van je maken, moet je hem eerst [aansluiten](https://node.bitdeal.nl/raspberry-pi/hardware-aansluiten) en er een [besturingssysteem op knallen](https://node.bitdeal.nl/raspberry-pi/software-flashen). Ook wil je natuurlijk [de beste prestaties](https://node.bitdeal.nl/raspberry-pi/boot-vanaf-ssd) uit je Pi halen. Als je interesse hebt in het anoniem gebruiken van Bitcoin, dan kan dat met [Tor](https://node.bitdeal.nl/raspberry-pi/tor).
 
 ### Bitcoin Core
 
