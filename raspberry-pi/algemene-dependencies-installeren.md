@@ -12,7 +12,7 @@ Om niet in herhaling te vallen door in ieder onderdeel te benoemen hoe een afhan
 
 Golang \(Go\) is een programmeertaal ontwikkeld door Google. Het is een vrij jonge taal uitgebracht in 2009. De lightning implementatie genaamd LND is hierop gebouwd. Aangezien we LND zelf gaan compilen, hebben we Go nodig.
 
-### Oude Go versie verwijderen \(optioneel\)
+### Oude versie verwijderen \(optioneel\)
 
 Dit deel is alleen nodig als je Go al een keer geïnstalleerd had op je Pi middels `sudo apt install`. De versie die je op die manier hebt geïnstalleerd dient eerst te worden verwijderd.
 
@@ -28,21 +28,31 @@ sudo apt autoremove golang-go
 sudo apt purge golang-go
 ```
 
-### Nieuwe Go versie installeren
+### Installeren
 
 Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.15.6](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download.
 
 ```bash
-wget https://golang.org/dl/go1.15.6.linux-armv6l.tar.gz
+wget https://golang.org/dl/go1.16.2.linux-armv6l.tar.gz
 ```
 
 ```bash
-sudo tar -C /usr/local -xzf go1.15.6.linux-armv6l.tar.gz
+sudo tar -C /usr/local -xzf go1.16.2.linux-armv6l.tar.gz
 ```
 
 ```bash
-rm go1.15.6.linux-armv6l.tar.gz
+rm go1.16.2.linux-armv6l.tar.gz
 ```
+
+### Updaten
+
+Voordat je kunt updaten dien je de oude versie te verwijderen. Dat doe je met dit commando:
+
+```bash
+sudo rm -rf /usr/local/go
+```
+
+Zodra je de oude versie verwijderd hebt, kun je de drie commando's [onder het vorige kopje](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#installeren) uitvoeren.
 
 ### Referencies updaten
 
@@ -72,7 +82,7 @@ Om zeker van de te zijn dat alles werkt log je uit met "exit" en start je een ni
 go version
 ```
 
-Als het goed is zie je `go version go1.15.6 linux/arm` verschijnen.
+Als het goed is zie je `go version go1.16.2 linux/arm` verschijnen.
 
 ## NodeJS
 
