@@ -1,6 +1,6 @@
 # LND Connect
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Om een of andere reden werkt het binnenhalen aan de hand van het `go get` commando niet. Er wordt naar een oplossing gezocht.
 {% endhint %}
 
