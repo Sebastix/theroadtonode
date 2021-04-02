@@ -10,7 +10,7 @@ Tor heeft een paar aanpassingen nodig zodat jij van buitenaf met LND kan communi
 sudo nano /etc/tor/torrc
 ```
 
-In het torrc bestand zijn we [eerder geweest](https://node.bitdeal.nl/bitcoin-core/tor-aanpassen). Voeg de volgende regels toe aan hetgeen dat er al staat.
+In het torrc bestand zijn we [eerder geweest](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen). Voeg de volgende regels toe aan hetgeen dat er al staat.
 
 ```text
 SOCKSPort 9050
@@ -75,4 +75,3 @@ sudo cat /var/lib/tor/lightning/rest/hostname
 ```bash
 sudo cat /var/lib/tor/lightning/rpc/hostname
 ```
-

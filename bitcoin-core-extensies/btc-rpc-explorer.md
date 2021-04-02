@@ -9,7 +9,7 @@ Een eigen block explorer helpt je privacy omdat je nu geen publieke block explor
 De Block Explorer die we gaan gebruiken is [BTC RPC Explorer](https://github.com/janoside/btc-rpc-explorer) van Dan Janosik.
 
 {% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
+Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
 {% endhint %}
 
 ## Voorbereiding
@@ -22,7 +22,7 @@ Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te
 
 ### Full node
 
-Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://node.bitdeal.nl/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
+Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://docs.theroadtonode.com/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
 
 ### Transactieindex
 
@@ -32,12 +32,20 @@ Login op je Pi en open het bitcoin configuratiebestand.
 nano /home/pi/.bitcoin/bitcoin.conf
 ```
 
-Controleer of er een regel `txindex = 1` in voorkomt. Zo niet, voeg deze dan toe en sla je wijzigingen op met `Ctrl + X` gevolgd door `Y`.
+Controleer of de regel `txindex=1` erin voorkomt. Zo niet, voeg deze dan toe en sla je wijzigingen op met `Ctrl + X` gevolgd door `Y`.
 
 Herstart vervolgens `bitcoind`.
 
 ```bash
 sudo systemctl restart bitcoind
+```
+
+## Firewall
+
+Ook hier dient de firewall geüpdate te worden. De port waarover BTC RPC Explorer zich toont is 3002.
+
+```bash
+sudo ufw allow 3002
 ```
 
 ## Installatie
@@ -87,7 +95,7 @@ BTCEXP_PRIVACY_MODE=true
 
 Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
-## Service
+## Automatisering
 
 Zorg er nu voor dat de BTC-RPC-Explorer automatisch start en draait als een service wanneer je Pi opnieuw opstart.
 
@@ -119,6 +127,8 @@ WantedBy=multi-user.target
 
 Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
+Met de volgende twee commando's activeer en start je de service.
+
 ```bash
 sudo systemctl enable btc-rpc-explorer
 sudo systemctl start btc-rpc-explorer
@@ -140,7 +150,7 @@ sudo systemctl start btc-rpc-explorer
 
 ## Tor
 
-De service kun je ook beschikbaar maken via tor. Alleerst passen we de tor configuratie aan om een nieuwe hidden service te maken.
+De service kun je ook beschikbaar maken via tor. Allereerst passen we de tor configuratie aan om een nieuwe hidden service te maken.
 
 ```bash
 sudo nano /etc/tor/torrc
@@ -151,12 +161,10 @@ In het bestand dat zich opent voeg je onderaan de volgende drie regels toe.
 ```bash
 HiddenServiceDir /var/lib/tor/btc-rpc-explorer
 HiddenServiceVersion 3
-HiddenServicePort 80 IP-ADRES VAN JE PI:3002
+HiddenServicePort 80 127.0.0.1:3002
 ```
 
-In de bovenstaande tekst zie je IP-ADRES VAN JE PI staan. Dit is iets wat je zelf moet invullen. De regel zou op `HiddenServicePort 80 192.168.1.6:3002` moeten lijken.
-
-Nadat tor is geconfigureerd moeten we de juiste mappen aanmaken.
+Nadat tor is geconfigureerd moeten we de juiste mappen aanmaken en rechten toekennen.
 
 ```bash
 sudo mkdir /var/lib/tor/btc-rpc-explorer
@@ -180,7 +188,7 @@ Vul deze \(zonder portnummer\) in in je tor browser. De BTC RPC Explorer homepag
 
 ## Koppeling met Electrum X
 
-Als je de [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
+Als je de [Electrum X](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
 
 ```bash
 nano ~/btc-rpc-explorer/.env
@@ -198,4 +206,3 @@ Herstart de service om de nieuwe configuratie van kracht te laten zijn.
 ```bash
 sudo systemctl restart btc-rpc-explorer
 ```
-

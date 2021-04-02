@@ -8,8 +8,8 @@ Thunderhub is net als Ride The Lightning een beheertool voor jouw node. Bezoek [
 
 ### Benodigdheden
 
-* NPM of [Yarn](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#yarn)
-* [nodejs](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs)
+-   NPM of [Yarn](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#yarn)
+-   [nodejs](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs)
 
 ## Broncode
 
@@ -101,6 +101,16 @@ Als je de app met Yarn wilt installeren, voer dan het volgende uit:
 ```bash
 yarn build
 ```
+
+## Firewall
+
+Zet port 4000 open.
+
+```bash
+sudo ufw allow 4000
+```
+
+Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 4000 op je router opengooien en verkeer doorsturen naar je Pi.
 
 ## Automatiseren
 
@@ -206,4 +216,3 @@ sudo systemctl start thunderhub
 ```
 
 Thunderhub is nu bijgewerkt!
-

@@ -4,7 +4,7 @@ description: Een Bitcoin node is helaas niet gratis
 
 # Benodigdheden
 
-Laten we even opsommen wat er bij een node komt kijken. Je hebt verschillende opties welke het eindbedrag beïnvloeden. Ondanks dat we het over enkele tientjes hebben, wil ik ze toch benoemen.
+Laten we even opsommen wat er bij een node komt kijken. Je hebt verschillende opties welke het eindbedrag beïnvloeden. Ondanks dat we het over enkele tientjes hebben, is het toch handig ze te benoemen.
 
 | Onderdeel | Prijs |
 | :--- | ---: |

@@ -16,7 +16,7 @@ Op de tweede terminal gaan we een wallet aanmaken. Typ:
 lncli create
 ```
 
-Je komt een proces in waarbij je een wachtwoord moet opgeven van minimaal 8 karakters lang. Je krijgt de vraag of je een bestaande seed hebt. Kies `N` \(of `Y` als je een seed wil invoeren\). Hierna krijg je de vraag of je de seed wil versleutelen met een wachtwoord. Ik zou het wel doen. Tot slot krijg je de seed te zien. Sla hem goed op, maar dat wordt ook duidelijk vermeld in de terminal.
+Je komt een proces in waarbij je een wachtwoord moet opgeven van minimaal 8 karakters lang. Je krijgt de vraag of je een bestaande seed hebt. Kies `N` \(of `Y` als je een seed wil invoeren\). Hierna krijg je de vraag of je de seed wil versleutelen met een wachtwoord. Gewoon doen 😉 Tot slot krijg je de seed te zien. Sla hem goed op, maar dat wordt ook duidelijk vermeld in de terminal.
 
 Nadat je een wallet geïnitialiseerd hebt, zal op het eerste terminal scherm meer tekst verschijnen.
 
