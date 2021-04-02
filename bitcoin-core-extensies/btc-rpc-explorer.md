@@ -9,7 +9,7 @@ Een eigen block explorer helpt je privacy omdat je nu geen publieke block explor
 De Block Explorer die we gaan gebruiken is [BTC RPC Explorer](https://github.com/janoside/btc-rpc-explorer) van Dan Janosik.
 
 {% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
+Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
 {% endhint %}
 
 ## Voorbereiding
@@ -22,7 +22,7 @@ Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te
 
 ### Full node
 
-Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://node.bitdeal.nl/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
+Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://docs.theroadtonode.com/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
 
 ### Transactieindex
 
@@ -188,7 +188,7 @@ Vul deze \(zonder portnummer\) in in je tor browser. De BTC RPC Explorer homepag
 
 ## Koppeling met Electrum X
 
-Als je de [Electrum X](https://node.bitdeal.nl/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
+Als je de [Electrum X](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
 
 ```bash
 nano ~/btc-rpc-explorer/.env
@@ -206,4 +206,3 @@ Herstart de service om de nieuwe configuratie van kracht te laten zijn.
 ```bash
 sudo systemctl restart btc-rpc-explorer
 ```
-

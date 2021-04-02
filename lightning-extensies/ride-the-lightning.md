@@ -7,7 +7,7 @@ Tijd: 15 minuten
 De Lightnig Network CLI \(lncli\) is wel geinig, maar niet heel praktisch. Daarom gaan we Ride The Lightning \(RTL\) installeren. Een gebruiksvriendelijk voorkantje voor LND.
 
 {% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
+Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
 {% endhint %}
 
 ## Installatie
@@ -73,7 +73,7 @@ Plak er dit in.
 }
 ```
 
-Vul bij `JOUW_ALIAS` de [alias](https://node.bitdeal.nl/lightning/configuratie) van jouw Lightning node in. Sla het op met `Ctrl + X` en bevestig met `Y`.
+Vul bij `JOUW_ALIAS` de [alias](https://docs.theroadtonode.com/lightning/configuratie) van jouw Lightning node in. Sla het op met `Ctrl + X` en bevestig met `Y`.
 
 ## Firewall
 
@@ -141,4 +141,3 @@ Ga via je favoriete browser naar `het ip adres van je Pi:3000`. Bij mij is dat 1
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
-

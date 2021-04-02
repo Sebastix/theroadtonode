@@ -7,7 +7,7 @@ Tijd: 5 minuten
 [Lighting Network Daemon](https://github.com/lightningnetwork/lnd#lightning-network-daemon) \(LND\) is een implementatie van het Lightning Network protocol. Het is een tweede laag op Bitcoin, waarbij bitcoind \(of software equivalent\) de eerste laag vormt. Maar als je LND wil installeren dan wist je dat waarschijnlijk al.
 
 {% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [Golang installatie](https://node.bitdeal.nl/raspberry-pi/algemene-dependencies-installeren#golang). Je kunt niet verder als je Golang niet geinstalleerd hebt op de Raspberry Pi.
+Let op: dit onderdeel is afhankelijk van de [Golang installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#golang). Je kunt niet verder als je Golang niet geinstalleerd hebt op de Raspberry Pi.
 {% endhint %}
 
 Zorg dat je in de home directory bent.
@@ -33,4 +33,3 @@ En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later ge
 ```bash
 make install tags="signrpc walletrpc chainrpc invoicesrpc"
 ```
-
