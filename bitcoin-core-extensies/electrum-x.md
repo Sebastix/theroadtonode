@@ -93,7 +93,18 @@ SERVICES=tcp://:50001,ssl://:50002,wss://:50004,rpc://
 
 Voordat je het opslaat moet je een tweetal aanpassingen maken. Vul op de plekken `USERNAME` en `PASSWORD` de gebruikersnaam-wachtwoord combinatie die je hebt aangemaakt in het [authenticatie deel van de Bitcoin Core configuratie](https://node.bitdeal.nl/bitcoin-core/configuratie-en-starten#authenticatie). Zodra alles goed staat kun je het bestand opslaan met `Ctrl + X` en bevestigen met `Y`.
 
-## Automatisatie
+## Firewall en router
+
+In principe kun je [BTC RPC Explorer](https://docs.theroadtonode.com/bitcoin-core-extensies/btc-rpc-explorer#koppeling-met-electrum-x) direct aansluiten op Electrum X. Hier hoef je geen ports voor open te zetten, aangezien lokale connectie \(dus van de Pi naar de Pi\) altijd worden toegestaan. Wil je echter gebruik maken van Electrum X in een app zoals BlueWallet, dan dien je de volgende commando's uit te voeren om twee ports open te zetten.
+
+```bash
+sudo ufw allow 50001
+sudo ufw allow 50002
+```
+
+Wil je van buiten je netwerk Electrum X als backend gebruiken, dan moet je dezelfde ports open gooien op je router en doorlussen naar je Pi.
+
+## Automatisering
 
 Electrum X wil je altijd op de achtergrond hebben draaien. Daarom gaan we het opstarten automatiseren middels een service. Maak een service aan.
 

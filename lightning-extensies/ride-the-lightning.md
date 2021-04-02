@@ -75,6 +75,16 @@ Plak er dit in.
 
 Vul bij `JOUW_ALIAS` de [alias](https://node.bitdeal.nl/lightning/configuratie) van jouw Lightning node in. Sla het op met `Ctrl + X` en bevestig met `Y`.
 
+## Firewall
+
+Zet port 3000 open.
+
+```bash
+sudo ufw allow 3000
+```
+
+Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 3000 op je router opengooien en verkeer doorsturen naar je Pi.
+
 ## Automatiseren
 
 ```bash

@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.1.0 - 2021 / maart / 31
+
+### Toevoegingen
+
+* Uncomplicated Firewall 🧱
+* Lightning Terminal ⚡️ \(Lightning Extensies\) \(Sebas en Lex\)
+
+### Verbeteringen
+
+* [Electrum Personal Server](https://github.com/bitdeal-nl/theroadtonode/pull/70) verbeteringen \(Bitcoin Core Extensies\) \(Dirk\)
+* Overal UFW aan toegevoegd.
+
+### Aanpassingen
+
+* De "ik"-vorm verwijderd uit de guide.
+* Alle URL's veranderd naar "docs.theroadtonode.com".
+
 ## 2.0.1 - 2021 / februari / 17
 
 ### Toevoegingen

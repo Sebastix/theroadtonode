@@ -8,7 +8,7 @@ description: Als dit je niet lukt zou je niet mogen stemmen
 Tijd: 15 minuten
 {% endhint %}
 
-De simpelste taak van de guide: het aansluiten van de hardware. Hier heb je de Raspberry Pi en heatsink nodig. Als je hebt gekozen voor de heatsink uit het [boodschappenlijstje](https://node.bitdeal.nl/introductie/benodigdheden), heb ik wel nog een tip voor je. Bij de heatsink wordt warmtegeleidende pasta geleverd in de vorm van dubbelzijdig tape. Als je niet heel erg thuis bent in het bouwen van computers, kan het zijn dat je hier geen raad mee weet. Plak de thermische tape als volgt.
+De simpelste taak van de guide: het aansluiten van de hardware. Hier heb je de Raspberry Pi en heatsink nodig. Als je hebt gekozen voor de heatsink uit het [boodschappenlijstje](https://node.bitdeal.nl/introductie/benodigdheden), is er nog een tip voor je: bij de heatsink wordt **warmtegeleidende pasta** geleverd in de vorm van dubbelzijdig tape. Als je niet heel erg thuis bent in het bouwen van computers, kan het zijn dat je hier geen raad mee weet. Plak de thermische tape als volgt.
 
 ![Raspberry Pi met thermische tape](../.gitbook/assets/paste-copy.png)
 

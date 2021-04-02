@@ -28,9 +28,9 @@ Ga de LND map in.
 cd lnd
 ```
 
-En installeer LND.
+En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later gebruik willen maken van [Lightning Terminal](https://docs.theroadtonode.com/lightning-extensies/lightning-terminal).
 
 ```bash
-make install
+make install tags="signrpc walletrpc chainrpc invoicesrpc"
 ```
 

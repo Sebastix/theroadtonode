@@ -4,7 +4,7 @@ description: "Omdat we financieel soeverein willen zijn \U0001F4AA"
 
 # Doel en waarom
 
-Bitcoin is een geweldige technologie. Een netwerk bestaande uit computers die ieder [een stukje code](https://github.com/bitcoin/bitcoin) draaien. De computers die meedoen in het netwerk noemen we nodes en zorgen samen voor het bestaan van Bitcoin. Echter, niet iedere Bitcoin gebruiker heeft een node. Velen worden al vermoeid bij de gedachte van het opzetten van zo'n ding. Daar wil ik met deze guide verandering in brengen. Om de guide te volgen heb je het volgende nodig:
+Bitcoin is een geweldige technologie. Een netwerk bestaande uit computers die ieder [een stukje code](https://github.com/bitcoin/bitcoin) draaien. De computers die meedoen in het netwerk noemen we nodes en zorgen samen voor het bestaan van Bitcoin. Echter, niet iedere Bitcoin gebruiker heeft een node. Velen worden al vermoeid bij de gedachte van het opzetten van zo'n ding. Daar moet deze guide verandering in brengen. Om de guide te volgen heb je het volgende nodig:
 
 * **interesse**, zonder interesse kom je niet heel ver;
 * **tijd**, bij ieder onderdeel van de guide staat aangegeven hoeveel tijd het in beslag neemt;

@@ -6,9 +6,9 @@ Backup eerst voor de zekerheid je channels via Ride The Lightning, Thunderhub of
 
 ### RTL
 
-* Ga naar je RTL dashboard op bijvoorbeeld 192.168.1.6:3000. 
-* Kies voor Backups onder Lightning
-* Klik op Backup All
+* Ga naar je RTL dashboard op bijvoorbeeld `192.168.1.6:3000`. 
+* Kies voor "Backups" onder "Lightning"
+* Klik op "Backup All"
 
 Nu staat er in `/home/pi/RTL/backup/node-1/` een bestand dat `channel-all.bak` heet.
 
@@ -17,7 +17,6 @@ Nu staat er in `/home/pi/RTL/backup/node-1/` een bestand dat `channel-all.bak` h
 Stop nu de services die afhankelijk zijn van LND zoals Ride The Lightning of Thunderhub en LND zelf.
 
 ```bash
-sudo systemctl stop rtl
 sudo systemctl stop lnd
 ```
 
@@ -45,12 +44,12 @@ git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.12.0-beta
 Installeer nu de software.
 
 ```bash
-make install
+make install tags="signrpc walletrpc chainrpc invoicesrpc"
 ```
 
 ## Start de services
 
-Start de service lnd en monitor de voortgang van het opstarten. Wees geduldig dit kan even duren.
+Start de service `lnd` en monitor de voortgang van het opstarten. Wees geduldig dit kan even duren.
 
 ```bash
 sudo systemctl start lnd
@@ -71,13 +70,7 @@ Check de huidige versie van LND.
 lncli --version
 ```
 
-De output zal lijken op `lncli version 0.12.0-beta commit=v0.12.0-beta`
+De output zal lijken op `lncli version 0.12.1-beta commit=v0.12.1-beta`
 
-LND is nu bijgewerkt!
-
-Start de andere services die afhankelijk zijn van LND zoals RTL of Thunderhub.
-
-```bash
-sudo systemctl start rtl
-```
+LND is nu bijgewerkt! Start nu de andere services die afhankelijk zijn van LND zoals RTL of Thunderhub.
 

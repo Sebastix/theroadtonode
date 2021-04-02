@@ -102,6 +102,16 @@ Als je de app met Yarn wilt installeren, voer dan het volgende uit:
 yarn build
 ```
 
+## Firewall
+
+Zet port 4000 open.
+
+```bash
+sudo ufw allow 4000
+```
+
+Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 4000 op je router opengooien en verkeer doorsturen naar je Pi.
+
 ## Automatiseren
 
 Hoe laat je Thunderhub automatisch opstarten?  
