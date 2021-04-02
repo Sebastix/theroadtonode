@@ -20,7 +20,7 @@ Een demo video kun je [hier](https://lightning.engineering/static/terminal-2c00f
 
 ### Benodigdheden
 
-* [Golang](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#golang)
+* [Golang](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#golang) **\(update naar de nieuwste versie voordat je begint\)**
 * [NodeJS](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs)
 * [Yarn](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#yarn)
 * Minimaal 250.000 sats per kanaal om gebruik te kunnen maken van Loop
