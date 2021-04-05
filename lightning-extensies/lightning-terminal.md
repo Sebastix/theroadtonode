@@ -438,7 +438,7 @@ Wants=lit.service
 After=lit.service
 ```
 
-Sla de wijzigingen op met `Ctrl + C` en bevestig met `Y`.
+Sla de wijzigingen op met `Ctrl + X` en bevestig met `Y`.
 
 #### Thunderhub service updaten
 
