@@ -322,6 +322,7 @@ lnd.listen=127.0.0.1:9735
 lnd.maxpendingchannels=5
 lnd.color=ZELF_VERZINNEN_A
 lnd.alias=ZELF_VERZINNEN_B
+lnd.lnddir=~/.lnd
 
 # LND - Tor
 lnd.tor.active=true
