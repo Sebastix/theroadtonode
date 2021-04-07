@@ -206,4 +206,3 @@ Herstart de service om de nieuwe configuratie van kracht te laten zijn.
 ```bash
 sudo systemctl restart btc-rpc-explorer
 ```
-

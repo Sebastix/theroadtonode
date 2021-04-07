@@ -17,4 +17,3 @@ Nadat je alles in elkaar hebt geschroefd, kun je de ventilatoren aansluiten op d
 ![Raspberry Pi met heatsink](../.gitbook/assets/aangesloten.png)
 
 Tijdens het synchroniseren van de Bitcoin blockchain is met deze opzet de temperatuur van de CPU niet boven de 47 graden gekomen.
-
