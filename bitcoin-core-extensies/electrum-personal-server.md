@@ -88,7 +88,7 @@ Electrum Personal Server is nu geïnstalleerd \(in ~/.local/bin\) en klaar om vo
 Nu moet EPS de blockchain scannen op zoek naar adressen en transacties horend bij de xpubs die je in de `config.cfg` hebt opgenomen. Als er wordt gevraagd naar de startdatum is het handig dat je de datum opgeeft van de eerste transactie naar een adres horend bij die wallet. Dan hoeft EPS geen blokken te scannen waar toch geen transacties in staan die horen bij jouw xpub.
 
 ```bash
-~/.local/bin/electrum-personal-server-rescan ~/.eps/config.cfg
+~/.local/bin/electrum-personal-server --rescan ~/.eps/config.cfg
 ```
 
 Je kunt de voorgang monitoren door de log-file van bitcoin in de gaten te houden via een tweede Putty venster:
