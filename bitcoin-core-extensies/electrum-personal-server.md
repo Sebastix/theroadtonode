@@ -94,7 +94,7 @@ Nu moet EPS de blockchain scannen op zoek naar adressen en transacties horend bi
 Je kunt de voorgang monitoren door de log-file van bitcoin in de gaten te houden via een tweede Putty venster:
 
 ```bash
-sudo tail -f -n 200 /home/pi/.bitcoin/bitcoin/debug.log
+sudo tail -f -n 200 /home/pi/.bitcoin/debug.log
 ```
 
 Als deze klaar is start je EPS nog een keer.
