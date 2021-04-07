@@ -33,3 +33,4 @@ En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later ge
 ```bash
 make install tags="signrpc walletrpc chainrpc invoicesrpc"
 ```
+

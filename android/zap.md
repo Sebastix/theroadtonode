@@ -47,3 +47,4 @@ Je krijgt nu een melding dat je verbonden bent met MAINNET met echte Bitcoin! Ta
 Je bent nu verbonden met je eigen Node.
 
 Via `Beheer...` kun je naam van je wallet aanpassen. Standaard krijgt die de naam van je Tor-adres namelijk.
+

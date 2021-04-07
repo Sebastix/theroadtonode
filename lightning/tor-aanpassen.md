@@ -75,3 +75,4 @@ sudo cat /var/lib/tor/lightning/rest/hostname
 ```bash
 sudo cat /var/lib/tor/lightning/rpc/hostname
 ```
+
