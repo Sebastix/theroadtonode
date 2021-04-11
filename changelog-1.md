@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.2.0 - 2021 / april / xx
+
+### Toevoegingen
+
+* Pagina met uitleg van commando's \(Dennis\)
+
+### Verbeteringen
+
+* Installeer een specifieke versie van LND.
+
+### Aanpassingen
+
+* ddd
+
 ## 2.1.0 - 2021 / april / 02
 
 ### Toevoegingen
