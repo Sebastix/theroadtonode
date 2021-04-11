@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.0 - 2021 / april / xx
+## 2.2.0 - 2021 / april / 11
 
 ### Toevoegingen
 
@@ -12,7 +12,7 @@
 
 ### Aanpassingen
 
-* ddd
+* [Verschillende](https://github.com/bitdeal-nl/theroadtonode/pull/74) [fixes](https://github.com/bitdeal-nl/theroadtonode/pull/76) door heel de guide \(Wim\)
 
 ## 2.1.0 - 2021 / april / 02
 
