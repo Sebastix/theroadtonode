@@ -12,7 +12,7 @@ Update de repository met de laatste wijzigingen via Git.
 git fetch --all
 ```
 
-Toon de laatste versie / tag.
+Toon de laatste versie/tag/release.
 
 ```text
 git describe --tags `git rev-list --tags --max-count=1`

@@ -5,10 +5,12 @@
 ### Toevoegingen
 
 * Pagina met uitleg van commando's \(Dennis\)
+* [Electrum X updaten](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x#updaten) \(Bitcoin Core Extensies\)
+* [Ride the Lightning updaten](https://docs.theroadtonode.com/lightning-extensies/ride-the-lightning#updaten) \(Lightning Extensies\)
 
 ### Verbeteringen
 
-* Installeer een specifieke versie van LND.
+* Installeer een specifieke versie van LND \(Lightning\)
 
 ### Aanpassingen
 

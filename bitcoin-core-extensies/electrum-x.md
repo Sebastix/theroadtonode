@@ -186,6 +186,53 @@ Als je output lijkt op het onderstaande ben je klaar!
     "tx hashes cache": "0 lookups 0 hits 0 entries",
     "txs sent": 0,
     "uptime": "21d 01h 08m",
-    "version": "ElectrumX 1.15.0"
+    "version": "ElectrumX 1.16.0"
 }
 ```
+
+## Updaten
+
+Stop de Electrum X service.
+
+```bash
+sudo systemctl stop electrumx
+```
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/electrumx
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```text
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld 1.16.0
+```
+
+Installeer de software.
+
+```text
+sudo python3 setup.py install
+```
+
+Start de Electrum X service.
+
+```bash
+sudo systemctl start electrumx
+```
+
+Electrum X is nu bijgewerkt!
+

@@ -138,6 +138,53 @@ sudo journalctl -f -u rtl
 
 Ga via je favoriete browser naar `het ip adres van je Pi:3000`. Bij mij is dat 192.168.1.6:3000. De RTL interface zal verschijnen en vragen om een wachtwoord. Het standaard wachtwoord is "password". Na de eerste keer inloggen mag je zelf een wachtwoord instellen. Mocht LND net opgestart zijn, zal RTL ook vragen om dát wachtwoord.
 
+## Updaten
+
+Stop de RTL service.
+
+```bash
+sudo systemctl stop rtl
+```
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/RTL
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```text
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.10.1
+```
+
+Installeer de software.
+
+```text
+npm install --only=prod
+```
+
+Start de RTL service.
+
+```bash
+sudo systemctl start rtl
+```
+
+RTL is nu bijgewerkt!
+
 ## Bereikbaar over Tor
 
 Dit blijkt ietwat lastig te zijn. Meer info volgt.
+

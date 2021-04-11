@@ -8,8 +8,8 @@ Thunderhub is net als Ride The Lightning een beheertool voor jouw node. Bezoek [
 
 ### Benodigdheden
 
--   NPM of [Yarn](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#yarn)
--   [nodejs](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs)
+* NPM of [Yarn](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#yarn)
+* [nodejs](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs)
 
 ## Broncode
 
@@ -190,7 +190,7 @@ Update de repository met de laatste wijzigingen via Git.
 git fetch --all
 ```
 
-Toon de laatste versie / tag.
+Toon de laatste versie/tag/release.
 
 ```text
 git describe --tags `git rev-list --tags --max-count=1`
@@ -216,3 +216,4 @@ sudo systemctl start thunderhub
 ```
 
 Thunderhub is nu bijgewerkt!
+
