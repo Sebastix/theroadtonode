@@ -27,3 +27,14 @@ Klik op "Paste" en Zap vult alles automatisch voor je in.
 ![Alles wordt automatisch ingevuld](../.gitbook/assets/img_4ea8cbfa09b2-1.jpeg)
 
 Druk op "Connect" en de connectie komt tot stand.
+
+## Connectie over clearnet
+
+Je hoeft niet te verbinden via tor. Sterker nog, Zap werkt beter via clearnet. Je kunt op dezelfde manier een lndconnect string genereren als met tor.
+
+```bash
+lndconnect -j --host=JOUW_IP --port=10009 --adminmacaroonpath=~/.lnd/data/chain/bitcoin/mainnet/admin.macaroon --tlscertpath=~/.lnd/tls.cert
+```
+
+Je moet in het bovenstaande commando even `JOUW_IP` vervangen voor het IP van je Pi. Of als je een DDNS gebruikt vervangen met je URL.
+
