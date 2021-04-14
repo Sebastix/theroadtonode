@@ -110,6 +110,10 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
+{% hint style="info" %}
+Mocht je gebruik maken van LiT, vervang dan `lnd.service` met `lit.service`
+{% endhint %}
+
 Sla het weer op met `Ctrl + X` en bevestig met `Y`.
 
 Het systeem moet op de hoogte gesteld worden van de nieuwe service en kan daarna gestart worden.
