@@ -494,7 +494,7 @@ sudo systemctl restart thunderhub
 
 Het is goed om te weten dan Pool, Loop en Faraday niet worden opgestart zolang er geen wallet unlocked is. Zodra de LiT service opstart en daarmee dus ook LND aangooit, moet je even `lncli unlock` draaien en je wachtwoord invullen. Pas daarna zullen de andere tools werken.
 
-Open **https://&lt;het ip adres van je Pi&gt;:8443** in de browser om in te loggen in Lightning Terminal en aan de slag te gaan met de tool.
+Open [https://&lt;het](https://<het) **ip adres van je Pi&gt;:8443** in de browser om in te loggen in Lightning Terminal en aan de slag te gaan met de tool.
 
 ### Walkthrough
 
