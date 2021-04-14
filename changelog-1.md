@@ -4,8 +4,8 @@
 
 ### Toevoegingen
 
-* LND Admin \(Lightning Extensies\)
-* 
+* [LND Admin](https://docs.theroadtonode.com/lightning-extensies/lnd-admin) \(Lightning Extensies\)
+
 ## 2.2.0 - 2021 / april / 11
 
 ### Toevoegingen
