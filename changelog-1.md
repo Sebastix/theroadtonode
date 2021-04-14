@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0 - 2021 / april / 11
+
+### Toevoegingen
+
+* LND Admin \(Lightning Extensies\)
+* 
 ## 2.2.0 - 2021 / april / 11
 
 ### Toevoegingen

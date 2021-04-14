@@ -40,6 +40,7 @@
   * [LND Connect](lightning-extensies/lnd-connect.md)
   * [Ride The Lightning](lightning-extensies/ride-the-lightning.md)
   * [Thunderhub](lightning-extensies/thunderhub.md)
+  * [LND Admin](lightning-extensies/lnd-admin.md)
   * [Lightning Terminal](lightning-extensies/lightning-terminal.md)
 * [Android](android/README.md)
   * [Zap](android/zap.md)
