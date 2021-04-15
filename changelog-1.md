@@ -1,5 +1,27 @@
 # Changelog
 
+## 2.3.0 - 2021 / april / 11
+
+### Toevoegingen
+
+* [LND Admin](https://docs.theroadtonode.com/lightning-extensies/lnd-admin) \(Lightning Extensies\)
+
+## 2.2.0 - 2021 / april / 11
+
+### Toevoegingen
+
+* Pagina met uitleg van commando's \(Dennis\)
+* [Electrum X updaten](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x#updaten) \(Bitcoin Core Extensies\)
+* [Ride the Lightning updaten](https://docs.theroadtonode.com/lightning-extensies/ride-the-lightning#updaten) \(Lightning Extensies\)
+
+### Verbeteringen
+
+* Installeer een specifieke versie van LND \(Lightning\)
+
+### Aanpassingen
+
+* [Verschillende](https://github.com/bitdeal-nl/theroadtonode/pull/74) [fixes](https://github.com/bitdeal-nl/theroadtonode/pull/76) door heel de guide \(Wim\)
+
 ## 2.1.0 - 2021 / april / 02
 
 ### Toevoegingen

@@ -50,7 +50,7 @@ cd ~/lnd
 Installeer LND met de juiste tags.
 
 ```text
-make install tags="signrpc walletrpc chainrpc invoicesrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
 ```
 
 Check voor macaroon bestanden.

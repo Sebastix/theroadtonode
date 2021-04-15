@@ -29,7 +29,7 @@ cd ~/lnd
 git pull
 ```
 
-Toon de laatste versie / tag.
+Toon de laatste versie/tag/release.
 
 ```text
 git describe --tags `git rev-list --tags --max-count=1`
@@ -44,7 +44,7 @@ git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.12.0-beta
 Installeer nu de software.
 
 ```bash
-make install tags="signrpc walletrpc chainrpc invoicesrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
 ```
 
 ## Start de services

@@ -141,6 +141,10 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
+{% hint style="info" %}
+Mocht je gebruik maken van LiT, vervang dan `lnd.service` met `lit.service`
+{% endhint %}
+
 Sla het weer op met `Ctrl + X` en bevestig met `Y`. De applicatie wordt gestart op poort 4000. Standaard is dit poort 3000, maar deze poort wordt ook gebruikt voor de [Ride The Lightning](ride-the-lightning.md) applicatie.
 
 Het systeem moet op de hoogte gesteld worden van de nieuwe service en kan daarna gestart worden.
@@ -190,7 +194,7 @@ Update de repository met de laatste wijzigingen via Git.
 git fetch --all
 ```
 
-Toon de laatste versie / tag.
+Toon de laatste versie/tag/release.
 
 ```text
 git describe --tags `git rev-list --tags --max-count=1`

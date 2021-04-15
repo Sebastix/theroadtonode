@@ -143,6 +143,14 @@ Je kunt de voortgang van het opstarten van EPS volgen door het log-bestand te be
 sudo tail -f -n 200 /tmp/electrumpersonalserver.log
 ```
 
+## Firewall
+
+Ook hier dient de firewall geüpdate te worden. De port waarover Electrum Personal Server zich toont is 50002.
+
+```bash
+sudo ufw allow 50002
+```
+
 ## Electrum Wallet
 
 1. Start nu Electrum Wallet op je PC met `"C:\Program Files (x86)\Electrum\electrum-4.0.9.exe" --server IP-ADRES VAN PI:50002:s --oneserver`

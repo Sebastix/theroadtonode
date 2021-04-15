@@ -28,9 +28,27 @@ Ga de LND map in.
 cd lnd
 ```
 
+Haal door middel van git alle branches op.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```bash
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Stap over naar de laatste release.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.12.0-beta
+```
+
 En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later gebruik willen maken van [Lightning Terminal](https://docs.theroadtonode.com/lightning-extensies/lightning-terminal).
 
 ```bash
-make install tags="signrpc walletrpc chainrpc invoicesrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
 ```
 
