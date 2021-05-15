@@ -102,7 +102,7 @@ Check of je de juiste versie hebt met:
 
 ```bash
 node --version
-# Verwachte output: v14.15.1
+# Verwachte output: v14.17.0
 ```
 
 ## Yarn
