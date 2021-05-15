@@ -235,4 +235,3 @@ sudo systemctl start electrumx
 ```
 
 Electrum X is nu bijgewerkt!
-
