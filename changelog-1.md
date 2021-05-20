@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1 - 2021 / mei / 20
+
+### Aanpassingen
+
+* [LND Connect](https://docs.theroadtonode.com/lightning-extensies/lnd-connect) installatie aangepast \(Brie\)
+
 ## 2.3.0 - 2021 / april / 11
 
 ### Toevoegingen
