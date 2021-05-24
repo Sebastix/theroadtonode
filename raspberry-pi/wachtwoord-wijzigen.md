@@ -4,7 +4,7 @@
 Tijd: 2 minuten
 {% endhint %}
 
-Het hebben van standaard wachtwoorden in de productieomgeving is nooit echt handig, dus passen we het maar aan. SSH de Pi in en voer dit uit:
+Het hebben van standaard wachtwoorden in de productieomgeving is nooit echt handig, dus passen we het aan. SSH de Pi in en voer dit uit:
 
 ```bash
 passwd

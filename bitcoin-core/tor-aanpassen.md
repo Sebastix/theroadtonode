@@ -22,13 +22,31 @@ Eenmaal in dit bestand voeg je deze regels toe:
 ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
+```
 
+Sla het bestand op met de toetsencombinatie `Ctrl + X`. Geef `Y` als antwoord op de vraag of je op wil slaan.
+
+## RPC via tor
+
+Je kunt via het RPC protocol van bitcoind verschillende commando's uitvoeren met betrekking tot Bitcoin Core. Zo kun je bijvoorbeeld transacties ondertekenen of informatie opvragen over het netwerk. Core staat het standaard niet toe om op afstand dit soort commando's uit te voeren. Standaard mag dat alleen vanaf de Pi zelf, de localhost. Wil je de commando's kunnen uitvoeren op afstand, dan zou je bepaalde IP-adressen expliciet moeten toevoegen in de configuratie van Core. Maar een makkelijkere manier om dit mogelijk te maken is via tor. Core ziet commando's via tor aan als localhost waardoor het mogelijk is.
+
+{% hint style="warning" %}
+Ondanks dat het RPC protocol van Core beveiligd is met een wachtwoord, wordt het niet per se aangeraden om dit te doen. Het brengt simpelweg beveiligingsrisico's met zich mee. Komt het wachtwoord in handen van de verkeerde persoon, moet je er rekening mee houden dat al je funds op je node weg kunnen zijn.
+{% endhint %}
+
+Open het torrc bestand.
+
+```bash
+sudo nano /etc/tor/torrc
+```
+
+Voeg de volgende drie regels onderaan toe:
+
+```text
 HiddenServiceDir /var/lib/tor/bitcoin/bitcoind
 HiddenServiceVersion 3
 HiddenServicePort 8332 127.0.0.1:8332
 ```
-
-Sla het bestand op met de toetsencombinatie `Ctrl + X`. Geef `Y` als antwoord op de vraag of je op wil slaan.
 
 Maak de nodige mappen aan met de volgende twee commando's. Hier komt informatie in te staan omtrent de tor hidden service.
 
@@ -56,7 +74,7 @@ Tor moet nu opnieuw opgestart worden.
 sudo systemctl restart tor
 ```
 
-## Onion-adres
+### Onion-adres
 
 Met onderstaand commando krijg je het onion-adres terug van je Bitcoin node. Dit adres heb je later nodig als je wil communiceren met je node via het tor netwerk. In vervolg onderdelen van de guide \(zoals tijdens het opzetten van Lightning\) zul je een soortgelijk commando moeten invoeren.
 

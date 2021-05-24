@@ -12,5 +12,5 @@ Bitcoin is een geweldige technologie. Een netwerk bestaande uit computers die ie
 
 Het is trouwens niet nodig om een node te hebben voordat je gebruik kunt maken van Bitcoin. Je kunt prima gebruik maken van de spaartechnologie, maar zonder node lever je een stukje van je privacy in. Met deze guide kun je een Bitcoin en Lightning nodes opzetten die volledig op het [Tor netwerk](https://nl.wikipedia.org/wiki/Tor_%28netwerk%29) zitten. Bijkomende voordeel is dat jouw node vanaf overal bereikbaar is, ondanks een [wisselend IP](https://www.kpn.com/zakelijk/blog/dynamisch-of-statisch-ip-adres-dit-zijn-de-verschillen.htm) door je ISP.
 
-Daarnaast is het opzetten van een node ook heel leerzaam. Je krijgt een beter idee van de technische kant van Bitcoin. Hoe diep je wil gaan is aan jou. Je hoeft niet alle onderdelen van de guide te volgen en de volgorde maakt niet altijd uit. ~~Mocht een onderdeel leunen op een voorgaande, staat dat aangegeven.~~ \(wordt later toegevoegd\)
+Daarnaast is het opzetten van een node ook heel leerzaam. Je krijgt een beter idee van de technische kant van Bitcoin. Hoe diep je wil gaan is aan jou. Je hoeft niet alle onderdelen van de guide te volgen en de volgorde maakt niet altijd uit. Mocht een onderdeel leunen op een voorgaande, staat dat aangegeven.
 

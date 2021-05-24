@@ -6,7 +6,7 @@ The Road to Node versie: 2.3.1
 Hulp nodig? Check [Telegram](https://t.me/theroadtonode).
 {% endhint %}
 
-Op deze site vind je alle benodigdheden om zelf een Bitcoin node op te zetten. Veel plezier!
+Op deze site vind je alle benodigdheden om zelf een Bitcoin en Lightning node op te zetten. Veel plezier!
 
 ### Introductie
 

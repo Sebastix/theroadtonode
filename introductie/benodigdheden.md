@@ -9,7 +9,7 @@ Laten we even opsommen wat er bij een node komt kijken. Je hebt verschillende op
 | Onderdeel | Prijs |
 | :--- | ---: |
 | [Raspberry Pi 4B - 4 GB](https://www.kiwi-electronics.nl/raspberry-pi-4-model-b-4gb) | **€61,95** |
-| [Raspberry Pi voeding](https://www.kiwi-electronics.nl/raspberry-pi-usb-c-psu-black-eu) | **€9,95** |
+| [Raspberry Pi voeding](https://www.kiwi-electronics.nl/raspberry-pi-usb-c-psu-black-eu) \(ga voor de officiële!\) | **€9,95** |
 | [MicroSD 8GB](https://www.kiwi-electronics.nl/Transcend-8GB-Class-10-MicroSDHC-UHS-1) | **€7,95** |
 | [Heatsink](https://www.kiwi-electronics.nl/armor-case-for-rpi4-with-dual-fan-black) | **€16,95** |
 | [Netwerkkabel](https://www.kiwi-electronics.nl/toebehoren/kabels-voedingen/netwerk-kabels/cat6-netwerkkabel-zwart-1m) | **€2,95** |
