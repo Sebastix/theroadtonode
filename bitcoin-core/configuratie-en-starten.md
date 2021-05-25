@@ -4,11 +4,11 @@
 Tijd: 5 minuten
 {% endhint %}
 
-Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind) net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide.
+Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind). Net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide.
 
 ## Configuratie
 
-Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de broncode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
+Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de brondcode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
 
 ```bash
 mkdir ~/.bitcoin
@@ -43,7 +43,7 @@ disablewallet=0
 dbcache=3000
 
 # Wil je jouw node op zowel tor als clearnet, laat de instellingen dan voor wat het is.
-# Wil je jouw node enkel op tor? Doe dan het volgende:
+# Wil je jouw node enkel op tor en maximale anonimiteit? Doe dan het volgende:
 # - Haal # weg voor onlynet=onion. Je zegt hiermee dat alleen tor toegestaan is.
 # - Haal # weg voor proxy=127.0.0.1:9050. Je zegt hiermee dat alles via tor moet lopen.
 # - Haal # weg voor bind=127.0.0.1.
@@ -63,7 +63,7 @@ zmqpubrawblock=tcp://127.0.0.1:28332
 zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
-Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor? Doe dan het onderstaand. Wil je dat jouw node ook via het normale internet bereikbaar is, laat de instellingen dan voor wat het is.
+Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor voor maximale anonimiteit? Doe dan het volgende:
 
 * Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
 * Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
@@ -76,17 +76,17 @@ Druk na alle veranderingen op `Ctrl + X` en daarna `Y` om op te slaan.
 
 ## Authenticatie
 
-We willen een gebruiker aanmaken om deze toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `XXX` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
+We willen een gebruiker aanmaken om deze toegang verlenen tot bitcoind. Dit doen we met een scriptje. In het volgende commando wordt de gebruiker `xxx` meegegeven. Maar dit kun je veranderen in iets wat je leuk vindt.
 
 ```bash
-python3 ~/bitcoin/share/rpcauth/rpcauth.py XXX
+python3 ~/bitcoin/share/rpcauth/rpcauth.py xxx
 ```
 
 De output zal hierop lijken:
 
 ```bash
 String to be appended to bitcoin.conf:
-rpcauth=XXX:kdfjhad93rhasdjfhas$lkajshdflakshdf93ehf3qiflkjf9f39rhf39p3930fhaldkjfhsdkljbdflg
+rpcauth=xxx:kdfjhad93rhasdjfhas$lkajshdflakshdf93ehf3qiflkjf9f39rhf39p3930fhaldkjfhsdkljbdflg
 Your password:
 sdflkashf93hfhalfhasdfjh3ejfhb=
 ```
@@ -109,7 +109,7 @@ Als je UFW hebt ingesteld is het belangrijk om port 8333 open te zetten. Dit zor
 sudo ufw allow 8333
 ```
 
-In het configuratie bestand een paar paragraven hierboven staat `upnp=1`. Dit houdt in dat als jouw router UPnP ondersteunt, Bitcoin Core die port zal openzetten op je router. Ondersteunt jouw router UPnP niet of heb je het uitgezet? Dan moet je even op [portforward.com](https://portforward.com/) kijken hoe jij op jouw specifieke router port 8333 openzet en het verkeer doorsluist naar je Pi.
+In het configuratie bestand hierboven staat `upnp=1`. Dit houdt in dat als jouw router UPnP ondersteunt, Bitcoin Core die port zal openzetten op je router. Ondersteunt jouw router UPnP niet of heb je het uitgezet? Dan moet je even op [portforward.com](https://portforward.com/) kijken hoe jij op jouw specifieke router port 8333 openzet en het verkeer doorsluist naar je Pi.
 
 ## Starten
 
@@ -125,7 +125,7 @@ Done! Je kunt live bijhouden wat er gebeurt met:
 tail -n 200 -f ~/.bitcoin/debug.log
 ```
 
-Per block dat gecontroleerd wordt, zie je de tekst `progress=X.XXXXX` voorbij komen. Dit is een getal van 0 tot 1. Nul betekent dat je nog niets gesynchroniseerd hebt, 1 betekent dat je klaar bent. Met `Ctrl + C` zet je de live feed weer stop.
+Per block dat gecontroleerd wordt, zie je de tekst `progress=X.XXXXX` voorbij komen. Dit is een getal van 0 tot 1. Nul betekent dat je nog niets gesynchroniseerd hebt, 1 betekent dat je klaar bent. Met `control + C` zet je de live feed weer stop.
 
 De initiële block download \(IBD\) zal zo'n 60 uur duren.
 
@@ -142,7 +142,7 @@ bitcoin-cli getnetworkinfo
 Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet het er ongeveer zo uit als je enkel van tor gebruik maakt.
 
 {% hint style="info" %}
-Het onion-adres wijkt af van het adres dat je in [de vorige stap](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) hebt aangemaakt \(als je dat hebt aangemaakt\)! Dat het afwijkt is juist goed. Het onion-adres uit de vorige stap is enkel voor het uitvoeren van commando's op je node van buitenaf en gaat over port 8332. Het onderstaande onion-adres wordt door bitcoind zelf aangemaakt en gaat over port 8333. Dit wordt gebruikt om met andere nodes te communiceren.
+Het onion-adres wijkt af van het adres dat je in [de vorige stap](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) hebt aangemaakt \(als je dat hebt aangemaakt uiteraard\)! Dat het afwijkt is juist goed. Het onion-adres uit de vorige stap is enkel voor het uitvoeren van commando's op je node van buitenaf en gaat over port 8332. Het onderstaande onion-adres wordt door bitcoind zelf aangemaakt en gaat over port 8333. Dit wordt gebruikt om met andere nodes te communiceren.
 {% endhint %}
 
 ```javascript

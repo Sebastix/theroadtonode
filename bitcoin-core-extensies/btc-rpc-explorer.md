@@ -4,12 +4,12 @@
 Tijd: 20 minuten
 {% endhint %}
 
-Een eigen block explorer helpt je privacy omdat je nu geen publieke block explorer meer hoeft te raadplegen om te zien of jouw transacties nog in de mempool zitten of al gevalideerd zijn.
+Een eigen block explorer helpt je in het waarborgen van je privacy, omdat je nu geen publieke block explorer meer hoeft te raadplegen. Zo kun je ongestoord kijken of jouw transacties nog in de mempool zitten of al gevalideerd zijn.
 
 De Block Explorer die we gaan gebruiken is [BTC RPC Explorer](https://github.com/janoside/btc-rpc-explorer) van Dan Janosik.
 
 {% hint style="info" %}
-Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
+Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geïnstalleerd hebt op de Raspberry Pi.
 {% endhint %}
 
 ## Voorbereiding
@@ -18,11 +18,11 @@ Er zijn een aantal voorwaarden waaraan je moet voldoen om deze block explorer te
 
 1. Je moet een full node hebben draaien waarvan de blockchain compleet is.
 2. Je node moet ook een index hebben van alle transacties.
-3. Je moet een recente versie van Node.js hebben draaien.
+3. Je moet een recente versie van NodeJS hebben draaien.
 
 ### Full node
 
-Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://docs.theroadtonode.com/bitcoin-core/installatie) inmiddels geinstalleerd. Zo niet doe dat dan eerst.
+Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen bent dan heb je [Bitcoin Core](https://docs.theroadtonode.com/bitcoin-core/installatie) inmiddels geïnstalleerd. Zo niet doe dat dan eerst.
 
 ### Transactieindex
 
