@@ -25,7 +25,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.21.0
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.21.1
 ```
 
 Build bitcoin core opnieuw op basis van de zojuist uitgecheckte versie van de broncode. Door de toevoeging van `-j $(nproc)` worden alle cores gebruikt van de CPU en zou de build sneller verlopen dan zonder deze toevoeging.
@@ -63,7 +63,7 @@ Start de service bitcoin. De service zal vrij snel gestart zijn maar mogelijk mo
 sudo systemctl start bitcoind
 ```
 
-Start de lnd service en vergeet deze niet te unlocken. (Dat zal pas kunnen nadat de blockchain van bitcoin weer synchroon is na de start. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is.
+Start de LND \(vergeet deze niet te unlocken\) en andere services. LND unlocken zal pas kunnen nadat de blockchain van bitcoin weer synchroon is na de start. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is. Services start je weer op deze manier:
 
 ```bash
 sudo systemctl start lnd
@@ -75,6 +75,7 @@ Check de huidige versie van bitcoin core.
 bitcoin-cli --version
 ```
 
-De output zal lijken op `Bitcoin Core RPC client v0.21.0`
+De output zal lijken op `Bitcoin Core RPC client v0.21.1`
 
 Bitcoin core is nu bijgewerkt!
+

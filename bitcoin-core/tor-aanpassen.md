@@ -31,7 +31,7 @@ Sla het bestand op met de toetsencombinatie `Ctrl + X`. Geef `Y` als antwoord op
 Je kunt via het RPC protocol van bitcoind verschillende commando's uitvoeren met betrekking tot Bitcoin Core. Zo kun je bijvoorbeeld transacties ondertekenen of informatie opvragen over het netwerk. Core staat het standaard niet toe om op afstand dit soort commando's uit te voeren. Standaard mag dat alleen vanaf de Pi zelf, de localhost. Wil je de commando's kunnen uitvoeren op afstand, dan zou je bepaalde IP-adressen expliciet moeten toevoegen in de configuratie van Core. Maar een makkelijkere manier om dit mogelijk te maken is via tor. Core ziet commando's via tor aan als localhost waardoor het mogelijk is.
 
 {% hint style="warning" %}
-Ondanks dat het RPC protocol van Core beveiligd is met een wachtwoord, wordt het niet per se aangeraden om dit te doen. Het brengt simpelweg beveiligingsrisico's met zich mee. Komt het wachtwoord in handen van de verkeerde persoon, moet je er rekening mee houden dat al je funds op je node weg kunnen zijn.
+Ondanks dat het RPC protocol van Core beveiligd is met een wachtwoord, wordt het niet per se aangeraden om Core van buitenaf benaderbaar te maken. Het brengt simpelweg beveiligingsrisico's met zich mee. Komt het wachtwoord in handen van de verkeerde persoon, moet je er rekening mee houden dat al je funds op je node weg kunnen zijn.
 {% endhint %}
 
 Open het torrc bestand.
