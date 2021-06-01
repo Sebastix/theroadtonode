@@ -21,7 +21,7 @@ pip3 install cryptoadvance.specter
 En tot slot start je Specter met:
 
 ```bash
-python3 -m cryptoadvance.specter server --host 0.0.0.0 --port 25441
+python3 -m cryptoadvance.specter server --daemon --host 0.0.0.0
 ```
 
 De tool zal nu in de achtergrond draaien op poortnummer `:25441`. Open je browser en ga naar `het ip van je pi:poortnummer`. Het zal iets weg hebben van: `192.168.1.6:25441`.
