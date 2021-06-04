@@ -104,7 +104,7 @@ sudo ufw allow 50002
 
 Wil je van buiten je netwerk Electrum X als backend gebruiken, dan moet je dezelfde ports open gooien op je router en doorlussen naar je Pi.
 
-## Automatisering
+## Automatiseren
 
 Electrum X wil je altijd op de achtergrond hebben draaien. Daarom gaan we het opstarten automatiseren middels een service. Maak een service aan.
 
@@ -235,3 +235,4 @@ sudo systemctl start electrumx
 ```
 
 Electrum X is nu bijgewerkt!
+

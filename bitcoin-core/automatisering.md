@@ -1,4 +1,4 @@
-# Automatisering
+# Automatiseren
 
 {% hint style="info" %}
 Tijd: 5 minuten

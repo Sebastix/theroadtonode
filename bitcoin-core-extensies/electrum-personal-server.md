@@ -103,7 +103,7 @@ Als deze klaar is start je EPS nog een keer.
 ~/.local/bin/electrum-personal-server ~/.eps/config.cfg
 ```
 
-## Automatisering
+## Automatiseren
 
 Nu moeten we alleen nog zorgen de EPS als een Service gaat draaien. Je hebt als het goed is twee vensters open. Eentje met de output van de bitcoin log en eentje waarin EPS draait.
 

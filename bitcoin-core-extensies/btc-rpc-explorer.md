@@ -95,7 +95,7 @@ BTCEXP_PRIVACY_MODE=true
 
 Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
-## Automatisering
+## Automatiseren
 
 Zorg er nu voor dat de BTC-RPC-Explorer automatisch start en draait als een service wanneer je Pi opnieuw opstart.
 
