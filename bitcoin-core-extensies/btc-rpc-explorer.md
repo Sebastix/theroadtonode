@@ -68,12 +68,6 @@ Ga de BTC RPC Explorer map in.
 cd btc-rpc-explorer
 ```
 
-Pak de nieuwste release.
-
-```bash
-git checkout v3.1.1
-```
-
 Installeer BTC RPC Explorer, maak het configuratie bestand `.env` en pas deze aan.
 
 ```bash
@@ -101,7 +95,7 @@ BTCEXP_PRIVACY_MODE=true
 
 Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
 
-## Automatiseren
+## Automatisering
 
 Zorg er nu voor dat de BTC-RPC-Explorer automatisch start en draait als een service wanneer je Pi opnieuw opstart.
 
@@ -137,7 +131,6 @@ Met de volgende twee commando's activeer en start je de service.
 
 ```bash
 sudo systemctl enable btc-rpc-explorer
-
 sudo systemctl start btc-rpc-explorer
 ```
 
@@ -149,41 +142,9 @@ Als er een nieuwe versie beschikbaar is voor BTC RPC Explorer, kun je eenvoudig 
 
 ```text
 sudo systemctl stop btc-rpc-explorer
-```
-
-Ga de BTC RPC Explorer map in.
-
-```text
 cd ~/btc-rpc-explorer
-```
-
-Update de repository met de laatste wijzigingen via Git.
-
-```bash
-git fetch --all
-```
-
-Toon de laatste versie/tag/release.
-
-```text
-git describe --tags `git rev-list --tags --max-count=1`
-```
-
-Haal de wijzigingen op van de laatste versie.
-
-```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.1.1
-```
-
-Installeer via NPM.
-
-```bash
+git pull
 npm install
-```
-
-Start de service weer op nadat installeren klaar is.
-
-```text
 sudo systemctl start btc-rpc-explorer
 ```
 

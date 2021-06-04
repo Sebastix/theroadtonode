@@ -518,7 +518,7 @@ sudo systemctl restart rtl
 sudo systemctl restart thunderhub
 ```
 
-## Onderliggende tools gebruiken
+## Onderliggende CLI gebruiken
 
 Niet alle functionaliteiten van LND, Pool, Loop en Faraday heb je tot je beschikking in de Lightning Terminal interface. Voor sommige zaken wil je alsnog de CLI van de desbetreffende tool gebruiken. Maar aangezien we nu achter LiT draaien, moeten we veel flags meegeven bij het uitvoeren van commando's. Dit heeft te maken met het feit dat alle tools op dezelfde port luisteren en van hetzelfde certificaat gebruik maken. Gelukkig kunnen we aliassen aanmaken om ons leven een stukje aangenamen te maken.
 
@@ -539,7 +539,7 @@ alias lit-pool="pool --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls
 alias lit-faraday="frcli --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.faraday/mainnet/faraday.macaroon"
 ```
 
-Sla het op met `Ctrl + X` en bevestig met `Y`.
+Sla het op met `Ctrl + X` en bevestig met `Y`. Log even uit met `exit` en log opnieuw in via SSH. Pas na uit- en inloggen zijn de aliassen van kracht.
 
 Nu kun je gemakkelijk gebruik maken van de CLI's van Pool, Loop en Faraday zonder dat je veel hoeft te typen. Het lit-loop commando vervangt loop, lit-pool vervangt pool en lit-faraday vervangt frcli. Probeer eens het commando `pool getinfo` uit te voeren. Je zal een error zien die hier op lijkt:
 

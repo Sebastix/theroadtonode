@@ -24,12 +24,6 @@ Navigeer daarna de map in.
 cd lnd-admin
 ```
 
-Pak de laatste versie/tag/release.
-
-```text
-git checkout v0.10.12
-```
-
 Installeer LND Admin met NPM.
 
 ```bash
