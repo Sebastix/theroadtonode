@@ -4,7 +4,7 @@
 Tijd: 15 minuten
 {% endhint %}
 
-De Lightnig Network CLI \(lncli\) is wel geinig, maar niet heel praktisch. Daarom gaan we Ride The Lightning \(RTL\) installeren. Een gebruiksvriendelijk voorkantje voor LND.
+De Lightnig Network CLI \(lncli\) is wel geinig, maar niet heel praktisch. Daarom installeren we [Ride The Lightning](https://github.com/Ride-The-Lightning/RTL) \(RTL\). Een gebruiksvriendelijk voorkantje voor LND.
 
 {% hint style="info" %}
 Let op: dit onderdeel is afhankelijk van de [NodeJS installatie](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs). Je kunt niet verder als je NodeJS niet geinstalleerd hebt op de Raspberry Pi.
@@ -22,6 +22,12 @@ Duik de code in.
 
 ```bash
 cd RTL
+```
+
+Pak de laatste versie/tag/release.
+
+```text
+git checkout v0.10.2
 ```
 
 Installeer nu RTL. Let op, dit kan zo'n 10 minuten duren.
@@ -171,7 +177,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.10.1
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.10.2
 ```
 
 Installeer de software.

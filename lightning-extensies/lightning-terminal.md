@@ -32,7 +32,7 @@ Als je LND hebt geïnstalleerd zonder speciale installatie tags, dan moet je LND
 {% hint style="info" %}
 Je channels en wallet blijven bestaan bij een herinstallatie van LND. Net als bij een update.
 
-Heb je Thunderhub draaien? Dan dien je na het opnieuw opstarten van LND ook Thunderhub opnieuw te starten.
+Heb je Thunderhub of andere tools draaien die op LND leunen? Dan dien je die na het opnieuw opstarten van LND ook opnieuw te starten.
 {% endhint %}
 
 Stop LND indien deze actief is.
@@ -95,6 +95,18 @@ Download de broncode.
 git clone https://github.com/lightninglabs/loop.git
 ```
 
+Ga de map in.
+
+```bash
+cd loop
+```
+
+Pak de laatste versie/tag/release.
+
+```text
+git checkout v0.14.0-beta
+```
+
 Ga naar `loop/cmd`.
 
 ```text
@@ -141,6 +153,12 @@ Ga naar de faraday map.
 cd faraday
 ```
 
+Pak de laatste versie/tag/release.
+
+```text
+git checkout v0.2.6-alpha
+```
+
 Installeer de faraday software.
 
 ```text
@@ -152,7 +170,7 @@ Test of het gelukt is.
 ```text
 faraday --version
 
-# Verwachte output lijkt op: faraday version 0.2.2-alpha commit=v0.2.2-alpha-17-gfa65f48c9172e601bbfc89dab7ab68de1564a346
+# Verwachte output lijkt op: faraday version 0.2.6-alpha commit=v0.2.6-alpha-BLABLA
 ```
 
 Configureer de faraday software en check of het allemaal werkt. Op de plekken "VUL\_USERNAME\_IN" en "VUL\_PASSWORD\_IN" moet je de gegevens invullen die je tijdens de [configuratie](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#authenticatie) van Core hebt aangemaakt.
@@ -181,6 +199,12 @@ Ga naar de pool map.
 
 ```text
 cd pool
+```
+
+Pak de laatste versie/tag/release.
+
+```text
+git checkout v0.5.0-alpha
 ```
 
 Installeer de Pool software.
@@ -215,6 +239,12 @@ Duik de code in.
 
 ```text
 cd lightning-terminal
+```
+
+Pak de laatste versie/tag/release.
+
+```text
+git checkout v0.4.1-alpha
 ```
 
 Installeer Lightning Terminal.
@@ -286,6 +316,7 @@ Voeg aan de "LND - Application Options" `lnd.lnddir=~/.lnd` toe. Daarna voeg je 
 ```bash
 # LiT - Application Options
 lnd-mode=integrated
+network=mainnet
 httpslisten=0.0.0.0:8443
 uipassword=ZELF_VERZINNEN_B
 ```
@@ -297,8 +328,6 @@ Tot slot voeg je onderaan deze regels toe voor Faraday:
 faraday.connect_bitcoin=true
 
 # Faraday - LND
-faraday.lnd.macaroondir=/home/pi/.lnd/data/chain/bitcoin/mainnet
-faraday.lnd.tlscertpath=/home/pi/.lnd/tls.cert
 faraday.lnd.rpcserver=127.0.0.1:10009
 
 # Faraday - Bitcoin
@@ -343,6 +372,7 @@ lnd.bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 
 # LiT - Application Options
 lnd-mode=integrated
+network=mainnet
 httpslisten=0.0.0.0:8443
 uipassword=ZELF_VERZINNEN_B
 
@@ -350,8 +380,6 @@ uipassword=ZELF_VERZINNEN_B
 faraday.connect_bitcoin=true
 
 # Faraday - LND
-faraday.lnd.macaroondir=/home/pi/.lnd/data/chain/bitcoin/mainnet
-faraday.lnd.tlscertpath=/home/pi/.lnd/tls.cert
 faraday.lnd.rpcserver=127.0.0.1:10009
 
 # Faraday - Bitcoin
@@ -422,7 +450,7 @@ sudo systemctl disable lnd
 
 ### Oude services updaten
 
-Aangezien we LND nu opstarten door middel van LiT, is het van belang dat services die voorheen op de LND service leunde, nu op de LiT service leunen. We moeten dus de RTL en Thunderhub service aanpassen als volgt: wijzig `Wants=lnd.service` en `After=lnd.service` naar `Wants=lit.service` en `After=lit.service`. Hieronder staan voorbeelden.
+Aangezien we LND nu opstarten door middel van LiT, is het van belang dat services die voorheen op de LND service leunde, nu op de LiT service leunen. We moeten dus de RTL en Thunderhub service \(en alle anderen die je misschien hebt draaien\) aanpassen als volgt: wijzig `Wants=lnd.service` en `After=lnd.service` naar `Wants=lit.service` en `After=lit.service`. Hieronder staan voorbeelden.
 
 #### RTL service updaten
 
@@ -451,7 +479,7 @@ sudo nano /etc/systemd/system/thunderhub.service
 
 Herhaal de stappen zoals je de RTL service ook hebt aangepast.
 
-#### Brengt systeem op de hoogte
+#### Breng systeem op de hoogte
 
 De Pi moet op de hoogte gebracht worden van de aangepaste services. Dat doe je zo:
 
@@ -483,18 +511,73 @@ sudo journalctl -f -u lit
 
 ### RTL en Thunderhub herstarten
 
-Tot slot dienen de RTL en Thunderhub services herstart te worden.
+Tot slot dienen de RTL en Thunderhub services herstart te worden. Als je meerdere tools bovenop LND had draaien, herstart die dan ook.
 
 ```bash
 sudo systemctl restart rtl
 sudo systemctl restart thunderhub
 ```
 
+## Onderliggende tools gebruiken
+
+Niet alle functionaliteiten van LND, Pool, Loop en Faraday heb je tot je beschikking in de Lightning Terminal interface. Voor sommige zaken wil je alsnog de CLI van de desbetreffende tool gebruiken. Maar aangezien we nu achter LiT draaien, moeten we veel flags meegeven bij het uitvoeren van commando's. Dit heeft te maken met het feit dat alle tools op dezelfde port luisteren en van hetzelfde certificaat gebruik maken. Gelukkig kunnen we aliassen aanmaken om ons leven een stukje aangenamen te maken.
+
+Open het `.bashrc` bestand.
+
+```bash
+nano ~/.bashrc
+```
+
+Plak onderaan het bestand de volgende drie regels:
+
+```bash
+# (...)
+# Hierboven staat allemaal andere zooi. Lekker laten staan.
+
+alias lit-loop="loop --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.loop/mainnet/loop.macaroon"
+alias lit-pool="pool --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.pool/mainnet/pool.macaroon"
+alias lit-faraday="frcli --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.faraday/mainnet/faraday.macaroon"
+```
+
+Sla het op met `Ctrl + X` en bevestig met `Y`.
+
+Nu kun je gemakkelijk gebruik maken van de CLI's van Pool, Loop en Faraday zonder dat je veel hoeft te typen. Het lit-loop commando vervangt loop, lit-pool vervangt pool en lit-faraday vervangt frcli. Probeer eens het commando `pool getinfo` uit te voeren. Je zal een error zien die hier op lijkt:
+
+```bash
+[pool] rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:12010: connect: connection refused"
+```
+
+Als je nu het commando `lit-pool getinfo` doet, zal je informatie zien over Pool:
+
+```javascript
+{
+	"version": "0.4.4-alpha commit=v0.4.4-alpha",
+	"accounts_total": 1,
+	"accounts_active": 0,
+	"accounts_active_expired": 0,
+	"accounts_archived": 1,
+	"orders_total": 1,
+	"orders_active": 0,
+	"orders_archived": 1,
+	"current_block_height": 686241,
+	"batches_involved": 0,
+	"node_rating": {
+		"node_pubkey": "PUB_KEY",
+		"node_tier": "TIER_1"
+	},
+	"lsat_tokens": 1,
+	"subscribed_to_auctioneer": false,
+	"new_nodes_only": false,
+	"market_info": {
+	}
+}
+```
+
 ## Lightning Terminal gebruiken
 
 Het is goed om te weten dan Pool, Loop en Faraday niet worden opgestart zolang er geen wallet unlocked is. Zodra de LiT service opstart en daarmee dus ook LND aangooit, moet je even `lncli unlock` draaien en je wachtwoord invullen. Pas daarna zullen de andere tools werken.
 
-Open [https://&lt;het](https://<het) **ip adres van je Pi&gt;:8443** in de browser om in te loggen in Lightning Terminal en aan de slag te gaan met de tool.
+Open `https://IP VAN JE PI:8443` in de browser om in te loggen in Lightning Terminal en aan de slag te gaan met de tool.
 
 ### Walkthrough
 
