@@ -126,11 +126,19 @@ It is also possible that a host key has just been changed.
 The fingerprint for the ECDSA key sent by the remote host is
 SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 Please contact your system administrator.
-Add correct host key in /Users/lex/.ssh/known_hosts to get rid of this message.
-Offending ECDSA key in /Users/lex/.ssh/known_hosts:56
+Add correct host key in /Users/NAME/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /Users/NAME/.ssh/known_hosts:56
 ECDSA host key for 192.168.1.6 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
 Zoiets van gemakkelijk op te lossen door op je computer het commando `nano .ssh/known_hosts` in te voeren. In het scherm dat volgt staan bekende computers voor jouw computer. Verwijder de regel met het IP-adres van jouw Pi. Sla het bestand op met `Ctrl + X` en bevestig met `Y`. Je hebt nu tegen jouw computer gezegd dat hij de eerdere relatie met de Pi mag vergeten en een nieuwe relatie mag opbouwen.
+
+## HDMI uitzetten
+
+Om minder stroom te verbruiken en daarmee je Pi stabieler te maken, kun je de HDMI uitzetten. We verbinden immers via SSH. Uitzetten doe je zo:
+
+```bash
+vcgencmd display_power 0
+```
 
