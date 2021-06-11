@@ -4,7 +4,7 @@
 
 ### Verbeteringen
 
-* Updaten van Specter \(Bitcoin Core Extensies\) \([DerM007](https://github.com/bitdeal-nl/theroadtonode/issues/86)\)
+* [Updaten van Specter](https://docs.theroadtonode.com/bitcoin-core-extensies/specter#updaten) \(Bitcoin Core Extensies\) \([DerM007](https://github.com/bitdeal-nl/theroadtonode/issues/86)\)
 
 ## 2.4.0 - 2021 / juni / 04
 
