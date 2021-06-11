@@ -37,3 +37,4 @@ lndconnect -j --host=JOUW_IP --port=10009 --adminmacaroonpath=~/.lnd/data/chain/
 ```
 
 Je moet in het bovenstaande commando even `JOUW_IP` vervangen voor het IP van je Pi. Of als je een DDNS gebruikt vervangen met je URL.
+

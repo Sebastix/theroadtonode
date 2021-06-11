@@ -40,6 +40,12 @@ Navigeer de zojuist geclonede map in.
 cd electrumx
 ```
 
+Pak de laatste versie.
+
+```bash
+git checkout 1.16.0
+```
+
 Installeer tot slot Electrum X.
 
 ```bash
@@ -54,6 +60,7 @@ Maak een `.electrumx` map in de home directory met daarin weer een `db` map.
 
 ```bash
 mkdir ~/.electrumx
+
 mkdir ~/.electrumx/db
 ```
 
@@ -104,7 +111,7 @@ sudo ufw allow 50002
 
 Wil je van buiten je netwerk Electrum X als backend gebruiken, dan moet je dezelfde ports open gooien op je router en doorlussen naar je Pi.
 
-## Automatisering
+## Automatiseren
 
 Electrum X wil je altijd op de achtergrond hebben draaien. Daarom gaan we het opstarten automatiseren middels een service. Maak een service aan.
 
@@ -137,6 +144,7 @@ Enable en start de service met deze twee commando's:
 
 ```bash
 sudo systemctl enable electrumx
+
 sudo systemctl start electrumx
 ```
 
@@ -235,3 +243,4 @@ sudo systemctl start electrumx
 ```
 
 Electrum X is nu bijgewerkt!
+

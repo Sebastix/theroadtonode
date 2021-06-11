@@ -2,7 +2,7 @@
 
 Een Bitcoin node zal in beginsel geen of niet veel bitcoin bevatten. Een Bitcoin node wordt door de meesten enkel gebruikt om transacties te controleren. Desalniettemin zijn er genoeg uitzonderingen te bedenken waarom je wél bitcoin op je node hebt staan. Lightning is zo'n uitzondering. Een Lightning node moet continu verbonden zijn met het internet en funds online hebben. De funds moeten uitgeefbaar zijn en daar zijn private keys voor nodig. Een Lightning node is per definitie ["hot"](https://www.investopedia.com/terms/h/hot-wallet.asp).
 
-Reden genoeg voor een extra beveiligingslaag op je node! Een tool genaamd Uncomplicated Firewall \(of UFW in het kort\) maakt je node een stukje veiliger. In de basis houdt UFW al het inkomende verkeer naar je node toe, tegen. Maar je kunt ook enkele ports open zetten waar verkeer wél over is toegestaan. We zullen UFW vaak tegenkomen in de guide. In dit hoofdstuk doen vind je de volgende zaken:
+Reden genoeg voor een extra beveiligingslaag op je node! Een tool genaamd Uncomplicated Firewall \(of UFW in het kort\) maakt je node een stukje veiliger. In de basis houdt UFW al het inkomende verkeer naar je node toe, tegen. Maar je kunt ook enkele ports open zetten waar verkeer wél over is toegestaan. We zullen UFW vaak tegenkomen in de guide. In dit hoofdstuk vind je de volgende zaken:
 
 1. UFW installeren
 2. Regel instellen voor SSH
@@ -24,5 +24,11 @@ Tot slot activeer je de UFW als volgt.
 
 ```bash
 sudo ufw enable
+```
+
+Wil je een mooi overzicht van alle ports die je open hebt staan, type dan:
+
+```bash
+sudo ufw status
 ```
 

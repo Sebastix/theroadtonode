@@ -21,7 +21,7 @@ pip3 install cryptoadvance.specter
 En tot slot start je Specter met:
 
 ```bash
-python3 -m cryptoadvance.specter server --daemon --host 0.0.0.0
+python3 -m cryptoadvance.specter server --host 0.0.0.0 --port 25441
 ```
 
 De tool zal nu in de achtergrond draaien op poortnummer `:25441`. Open je browser en ga naar `het ip van je pi:poortnummer`. Het zal iets weg hebben van: `192.168.1.6:25441`.
@@ -31,6 +31,75 @@ Als je een firewall gebruik is het wel van belang dat je de bijbehorende port op
 ```bash
 sudo ufw allow 25441
 ```
+
+## Automatiseren
+
+Net als bij alle andere tools in deze guide zullen we Specter in de achtergrond laten draaien. Zo hoef je niet iedere keer Specter handmatig op te starten voordat je er gebruik van kan maken.
+
+Maak een service aan.
+
+```bash
+sudo nano /etc/systemd/system/specter.service
+```
+
+Plak er het volgende in.
+
+```bash
+[Unit]
+Description=Specter
+Wants=bitcoind.service
+After=bitcoind.service
+
+[Service]
+ExecStart=python3 -m cryptoadvance.specter server --host 0.0.0.0 --port 25441
+User=pi
+Group=pi
+Type=simple
+Restart=on-failure
+TimeoutSec=120
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
+
+Activeer de service.
+
+```bash
+sudo systemctl enable specter
+```
+
+En start de service op.
+
+```bash
+sudo systemctl start specter
+```
+
+Ga naar `http://IP-ADRES VAN PI:25441` om te zien of het werkt. Bijvoorbeeld `http://192.168.1.6:25441`.
+
+## Updaten
+
+Af en toe komt er een nieuwe versie van Specter uit. Updaten is best gemakkelijk. Eerst gooi je de service uit.
+
+```bash
+sudo systemctl stop specter
+```
+
+Het updaten doe je als volgt.
+
+```bash
+pip3 install cryptoadvance.specter --upgrade
+```
+
+Tot slot start je de service weer met het `systemctl` commando.
+
+```bash
+sudo systemctl start specter
+```
+
+Zodra je weer naar de Specter website toe gaat zoals eerder beschreven, zal je links onderin het versienummer zien staan.
 
 ## Gebruik van Specter
 

@@ -1,6 +1,6 @@
 # Raspberry Pi
 
-Onder Raspberry Pi vallen de volgende negen hoofdstukken.
+Onder Raspberry Pi vallen de volgende elf hoofdstukken.
 
 {% page-ref page="hardware-aansluiten.md" %}
 
@@ -18,5 +18,11 @@ Onder Raspberry Pi vallen de volgende negen hoofdstukken.
 
 {% page-ref page="algemene-dependencies-installeren.md" %}
 
+{% page-ref page="firewall.md" %}
+
 {% page-ref page="port-overzicht.md" %}
+
+{% page-ref page="uitleg-van-commandos.md" %}
+
+
 

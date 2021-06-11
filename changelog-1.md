@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.4.1 - 2021 / juni / 11
+
+### Verbeteringen
+
+* Updaten van Specter \(Bitcoin Core Extensies\) \([DerM007](https://github.com/bitdeal-nl/theroadtonode/issues/86)\)
+
+## 2.4.0 - 2021 / juni / 04
+
+### Toevoegingen
+
+* Automatiseren van [Specter](https://docs.theroadtonode.com/bitcoin-core-extensies/specter#automatiseren) \(Bitcoin Core Extensies\)
+
+### Verbeteringen
+
+* Aan ieder onderdeel `git checkout` toegevoegd
+* Aliassen toegevoegd voor Pool, Loop en Faraday onder LiT installatie \(Lightning Extensies\)
+
 ## 2.3.1 - 2021 / mei / 20
 
 ### Aanpassingen
