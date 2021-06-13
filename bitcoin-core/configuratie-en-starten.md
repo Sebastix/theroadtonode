@@ -109,10 +109,16 @@ Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aa
 Als je UFW hebt ingesteld is het belangrijk om port 8333 open te zetten. Dit zorgt ervoor dat andere nodes kunnen verbinden met die van jou. Het openzetten van deze port is alleen noodzakelijk als je je node \(ook\) over clearnet draait. Draai je jouw node enkel over tor, dan kun je deze paragraaf overslaan en verder naar "starten".
 
 ```bash
-sudo ufw allow 8333
+sudo ufw allow 8333 comment "Sta inkomende Bitcoin Core connecties toe"
 ```
 
 In het configuratie bestand een paar paragraven hierboven staat `upnp=1`. Dit houdt in dat als jouw router UPnP ondersteunt, Bitcoin Core die port zal openzetten op je router. Ondersteunt jouw router UPnP niet of heb je het uitgezet? Dan moet je even op [portforward.com](https://portforward.com/) kijken hoe jij op jouw specifieke router port 8333 openzet en het verkeer doorsluist naar je Pi.
+
+Het is ook verstandig om toegang tot port 8332 te limiteren. Over deze port verloopt communicatie met Core omtrent het uitvoeren van commando's.
+
+```bash
+sudo ufw allow from 127.0.0.1 to any port 8332 comment "Bitcoin Core RPC"
+```
 
 ## Starten
 

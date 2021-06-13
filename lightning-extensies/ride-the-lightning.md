@@ -86,7 +86,7 @@ Vul bij `JOUW_ALIAS` de [alias](https://docs.theroadtonode.com/lightning/configu
 Zet port 3000 open.
 
 ```bash
-sudo ufw allow 3000
+sudo ufw allow 3000 comment "Port voor Ride the Lightning"
 ```
 
 Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 3000 op je router opengooien en verkeer doorsturen naar je Pi.

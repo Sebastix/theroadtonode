@@ -29,6 +29,6 @@ sudo ufw enable
 Wil je een mooi overzicht van alle ports die je open hebt staan, type dan:
 
 ```bash
-sudo ufw status
+sudo ufw status numbered
 ```
 

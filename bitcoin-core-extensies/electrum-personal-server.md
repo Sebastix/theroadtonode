@@ -148,7 +148,7 @@ sudo tail -f -n 200 /tmp/electrumpersonalserver.log
 Ook hier dient de firewall geüpdate te worden. De port waarover Electrum Personal Server zich toont is 50002.
 
 ```bash
-sudo ufw allow 50002
+sudo ufw allow 50002 comment "Electrum protocol SSL port"
 ```
 
 ## Electrum Wallet
