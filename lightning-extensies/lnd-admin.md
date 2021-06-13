@@ -41,7 +41,7 @@ npm install
 We starten LND Admin niet direct. Eerst moet de firewall nog opengezet worden voor de juiste port.
 
 ```bash
-sudo ufw allow 3004 comment "Port voor LND Admin"
+sudo ufw allow 3004
 ```
 
 ## Automatiseren

@@ -392,8 +392,8 @@ faraday.bitcoin.password=DIT_WEET_JE_B
 
 W kunnen LiT benaderen over port 8443, vandaar dat we die open zetten.
 
-```bash
-sudo ufw allow 8443 comment "Port voor Lightning Terminal"
+```text
+sudo ufw allow 8443
 ```
 
 ## Automatiseren

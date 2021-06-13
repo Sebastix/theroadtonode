@@ -29,7 +29,7 @@ De tool zal nu in de achtergrond draaien op poortnummer `:25441`. Open je browse
 Als je een firewall gebruik is het wel van belang dat je de bijbehorende port openzet.
 
 ```bash
-sudo ufw allow 25441 comment "Port voor Specter"
+sudo ufw allow 25441
 ```
 
 ## Automatiseren

@@ -14,6 +14,7 @@
   * [Monitoring](raspberry-pi/monitoring.md)
   * [Algemene dependencies installeren](raspberry-pi/algemene-dependencies-installeren.md)
   * [Firewall](raspberry-pi/firewall.md)
+  * [Dynamic DNS](raspberry-pi/dynamic-dns.md)
   * [Port overzicht](raspberry-pi/port-overzicht.md)
   * [Uitleg van commando's](raspberry-pi/uitleg-van-commandos.md)
 * [Bitcoin Core](bitcoin-core/README.md)

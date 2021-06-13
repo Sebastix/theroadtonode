@@ -113,7 +113,7 @@ yarn build
 Zet port 4000 open.
 
 ```bash
-sudo ufw allow 4000 comment "Port voor Thunderhub"
+sudo ufw allow 4000
 ```
 
 Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 4000 op je router opengooien en verkeer doorsturen naar je Pi.
