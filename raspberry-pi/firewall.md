@@ -17,7 +17,7 @@ sudo apt install ufw
 Het instellen van een regel waarmee je verkeer toestaat op een specifieke port, doe je op de manier die hier onder staat. Hier wordt aan het `ufw` programma de opdracht `allow` meegegeven en een portnummer. **Voer dit commando ook uit, anders kun je je Pi niet meer in!**
 
 ```bash
-sudo ufw allow 22 comment "Port voor SSH"
+sudo ufw allow 22
 ```
 
 Tot slot activeer je de UFW als volgt.
@@ -29,6 +29,6 @@ sudo ufw enable
 Wil je een mooi overzicht van alle ports die je open hebt staan, type dan:
 
 ```bash
-sudo ufw status numbered
+sudo ufw status
 ```
 
