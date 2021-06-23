@@ -26,6 +26,7 @@ Update de repository met de laatste wijzigingen via Git.
 
 ```bash
 cd ~/lnd
+git pull
 ```
 
 Toon de laatste versie/tag/release.
