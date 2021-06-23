@@ -28,7 +28,7 @@ cd thunderhub
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.12.18
+git checkout v0.12.20
 ```
 
 Haal alle benodigde software dependencies binnen.
@@ -113,7 +113,7 @@ yarn build
 Zet port 4000 open.
 
 ```bash
-sudo ufw allow 4000
+sudo ufw allow 4000 comment "Port voor Thunderhub"
 ```
 
 Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 4000 op je router opengooien en verkeer doorsturen naar je Pi.
