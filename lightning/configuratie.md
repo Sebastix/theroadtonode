@@ -25,8 +25,6 @@ restlisten=0.0.0.0:8080
 rpclisten=0.0.0.0:10009
 listen=127.0.0.1:9735
 maxpendingchannels=5
-accept-amp=true
-accept-keysend=true
 color=ZELF_VERZINNEN_A
 alias=ZELF_VERZINNEN_B
 

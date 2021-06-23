@@ -104,7 +104,7 @@ cd loop
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.14.0-beta
+git checkout v0.14.1-beta
 ```
 
 Ga naar `loop/cmd`.
@@ -244,7 +244,7 @@ cd lightning-terminal
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.4.1-alpha
+git checkout v0.5.0-alpha
 ```
 
 Installeer Lightning Terminal.
@@ -290,6 +290,8 @@ lnd.restlisten=0.0.0.0:8080
 lnd.rpclisten=0.0.0.0:10009
 lnd.listen=127.0.0.1:9735
 lnd.maxpendingchannels=5
+lnd.accept-amp=true
+lnd.accept-keysend=true
 lnd.color=ZELF_VERZINNEN_A
 lnd.alias=ZELF_VERZINNEN_B
 
@@ -349,6 +351,8 @@ lnd.restlisten=0.0.0.0:8080
 lnd.rpclisten=0.0.0.0:10009
 lnd.listen=127.0.0.1:9735
 lnd.maxpendingchannels=5
+lnd.accept-amp=true
+lnd.accept-keysend=true
 lnd.color=ZELF_VERZINNEN_A
 lnd.alias=ZELF_VERZINNEN_B
 lnd.lnddir=~/.lnd
@@ -392,8 +396,8 @@ faraday.bitcoin.password=DIT_WEET_JE_B
 
 W kunnen LiT benaderen over port 8443, vandaar dat we die open zetten.
 
-```text
-sudo ufw allow 8443
+```bash
+sudo ufw allow 8443 comment "Port voor Lightning Terminal"
 ```
 
 ## Automatiseren
