@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.5.0 - 2021 / juni / xx \(WIP\)
+
+### Toevoegingen
+
+* Dynamisch DNS voor bereik van buitenaf \(Raspberry Pi\)
+
+### Verbeteringen
+
+* Updaten van Lightning Terminal
+
 ## 2.4.1 - 2021 / juni / 11
 
 ### Verbeteringen

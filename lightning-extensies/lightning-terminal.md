@@ -104,7 +104,7 @@ cd loop
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.14.0-beta
+git checkout v0.14.1-beta
 ```
 
 Ga naar `loop/cmd`.
@@ -244,7 +244,7 @@ cd lightning-terminal
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.4.1-alpha
+git checkout v0.5.0-alpha
 ```
 
 Installeer Lightning Terminal.
@@ -290,6 +290,8 @@ lnd.restlisten=0.0.0.0:8080
 lnd.rpclisten=0.0.0.0:10009
 lnd.listen=127.0.0.1:9735
 lnd.maxpendingchannels=5
+lnd.accept-amp=true
+lnd.accept-keysend=true
 lnd.color=ZELF_VERZINNEN_A
 lnd.alias=ZELF_VERZINNEN_B
 
@@ -349,6 +351,8 @@ lnd.restlisten=0.0.0.0:8080
 lnd.rpclisten=0.0.0.0:10009
 lnd.listen=127.0.0.1:9735
 lnd.maxpendingchannels=5
+lnd.accept-amp=true
+lnd.accept-keysend=true
 lnd.color=ZELF_VERZINNEN_A
 lnd.alias=ZELF_VERZINNEN_B
 lnd.lnddir=~/.lnd
@@ -392,8 +396,8 @@ faraday.bitcoin.password=DIT_WEET_JE_B
 
 W kunnen LiT benaderen over port 8443, vandaar dat we die open zetten.
 
-```text
-sudo ufw allow 8443
+```bash
+sudo ufw allow 8443 comment "Port voor Lightning Terminal"
 ```
 
 ## Automatiseren
@@ -551,7 +555,7 @@ Als je nu het commando `lit-pool getinfo` doet, zal je informatie zien over Pool
 
 ```javascript
 {
-	"version": "0.4.4-alpha commit=v0.4.4-alpha",
+	"version": "0.5.0-alpha commit=v0.5.0-alpha",
 	"accounts_total": 1,
 	"accounts_active": 0,
 	"accounts_active_expired": 0,
@@ -582,4 +586,90 @@ Open `https://IP VAN JE PI:8443` in de browser om in te loggen in Lightning Term
 ### Walkthrough
 
 Aan de slag met het LiT dashboard? Volg dan [deze walkthrough](https://github.com/lightninglabs/lightning-terminal/blob/master/doc/WALKTHROUGH.md) van Lightning Labs.
+
+## Updaten
+
+Er zijn vier \(vijf als je LND meerekent\) onderdelen die je moet updaten. Dat zijn LiT, Pool, Loop en Faraday \(en LND\). Voor de LND update zou je naar het [desbetreffende hoofdstuk](https://docs.theroadtonode.com/lightning/updaten) moeten kijken. Alle anderen worden hier besproken.
+
+### Loop
+
+Stop de LiT service.
+
+```bash
+sudo systemctl stop lit
+```
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/loop
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```text
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.14.1-beta
+```
+
+Ga naar `cmd`.
+
+```text
+cd cmd
+```
+
+Installeer de `loopd` software.
+
+```text
+go install ./...
+```
+
+### Lightning Terminal
+
+Stop de LiT service.
+
+```bash
+sudo systemctl stop lit
+```
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/lightning-terminal
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```text
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.0-alpha
+```
+
+Installeer Lightning Terminal.
+
+```text
+make install
+```
 

@@ -22,11 +22,16 @@ sudo systemctl stop lnd
 
 ## Source code ophalen en compileren
 
-Update de repository met de laatste wijzigingen via Git.
+Ga de LND map in.
 
 ```bash
 cd ~/lnd
-git pull
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
 ```
 
 Toon de laatste versie/tag/release.
