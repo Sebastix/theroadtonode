@@ -38,7 +38,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.12.0-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.13.0-beta
 ```
 
 Installeer nu de software.
