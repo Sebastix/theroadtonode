@@ -27,7 +27,7 @@ cd RTL
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.10.2
+git checkout v0.11.0
 ```
 
 Installeer nu RTL. Let op, dit kan zo'n 10 minuten duren.
@@ -86,7 +86,7 @@ Vul bij `JOUW_ALIAS` de [alias](https://docs.theroadtonode.com/lightning/configu
 Zet port 3000 open.
 
 ```bash
-sudo ufw allow 3000
+sudo ufw allow 3000 comment "Port voor Ride the Lightning"
 ```
 
 Mocht je RTL van buiten je netwerk willen gebruiken, moet je port 3000 op je router opengooien en verkeer doorsturen naar je Pi.
@@ -177,7 +177,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.10.2
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.11.0
 ```
 
 Installeer de software.
