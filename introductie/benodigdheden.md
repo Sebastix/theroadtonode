@@ -20,9 +20,13 @@ Verder is uit het boodschappenlijstje op te maken dat we gebruik maken van bedra
 
 ## Solid state drive
 
+{% hint style="info" %}
+Ga voor een [Samsung T5](https://tweakers.net/pricewatch/942129/samsung-portable-ssd-t5-1tb-zwart.html). Echt waar. Doe het. Het zal je veel gezeik schelen.
+{% endhint %}
+
 Iedere node moet het grote Bitcoin kasboek bijhouden. In de afgelopen jaren is dat uitgegroeid tot 360 GB. Hier komt de SSD om de hoek kijken. Het is verstandig om ruim te gaan zitten en voor 1 TB te gaan. De blockchain blijft immers groeien en later in het proces komen de nodige gigabytes hier bovenop. Je hebt een paar opties:
 
-* Een externe SSD. Zo'n apparaat kost al snel **€110,00**.
+* Een externe SSD. Zo'n apparaat kost rond de **€110,00**.
 * Een losse SSD met een adapter naar USB-A 3.0. De combinatie zit ergens tussen de **€80,00** en **€120,00**.
 
 Een kant en klare externe SSD is het simpelst. Zoek een beetje rond op je favoriete vergelijkingssite en je vindt een mooi exemplaar.
