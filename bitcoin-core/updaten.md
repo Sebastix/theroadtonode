@@ -57,13 +57,13 @@ Installeer nu de software. Dit duurt maximaal 5 minuten.
 sudo make install
 ```
 
-Start de service bitcoin. De service zal vrij snel gestart zijn maar mogelijk moeten de blockchain n
+Start de service bitcoin. De service zal vrij snel gestart zijn maar de blockchain moet mogelijk nog een aantal blocks downloaden, afhankelijk van hoe lang de service gestopt was.
 
 ```bash
 sudo systemctl start bitcoind
 ```
 
-Start de LND \(vergeet deze niet te unlocken\) en andere services. LND unlocken zal pas kunnen nadat de blockchain van bitcoin weer synchroon is na de start. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is. Services start je weer op deze manier:
+Start de service LND \(vergeet deze niet te unlocken\) en andere services. LND unlocken zal pas kunnen nadat de blockchain van bitcoin weer synchroon is na de start. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is. Services start je weer op deze manier:
 
 ```bash
 sudo systemctl start lnd
