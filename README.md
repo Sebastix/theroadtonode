@@ -14,7 +14,7 @@ In het introductie onderdeel vind je informatie over het [doel en de waarom](htt
 
 ### Raspberry Pi
 
-De Raspberry Pi is een mini computer waar je de leukste dingen mee kunt. Maar om er gebruik van je maken, moet je hem eerst [aansluiten](https://docs.theroadtonode.com/raspberry-pi/hardware-aansluiten) en er een [besturingssysteem op knallen](https://docs.theroadtonode.com/raspberry-pi/software-flashen). Ook wil je natuurlijk [de beste prestaties](https://docs.theroadtonode.com/raspberry-pi/boot-vanaf-ssd) uit je Pi halen. Als je interesse hebt in het anoniem gebruiken van Bitcoin, dan kan dat met [Tor](https://docs.theroadtonode.com/raspberry-pi/tor). Voor informatie over je Pi kun je de [monitoring](https://docs.theroadtonode.com/raspberry-pi/monitoring) sectie raadplegen. Hier komen standaard zaken voor zoals het checken van de temperatuur van je Pi, maar ook custom zaken zoals overzichten van de software die je draait.
+De Raspberry Pi is een mini computer waar je de leukste dingen mee kunt. Maar om er gebruik van je maken, moet je hem eerst [aansluiten](https://docs.theroadtonode.com/raspberry-pi/hardware-aansluiten) en er een [besturingssysteem op knallen](https://docs.theroadtonode.com/raspberry-pi/software-flashen). Ook wil je natuurlijk [de beste prestaties](https://docs.theroadtonode.com/raspberry-pi/boot-vanaf-ssd) uit je Pi halen. Als je interesse hebt in het anoniem gebruiken van Bitcoin, dan kan dat met [Tor](https://docs.theroadtonode.com/raspberry-pi/tor-installeren). Voor informatie over je Pi kun je de [monitoring](https://docs.theroadtonode.com/raspberry-pi/monitoring) sectie raadplegen. Hier komen standaard zaken voor zoals het checken van de temperatuur van je Pi, maar ook custom zaken zoals overzichten van de software die je draait.
 
 De software die je gaat draaien is vaak afhankelijk \(in het Engels "dependencies"\) van andere software. daar is het [dependencies onderdeel](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren) voor in het leven geroepen. Veel onderdelen van de gids zullen naar de dependencies verwijzen.
 
@@ -40,7 +40,7 @@ Eén van de gaafste onderdelen van de gids is [Lightning Terminal](https://docs.
 
 ### Android
 
-Het Android gedeelte van de guide richt zich op apps voor het Android besturingssysteem. Zo wordt er uitgelegd hoe je de app [Zap](https://docs.theroadtonode.com/ios/zap) kunt gebruiken om channels te openen en Lightning transacties te doen - al dan niet via tor - via je eigen node over.
+Het Android gedeelte van de guide richt zich op apps voor het Android besturingssysteem. Zo wordt er uitgelegd hoe je de app [Zap](https://docs.theroadtonode.com/ios/zap) kunt gebruiken om channels te openen en Lightning transacties te doen - al dan niet via tor - via je eigen node.
 
 ### iOS
 
