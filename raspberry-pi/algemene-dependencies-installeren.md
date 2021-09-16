@@ -30,18 +30,18 @@ sudo apt purge golang-go
 
 ### Installeren
 
-Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.15.6](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download.
+Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.17.1](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download voor je Raspberry Pi. Als je bijvoorbeeld op een Intel NUC draait, dan heb je de amd64 versie nodig.
 
 ```bash
-wget https://golang.org/dl/go1.16.2.linux-armv6l.tar.gz
+wget https://golang.org/dl/go1.17.1.linux-armv6l.tar.gz
 ```
 
 ```bash
-sudo tar -C /usr/local -xzf go1.16.2.linux-armv6l.tar.gz
+sudo tar -C /usr/local -xzf go1.17.1.linux-armv6l.tar.gz
 ```
 
 ```bash
-rm go1.16.2.linux-armv6l.tar.gz
+rm go1.17.1.linux-armv6l.tar.gz
 ```
 
 ### Updaten
@@ -82,7 +82,7 @@ Om zeker van de te zijn dat alles werkt log je uit met "exit" en start je een ni
 go version
 ```
 
-Als het goed is zie je `go version go1.16.2 linux/arm` verschijnen.
+Als het goed is zie je `go version go1.17.1 linux/arm` verschijnen.
 
 ## NodeJS
 
