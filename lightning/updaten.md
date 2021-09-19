@@ -20,7 +20,7 @@ Stop nu de services die afhankelijk zijn van LND zoals Ride The Lightning of Thu
 sudo systemctl stop lnd
 ```
 
-of als je LiT gebruikt:
+óf als je de Lightning Terminal gebruikt:
 
 ```bash
 sudo systemctl stop lit
