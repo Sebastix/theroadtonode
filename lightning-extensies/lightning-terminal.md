@@ -620,7 +620,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.14.1-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.14.1-beta
 ```
 
 Ga naar `cmd`.
@@ -664,7 +664,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.0-alpha
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.0-alpha
 ```
 
 Installeer Lightning Terminal.
