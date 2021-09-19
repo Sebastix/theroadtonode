@@ -45,7 +45,7 @@ sudo systemctl restart bitcoind
 Ook hier dient de firewall geüpdate te worden. De port waarover BTC RPC Explorer zich toont is 3002.
 
 ```bash
-sudo ufw allow 3002
+sudo ufw allow 3002 comment "Maak BTC-RPC-Explorer bereikbaar"
 ```
 
 ## Installatie
@@ -71,7 +71,7 @@ cd btc-rpc-explorer
 Pak de nieuwste release.
 
 ```bash
-git checkout v3.1.1
+git checkout v3.2.0
 ```
 
 Installeer BTC RPC Explorer, maak het configuratie bestand `.env` en pas deze aan.
@@ -172,7 +172,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.1.1
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.2.0
 ```
 
 Installeer via NPM.
