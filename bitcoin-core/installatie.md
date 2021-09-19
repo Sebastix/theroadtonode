@@ -38,7 +38,7 @@ Gezien de [git-flow van Bitcoin Core](https://github.com/bitcoin/bitcoin/blob/ma
 Zou je toch een specifieke release willen \(wat op zich wel aan te raden is\), kun je het onderstaande commando uitvoeren.
 
 ```bash
-git checkout v0.21.1
+git checkout v22.0
 ```
 
 ## Database

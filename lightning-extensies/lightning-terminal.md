@@ -104,7 +104,7 @@ cd loop
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.15.0-beta
+git checkout v0.14.1-beta
 ```
 
 Ga naar `loop/cmd`.
@@ -204,7 +204,7 @@ cd pool
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.5.1-alpha
+git checkout v0.5.0-alpha
 ```
 
 Installeer de Pool software.
@@ -620,7 +620,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.15.0-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.14.1-beta
 ```
 
 Ga naar `cmd`.
@@ -633,44 +633,6 @@ Installeer de `loopd` software.
 
 ```text
 go install ./...
-```
-
-### Pool
-
-Stop de LiT service.
-
-```bash
-sudo systemctl stop lit
-```
-
-Ga naar de applicatie directory.
-
-```bash
-cd ~/pool
-```
-
-Update de repository met de laatste wijzigingen via Git.
-
-```bash
-git fetch --all
-```
-
-Toon de laatste versie/tag/release.
-
-```text
-git describe --tags `git rev-list --tags --max-count=1`
-```
-
-Haal de wijzigingen op van de laatste versie.
-
-```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.1-alpha
-```
-
-Installeer de Pool software.
-
-```text
-make install
 ```
 
 ### Lightning Terminal
@@ -702,7 +664,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.0-alpha
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.0-alpha
 ```
 
 Installeer Lightning Terminal.

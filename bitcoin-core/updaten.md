@@ -25,7 +25,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.21.1
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v22.0
 ```
 
 Build bitcoin core opnieuw op basis van de zojuist uitgecheckte versie van de broncode. Door de toevoeging van `-j $(nproc)` worden alle cores gebruikt van de CPU en zou de build sneller verlopen dan zonder deze toevoeging.
@@ -75,7 +75,7 @@ Check de huidige versie van bitcoin core.
 bitcoin-cli --version
 ```
 
-De output zal lijken op `Bitcoin Core RPC client v0.21.1`
+De output zal lijken op `Bitcoin Core RPC client v0.22.0`
 
 Bitcoin core is nu bijgewerkt!
 
