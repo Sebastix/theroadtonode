@@ -27,7 +27,7 @@ cd RTL
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.11.2
+git checkout v0.11.0
 ```
 
 Installeer nu RTL. Let op, dit kan zo'n 10 minuten duren.
@@ -177,7 +177,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.11.2
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.11.0
 ```
 
 Installeer de software.
@@ -193,4 +193,8 @@ sudo systemctl start rtl
 ```
 
 RTL is nu bijgewerkt!
+
+## Bereikbaar over Tor
+
+Dit blijkt ietwat lastig te zijn. Meer info volgt.
 
