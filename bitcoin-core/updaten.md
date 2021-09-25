@@ -77,7 +77,7 @@ Check de huidige versie van bitcoin core.
 bitcoin-cli --version
 ```
 
-De output zal lijken op `Bitcoin Core RPC client v0.22.0`
+De output zal lijken op `Bitcoin Core RPC client v22.0`
 
 Bitcoin core is nu bijgewerkt!
 
