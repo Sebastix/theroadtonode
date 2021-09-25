@@ -4,6 +4,8 @@
 Tijd: 1.5 uur
 {% endhint %}
 
+Zorg voordat je van start gaat dat je Pi up-to-date is met `sudo apt update` en `sudo apt upgrade -y`.
+
 Ga naar de applicatie directory.
 
 ```bash
