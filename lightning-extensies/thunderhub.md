@@ -28,7 +28,7 @@ cd thunderhub
 Pak de laatste versie/tag/release.
 
 ```text
-git checkout v0.12.28
+git checkout v0.12.30
 ```
 
 Haal alle benodigde software dependencies binnen.
@@ -209,7 +209,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.12.28
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.12.30
 ```
 
 Installeer de software.
