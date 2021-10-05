@@ -55,7 +55,7 @@ git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.13.3-beta
 Installeer nu de software.
 
 ```bash
-make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc monitoring"
 ```
 
 ## Start de services
@@ -63,7 +63,8 @@ make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc
 Start de service `lnd` en monitor de voortgang van het opstarten. Wees geduldig dit kan even duren.
 
 ```bash
-sudo systemctl start lnd
+sudo systemctl start lnd # of lit natuurlijk
+
 sudo journalctl -f -u lnd
 ```
 

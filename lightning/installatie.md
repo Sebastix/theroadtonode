@@ -37,6 +37,6 @@ git checkout v0.13.3-beta
 En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later gebruik willen maken van [Lightning Terminal](https://docs.theroadtonode.com/lightning-extensies/lightning-terminal) en andere tools.
 
 ```bash
-make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc monitoring"
 ```
 
