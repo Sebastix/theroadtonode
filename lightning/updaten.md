@@ -20,12 +20,6 @@ Stop nu de services die afhankelijk zijn van LND zoals Ride The Lightning of Thu
 sudo systemctl stop lnd
 ```
 
-óf als je de Lightning Terminal gebruikt:
-
-```bash
-sudo systemctl stop lit
-```
-
 ## Source code ophalen en compileren
 
 Ga de LND map in.
@@ -49,13 +43,13 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.13.3-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.13.0-beta
 ```
 
 Installeer nu de software.
 
 ```bash
-make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc monitoring"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
 ```
 
 ## Start de services
@@ -63,8 +57,7 @@ make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc
 Start de service `lnd` en monitor de voortgang van het opstarten. Wees geduldig dit kan even duren.
 
 ```bash
-sudo systemctl start lnd # of lit natuurlijk
-
+sudo systemctl start lnd
 sudo journalctl -f -u lnd
 ```
 
@@ -82,7 +75,7 @@ Check de huidige versie van LND.
 lncli --version
 ```
 
-De output zal lijken op `lncli version 0.13.2-beta commit=v0.13.2-beta`
+De output zal lijken op `lncli version 0.12.1-beta commit=v0.12.1-beta`
 
 LND is nu bijgewerkt! Start nu de andere services die afhankelijk zijn van LND zoals RTL of Thunderhub.
 
