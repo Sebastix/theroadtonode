@@ -4,7 +4,7 @@
 Tijd: 15 minuten
 {% endhint %}
 
-Het is tijd om iets met een beeldscherm te doen. De Pi moet een besturingssysteem hebben, namelijk [Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_lite_armhf_latest). Om het besturingssysteem op zowel de SSD als de microSD te krijgen, gebruiken we het programma [Balena Etcher](https://www.balena.io/etcher/). Gebruik je Windows dan zou je ook [Rufus](https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe) kunnen gebruiken.
+Het is tijd om iets met een beeldscherm te doen. De Pi moet een besturingssysteem hebben, namelijk [Raspberry Pi OS](https://downloads.raspberrypi.org/raspios\_lite\_armhf\_latest). Om het besturingssysteem op zowel de SSD als de microSD te krijgen, gebruiken we het programma [Balena Etcher](https://www.balena.io/etcher/). Gebruik je Windows dan zou je ook [Rufus](https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe) kunnen gebruiken.
 
 ## Raspberry Pi OS
 
@@ -21,7 +21,11 @@ touch /Volumes/boot/ssh
 Zit je [op Windows](https://arjanlobbezoo.nl/windows-10-programma-administrator-mode-openen/), dan zou iets in de trant van het volgende moeten werken. In dit voorbeeld zou je de D-schijf moeten aanpassen naar wat voor jou van toepassing is.
 
 ```bash
-type nul > D:\ssh
+cd D:\
+```
+
+```bash
+type ssh
 ```
 
 Met bovenstaande commando's wordt een bestand aangemaakt op de microSD. Het bestand heet "ssh" en als de Pi opstart met dit bestand aan boord, maakt de Pi het mogelijk om zich te laten aansturen van buitenaf. We gaan namelijk met behulp van SSH de Pi aansturen vanaf onze computer. Werp tot slot de microSD uit. Stop de microSD in de Pi.
@@ -35,4 +39,3 @@ In de guide wordt gebruik gemaakt van Raspberry Pi OS Lite 32-bit als besturings
 
 In de toekomst wordt de guide eventueel geüpdate om gebruik te maken van 64-bits architectuur.
 {% endhint %}
-
