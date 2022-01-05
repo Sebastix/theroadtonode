@@ -45,6 +45,7 @@
   * [Lightning Terminal](lightning-extensies/lightning-terminal.md)
 * [Android](android/README.md)
   * [Zap](android/zap.md)
+  * [Zeus](android/zeus.md)  
 * [iOS](ios/README.md)
   * [Fully Noded](ios/fully-noded.md)
   * [Zap](ios/zap.md)

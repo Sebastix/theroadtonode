@@ -4,7 +4,7 @@
 Tijd: 30 minuten
 {% endhint %}
 
-Als je de wallet software van [Electrum](https://electrum.org/#home) gebruikt is het een logische stap om ervoor te zorgen dat Electrum babbelt met je eigen node. Dit kan niet rechtstreeks maar moet verlopen via een Electrum Server. De Electrum wallet software connect namelijk normaal gesproken met Electrum Servers waarvan je niet weet wie die in de gaten houdt. De wallet houdt namelijk de adressen in de gaten waar je Bitcoin op hebt ontvangen en zo kunnen verschillende adressen terug te herleiden zijn naar jouw IP. Dat wil je natuurlijk niet. De oplossing: draai je eigen Electrum Server. Er zijn verschillende forks beschikbaar zoals [ElectrumX](https://github.com/spesmilo/electrumx), [ElectRS](https://github.com/romanz/electrs) en Electrum Personal Server. Dit document beschrijft de installatie van [Electrum Personal Server](https://github.com/chris-belcher/electrum-personal-server) omdat dit momenteel de meest lightweight implementatie is. In TRTN is ook een handleiding opgenomen voor het installeren voor [ElectrumX](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x). Je hebt niet beide nodig dus bedenk vooraf welke fork je nodig hebt. Een voordeel van EPS is dat deze vrij ligt en simpel is. Een nadeel is dat er maar 1 connectie tegelijk mogelijk is. Dat kan een nadeel zijn wanneer je op een later moment misschien met zowel een desktop client als Blue Wallet tegelijk wilt verbinden.
+Als je de wallet software van [Electrum](https://electrum.org/#home) gebruikt is het een logische stap om ervoor te zorgen dat Electrum babbelt met je eigen node. Dit kan niet rechtstreeks maar moet verlopen via een Electrum Server. De Electrum wallet software connect namelijk normaal gesproken met Electrum Servers waarvan je niet weet wie die in de gaten houdt. De wallet houdt namelijk de adressen in de gaten waar je Bitcoin op hebt ontvangen en zo kunnen verschillende adressen terug te herleiden zijn naar jouw IP. Dat wil je natuurlijk niet. De oplossing: draai je eigen Electrum Server. Er zijn verschillende forks beschikbaar zoals [ElectrumX](https://github.com/spesmilo/electrumx), [ElectRS](https://github.com/romanz/electrs) en Electrum Personal Server. Dit document beschrijft de installatie van [Electrum Personal Server](https://github.com/chris-belcher/electrum-personal-server) omdat dit momenteel de meest lightweight implementatie is. In TRTN is ook een handleiding opgenomen voor het installeren voor [ElectrumX](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x). Je hebt niet beide nodig dus bedenk vooraf welke fork je nodig hebt. Een voordeel van EPS is dat deze vrij licht en simpel is. Een nadeel is dat er maar 1 connectie tegelijk mogelijk is. Dat kan een nadeel zijn wanneer je op een later moment misschien met zowel een desktop client als Blue Wallet tegelijk wilt verbinden.
 
 ## Voorbereidingen
 
@@ -43,20 +43,20 @@ cd .eps
 
 ## Installatie
 
-Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server. Zorg er v
+Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server. Zorg er voor dat je de meest recent versie van EPS hebt.
 
 Download vanaf de Github de [nieuwste release](https://github.com/chris-belcher/electrum-personal-server/releases) van Electrum Personal Server. Kopiëer de link van Source code \(tar.gz\), pak deze uit en gooi de download weg.
 
 ```bash
-wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.1.1.tar.gz
-tar -xvf eps-v0.2.1.1.tar.gz
-rm eps-v0.2.1.1.tar.gz
+wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.2.tar.gz
+tar -xvf eps-v0.2.2.tar.gz
+rm eps-v0.2.2.tar.gz
 ```
 
 Maak een kopie van het configuratie bestand en pas deze aan.
 
 ```bash
-cp electrum-personal-server-eps-v0.2.1.1/config.ini_sample config.cfg
+cp electrum-personal-server-eps-v0.2.2/config.ini_sample config.cfg
 nano config.cfg
 ```
 
@@ -153,7 +153,7 @@ sudo ufw allow 50002
 
 ## Electrum Wallet
 
-1. Start nu Electrum Wallet op je PC met `"C:\Program Files (x86)\Electrum\electrum-4.0.9.exe" --server IP-ADRES VAN PI:50002:s --oneserver`
+1. Start nu Electrum Wallet op je PC met `"C:\Program Files (x86)\Electrum\electrum-4.1.5.exe" --server IP-ADRES VAN PI:50002:s --oneserver`
 2. Kies in het Tools-menu voor Network
 3. Open de Server-tab
 4. Haal het vinkje weg bij “select server automatically”
@@ -179,10 +179,10 @@ Download vanaf de Github de tarball van de [nieuwste release](https://github.com
 
 ```text
 cd ~/.eps
-wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.1.1.tar.gz
-tar -xvf eps-v0.2.1.1.tar.gz
-rm eps-v0.2.1.1.tar.gz
-cd electrum-personal-server-eps-v0.2.1.1/
+wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.2.tar.gz
+tar -xvf eps-v0.2.2.tar.gz
+rm eps-v0.2.2.tar.gz
+cd electrum-personal-server-eps-v0.2.2/
 pip3 install use .
 ```
 
@@ -191,4 +191,3 @@ Start de service weer.
 ```text
 sudo systemctl start eps
 ```
-
