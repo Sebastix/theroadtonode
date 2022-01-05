@@ -24,13 +24,13 @@ Kopieer die lap tekst vanuit SSH en plak die bijvoorbeeld in een Google Docs doc
 
 ## Zeus
 
-1. Switch op je telefoon naar dit Google Docs document en kopieer de gehele string \(`lndconnect://xxx.onion:10009?cert=heel_veel_tekens&macaroon=heel_veel_tekens`\).
+1. Switch op je telefoon naar dit Google Docs document en kopieer de gehele string \(`lndconnect://xxx.onion:8080?cert=heel_veel_tekens&macaroon=heel_veel_tekens`\).
 2. Open Zeus
-3. Tap GET STARTED
-4. Connect a node >
-5. + ADD A NEW NODE
-6. IMPORT
-7. Vul de alias van je node in bij Nickname (optional)
-8. SAVE NODE CONFIG
+3. `GET STARTED`
+4. `Connect a node >`
+5. `+ ADD A NEW NODE`
+6. `IMPORT`
+7. Vul de alias van je node in bij `Nickname (optional)`
+8. `SAVE NODE CONFIG`
 
 Je bent nu verbonden met je eigen Node.
