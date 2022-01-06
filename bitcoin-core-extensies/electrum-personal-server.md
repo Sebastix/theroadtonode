@@ -43,7 +43,7 @@ cd .eps
 
 ## Installatie
 
-Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server. Zorg er voor dat je de meest recent versie van EPS hebt.
+Nu kunnen we verder gaan met het downloaden van de source en het installeren van Electrum Personal Server. Zorg er voor dat je de meest recente versie van EPS hebt.
 
 Download vanaf de Github de [nieuwste release](https://github.com/chris-belcher/electrum-personal-server/releases) van Electrum Personal Server. Kopiëer de link van Source code \(tar.gz\), pak deze uit en gooi de download weg.
 
@@ -72,7 +72,7 @@ let bij het laatste commando in onderstaand blokje op de punt \(.\) aan het eind
 {% endhint %}
 
 ```bash
-cd electrum-personal-server-eps-v0.2.1.1
+cd electrum-personal-server-eps-v0.2.2
 pip3 install wheel
 pip3 install use .
 ```
