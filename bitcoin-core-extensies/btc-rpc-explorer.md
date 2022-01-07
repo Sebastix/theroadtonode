@@ -45,7 +45,7 @@ sudo systemctl restart bitcoind
 Ook hier dient de firewall geüpdate te worden. De port waarover BTC RPC Explorer zich toont is 3002.
 
 ```bash
-sudo ufw allow 3002
+sudo ufw allow 3002 comment "Maak BTC-RPC-Explorer bereikbaar"
 ```
 
 ## Installatie
@@ -71,7 +71,7 @@ cd btc-rpc-explorer
 Pak de nieuwste release.
 
 ```bash
-git checkout v3.1.1
+git checkout v3.2.0
 ```
 
 Installeer BTC RPC Explorer, maak het configuratie bestand `.env` en pas deze aan.
@@ -147,13 +147,13 @@ Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te
 
 Als er een nieuwe versie beschikbaar is voor BTC RPC Explorer, kun je eenvoudig updaten door de nieuwe source uit git op te halen en deze te installeren. Wel eerst even de service stoppen en naderhand weer starten zoals hieronder staat aangegeven.
 
-```text
+```
 sudo systemctl stop btc-rpc-explorer
 ```
 
 Ga de BTC RPC Explorer map in.
 
-```text
+```
 cd ~/btc-rpc-explorer
 ```
 
@@ -165,14 +165,14 @@ git fetch --all
 
 Toon de laatste versie/tag/release.
 
-```text
+```
 git describe --tags `git rev-list --tags --max-count=1`
 ```
 
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.1.1
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.2.0
 ```
 
 Installeer via NPM.
@@ -183,7 +183,7 @@ npm install
 
 Start de service weer op nadat installeren klaar is.
 
-```text
+```
 sudo systemctl start btc-rpc-explorer
 ```
 
@@ -200,7 +200,7 @@ In het bestand dat zich opent voeg je onderaan de volgende drie regels toe.
 ```bash
 HiddenServiceDir /var/lib/tor/btc-rpc-explorer
 HiddenServiceVersion 3
-HiddenServicePort 80 127.0.0.1:3002
+HiddenServicePort 3002 127.0.0.1:3002
 ```
 
 Nadat tor is geconfigureerd moeten we de juiste mappen aanmaken en rechten toekennen.
@@ -223,7 +223,7 @@ Het onion-adres vind je met het volgende commando:
 sudo cat /var/lib/tor/btc-rpc-explorer/hostname
 ```
 
-Vul deze \(zonder portnummer\) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
+Vul deze (met portnummer) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
 
 ## Koppeling met Electrum X
 
@@ -245,4 +245,3 @@ Herstart de service om de nieuwe configuratie van kracht te laten zijn.
 ```bash
 sudo systemctl restart btc-rpc-explorer
 ```
-
