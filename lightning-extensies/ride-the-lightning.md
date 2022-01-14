@@ -38,7 +38,7 @@ npm install --only=prod
 
 ## Configuratie
 
-Ook RTL moet ingesteld worden. Maak het configuratiebestand aan \(nog steeds in de /home/pi/RTL map\).
+Ook RTL moet ingesteld worden. Maak het configuratiebestand aan \(nog steeds in de /home/ubuntu/RTL map\).
 
 ```bash
 nano RTL-Config.json
@@ -62,14 +62,14 @@ Plak er dit in.
             "lnNode": "JOUW_ALIAS",
             "lnImplementation": "LND",
             "Authentication": {
-                "macaroonPath": "/home/pi/.lnd/data/chain/bitcoin/mainnet",
-                "configPath": "/home/pi/.lnd/lnd.conf"
+                "macaroonPath": "/home/ubuntu/.lnd/data/chain/bitcoin/mainnet",
+                "configPath": "/home/ubuntu/.lnd/lnd.conf"
             },
             "Settings": {
                 "userPersona": "OPERATOR",
                 "themeMode": "NIGHT",
                 "themeColor": "TEAL",
-                "bitcoindConfigPath": "/home/pi/.bitcoin/bitcoin.conf",
+                "bitcoindConfigPath": "/home/ubuntu/.bitcoin/bitcoin.conf",
                 "enableLogging": true,
                 "fiatConversion": false,
                 "lnServerUrl": "https://127.0.0.1:8080"
@@ -99,7 +99,7 @@ sudo nano /etc/systemd/system/rtl.service
 
 Plak er dit in.
 
-```bash
+```toml
 [Unit]
 Description=Ride The Lightning Daemon
 Wants=lnd.service
@@ -107,7 +107,7 @@ After=lnd.service
 
 [Service]
 User=pi
-ExecStart=/usr/bin/node /home/pi/RTL/rtl.js
+ExecStart=/usr/bin/node /home/ubuntu/RTL/rtl.js
 Restart=always
 TimeoutSec=120
 RestartSec=30

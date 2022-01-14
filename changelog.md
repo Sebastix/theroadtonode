@@ -1,10 +1,17 @@
 # Changelog
 
-## 2.5.0 - 2021 / juni / xx \(WIP\)
+## 3.0.0 - 2022 / januari / 06
+
+### Aanpassingen
+
+* OS aangepast van 32-bit Raspberry OS naar 64-bit Ubuntu
+* User aangepast van `pi` naar `ubuntu`
 
 ### Toevoegingen
 
-* Dynamisch DNS voor bereik van buitenaf \(Raspberry Pi\)
+* [Electrs](https://docs.theroadtonode.com/bitcoin-core-extensies/electrs) \(Bitcoin Core Extensies\)
+
+## 2.5.0 - 2021 / juni / 06
 
 ### Verbeteringen
 
@@ -176,7 +183,7 @@
 ### Toevoegingen
 
 * Logo
-* [Automatisering](https://docs.theroadtonode.com/bitcoin-core/automatisering) voor bitcoind
+* [Automatiseren](https://docs.theroadtonode.com/bitcoin-core/automatiseren) voor bitcoind
 * Het [Lightning \(LND\)](https://docs.theroadtonode.com/lightning) hoofdstuk
 * [Ride The Lightning](https://docs.theroadtonode.com/lightning-extensies/ride-the-lightning) onderdeel \(Lightning extensies\)
 

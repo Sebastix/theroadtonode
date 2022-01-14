@@ -176,7 +176,7 @@ faraday --version
 Configureer de faraday software en check of het allemaal werkt. Op de plekken "VUL\_USERNAME\_IN" en "VUL\_PASSWORD\_IN" moet je de gegevens invullen die je tijdens de [configuratie](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#authenticatie) van Core hebt aangemaakt.
 
 ```bash
-faraday --lnd.macaroondir=/home/pi/.lnd/data/chain/bitcoin/mainnet --lnd.tlscertpath=/home/pi/.lnd/tls.cert --lnd.rpcserver=127.0.0.1:10009 --connect_bitcoin --bitcoin.host=127.0.0.1:8332 --bitcoin.user=VUL_USERNAME_IN --bitcoin.password=VUL_PASSWORD_IN
+faraday --lnd.macaroondir=/home/ubuntu/.lnd/data/chain/bitcoin/mainnet --lnd.tlscertpath=/home/ubuntu/.lnd/tls.cert --lnd.rpcserver=127.0.0.1:10009 --connect_bitcoin --bitcoin.host=127.0.0.1:8332 --bitcoin.user=VUL_USERNAME_IN --bitcoin.password=VUL_PASSWORD_IN
 ```
 
 Zodra je te zien krijgt dat alles werkt, kun je faraday weer afsluiten met `Ctrl + C`.
@@ -269,7 +269,7 @@ Maak de `.lit` map aan.
 mkdir .lit
 ```
 
-De configuratie van LND nemen we over in LiT. Aangezien we LND zullen opstarten zodra LiT wordt opgestart \(daarover onder het kopje "automatisering" meer\), kunnen we de LND instellingen kopiëren.
+De configuratie van LND nemen we over in LiT. Aangezien we LND zullen opstarten zodra LiT wordt opgestart \(daarover onder het kopje "automatiseren" meer\), kunnen we de LND instellingen kopiëren.
 
 ```bash
 cp .lnd/lnd.conf .lit/lit.conf
@@ -306,7 +306,7 @@ lnd.bitcoin.mainnet=true
 lnd.bitcoin.node=bitcoind
 
 # LND - bitcoind
-lnd.bitcoind.dir=/home/pi/.bitcoin
+lnd.bitcoind.dir=/home/ubuntu/.bitcoin
 lnd.bitcoind.rpcuser=DIT_WEET_JE_A
 lnd.bitcoind.rpcpass=DIT_WEET_JE_B
 lnd.bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
@@ -368,7 +368,7 @@ lnd.bitcoin.mainnet=true
 lnd.bitcoin.node=bitcoind
 
 # LND - bitcoind
-lnd.bitcoind.dir=/home/pi/.bitcoin
+lnd.bitcoind.dir=/home/ubuntu/.bitcoin
 lnd.bitcoind.rpcuser=DIT_WEET_JE_A
 lnd.bitcoind.rpcpass=DIT_WEET_JE_B
 lnd.bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
@@ -420,8 +420,8 @@ After=bitcoind.service
 
 [Service]
 User=pi
-ExecStart=/home/pi/go/bin/litd
-PIDFile=/home/pi/.lit/lit.pid
+ExecStart=/home/ubuntu/go/bin/litd
+PIDFile=/home/ubuntu/.lit/lit.pid
 Restart=always
 TimeoutSec=120
 RestartSec=30
@@ -538,9 +538,9 @@ Plak onderaan het bestand de volgende drie regels:
 # (...)
 # Hierboven staat allemaal andere zooi. Lekker laten staan.
 
-alias lit-loop="loop --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.loop/mainnet/loop.macaroon"
-alias lit-pool="pool --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.pool/mainnet/pool.macaroon"
-alias lit-faraday="frcli --rpcserver=localhost:10009 --tlscertpath=/home/pi/.lnd/tls.cert --macaroonpath=/home/pi/.faraday/mainnet/faraday.macaroon"
+alias lit-loop="loop --rpcserver=localhost:10009 --tlscertpath=/home/ubuntu/.lnd/tls.cert --macaroonpath=/home/ubuntu/.loop/mainnet/loop.macaroon"
+alias lit-pool="pool --rpcserver=localhost:10009 --tlscertpath=/home/ubuntu/.lnd/tls.cert --macaroonpath=/home/ubuntu/.pool/mainnet/pool.macaroon"
+alias lit-faraday="frcli --rpcserver=localhost:10009 --tlscertpath=/home/ubuntu/.lnd/tls.cert --macaroonpath=/home/ubuntu/.faraday/mainnet/faraday.macaroon"
 ```
 
 Sla het op met `Ctrl + X` en bevestig met `Y`. Log even uit met `exit` en log opnieuw in via SSH. Pas na uit- en inloggen zijn de aliassen van kracht.

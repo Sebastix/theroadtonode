@@ -30,18 +30,18 @@ sudo apt purge golang-go
 
 ### Installeren
 
-Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.17.1](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARMv6 versie van Go download voor je Raspberry Pi. Als je bijvoorbeeld op een Intel NUC draait, dan heb je de amd64 versie nodig.
+Nadat de oude versie is verwijderd kunnen we de nieuwe installeren. Op moment van schrijven is [v1.17.6](https://golang.org/dl/) het meest recent. Als er een nieuwe versie is die je wil installeren \(of omdat een latere versie van LND dat vereist\), let er dan op dat je een ARM64 versie van Go download voor je Raspberry Pi. Als je bijvoorbeeld op een Intel NUC draait, dan heb je de amd64 versie nodig.
 
 ```bash
-wget https://golang.org/dl/go1.17.1.linux-armv6l.tar.gz
+wget https://go.dev/dl/go1.17.6.linux-arm64.tar.gz
 ```
 
 ```bash
-sudo tar -C /usr/local -xzf go1.17.1.linux-armv6l.tar.gz
+sudo tar -C /usr/local -xzf go1.17.6.linux-arm64.tar.gz
 ```
 
 ```bash
-rm go1.17.1.linux-armv6l.tar.gz
+rm go1.17.6.linux-arm64.tar.gz
 ```
 
 ### Updaten
@@ -82,14 +82,14 @@ Om zeker van de te zijn dat alles werkt log je uit met "exit" en start je een ni
 go version
 ```
 
-Als het goed is zie je `go version go1.17.1 linux/arm` verschijnen.
+Als het goed is zie je `go version go1.17.6 linux/arm64` verschijnen.
 
 ## NodeJS
 
 Net als dat Golang binnengehaald moest worden, gaan we nu NodeJS binnenhalen. We willen de nieuwste versie, dus draaien eerst een scriptje. Zorg allereerst dat je in de home directory zit met `cd ~` commando. Voer daarna het script uit.
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 ```
 
 Nadat het scriptje zijn werk gedaan heeft, kunnen we NodeJS installeren.
@@ -102,7 +102,8 @@ Check of je de juiste versie hebt met:
 
 ```bash
 node --version
-# Verwachte output: v14.17.0
+
+# Verwachte output: v16.13.1
 ```
 
 ## Yarn
@@ -111,14 +112,17 @@ Download en installeer [Yarn](https://classic.yarnpkg.com/en/docs/install).
 
 ```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install yarn
+
+sudo apt update && sudo apt install yarn -y
 ```
 
 Controleer of Yarn is geïnstalleerd.
 
 ```bash
-yarn --version 
-# Verwachte output: 1.22.5
+yarn --version
+
+# Verwachte output: 1.22.17
 ```
 

@@ -18,14 +18,14 @@ sudo nano /etc/systemd/system/bitcoind.service
 
 Plak er dit in.
 
-```bash
+```toml
 [Unit]
 Description=Bitcoin Daemon
 After=network.target
 
 [Service]
-User=pi
-PIDFile=/home/pi/.bitcoin/bitcoind.pid
+User=ubuntu
+PIDFile=/home/ubuntu/.bitcoin/bitcoind.pid
 ExecStart=/usr/local/bin/bitcoind
 Restart=always
 TimeoutSec=120
@@ -57,29 +57,21 @@ Het zou kunnen dat het niet in een keer werkt. Je output zal dan hierop lijken:
 
 ```bash
 ● bitcoind.service - Bitcoin Daemon
-   Loaded: loaded (/etc/systemd/system/bitcoind.service; enabled; vendor preset: enabled)
-   Active: activating (auto-restart) (Result: exit-code) since Sun 2020-11-22 16:36:03 GMT; 7s ago
-  Process: 29164 ExecStart=/usr/local/bin/bitcoind (code=exited, status=1/FAILURE)
- Main PID: 29164 (code=exited, status=1/FAILURE)
+     Loaded: loaded (/etc/systemd/system/bitcoind.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-01-14 12:20:53 UTC; 2s ago
+   Main PID: 40483 (bitcoind)
+      Tasks: 12 (limit: 4203)
+     CGroup: /system.slice/bitcoind.service
+             └─40483 /usr/local/bin/bitcoind
+
+Jan 14 12:20:53 ubuntu systemd[1]: Started Bitcoin Daemon.
+Jan 14 12:20:53 ubuntu bitcoind[40482]: Bitcoin Core starting
 ```
 
-Probeer het commando een paar keer uit te voeren, want het duurt hooguit een minuutje voordat bitcoind goed is opgestart middels de service. De output zou dan hier iets van weg moeten hebben:
-
-```bash
-● bitcoind.service - Bitcoin Daemon
-   Loaded: loaded (/etc/systemd/system/bitcoind.service; enabled; vendor preset: enabled)
-   Active: active (running) since Sun 2020-11-22 17:11:11 GMT; 12min ago
- Main PID: 29806 (bitcoind)
-    Tasks: 19 (limit: 4915)
-   CGroup: /system.slice/bitcoind.service
-           └─29806 /usr/local/bin/bitcoind
-
-Nov 22 17:11:11 raspberrypi systemd[1]: Started Bitcoin Daemon.
-```
+Probeer het commando een paar keer uit te voeren, want het duurt hooguit een minuutje voordat bitcoind goed is opgestart middels de service.
 
 Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 
 ```bash
 sudo journalctl -f -u bitcoind
 ```
-

@@ -4,11 +4,11 @@
 Tijd: 5 minuten
 {% endhint %}
 
-Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind) net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide.
+Bitcoin Core heeft [allerhande instellingen](https://en.bitcoinwiki.org/wiki/Running_Bitcoind) net zoals jouw mobiel instellingen heeft. Het mooie aan het mobieltje is dat de instellingen overzichtelijk gegroepeerd onder elkaar staan. Je kunt ze makkelijk wijzigen met een druk op de knop. Bij Core werkt dat net even anders. Je moet eerst een lijst vinden met mogelijke instellingen, je inlezen en daarna bepalen wat je nodig hebt. Best wel een gedoe, daarom staat hieronder een configuratie bestand wat zou moeten werken voor deze guide. Wil je meer customizen dan is [deze site](https://jlopp.github.io/bitcoin-core-config-generator/) van Lopp een hele goede resource.
 
 ## Configuratie
 
-Gezien vanuit de home directory \(`/home/pi`\) hebben we nu een map genaamd `bitcoin` met de broncode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
+Gezien vanuit de home directory \(`/home/ubuntu`\) hebben we nu een map genaamd `bitcoin` met de broncode. Naast deze map hebben we een map nodig genaamd `.bitcoin` dus maak hem aan.
 
 ```bash
 mkdir ~/.bitcoin
@@ -64,9 +64,13 @@ upnp=1
 # Nodig voor Lightning in een later stadium van de guide
 zmqpubrawblock=tcp://127.0.0.1:28332
 zmqpubrawtx=tcp://127.0.0.1:28333
+
+# Standaard gebruik maken van native segwit (bech32) adressen
+addresstype=bech32
+changetype=bech32
 ```
 
-Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor? Doe dan het onderstaand. Wil je dat jouw node ook via het normale internet bereikbaar is, laat de instellingen dan voor wat het is.
+Wacht even met gulzig op `Ctrl + X` drukken om op te slaan! Wil je dat jouw node enkel bereikbaar is via tor? Doe dan het onderstaande. Wil je dat jouw node ook via het normale internet bereikbaar is, laat de instellingen dan voor wat het is en sla het bestand op.
 
 * Haal de `#` weg voor `onlynet=onion`. Je zegt hiermee dat alleen tor toegestaan is.
 * Haal de `#` weg voor `proxy=127.0.0.1:9050`. Je zegt hiermee dat alles via tor moet lopen.
@@ -109,7 +113,7 @@ Je kunt meerdere rpcauth regels toevoegen. Zo kun je verschillende gebruikers aa
 Als je UFW hebt ingesteld is het belangrijk om port 8333 open te zetten. Dit zorgt ervoor dat andere nodes kunnen verbinden met die van jou. Het openzetten van deze port is alleen noodzakelijk als je je node \(ook\) over clearnet draait. Draai je jouw node enkel over tor, dan kun je deze paragraaf overslaan en verder naar "starten".
 
 ```bash
-sudo ufw allow 8333
+sudo ufw allow 8333 comment "Port voor Bitcoin Core peers"
 ```
 
 In het configuratie bestand een paar paragraven hierboven staat `upnp=1`. Dit houdt in dat als jouw router UPnP ondersteunt, Bitcoin Core die port zal openzetten op je router. Ondersteunt jouw router UPnP niet of heb je het uitgezet? Dan moet je even op [portforward.com](https://portforward.com/) kijken hoe jij op jouw specifieke router port 8333 openzet en het verkeer doorsluist naar je Pi.
@@ -130,7 +134,7 @@ tail -n 200 -f ~/.bitcoin/debug.log
 
 Per block dat gecontroleerd wordt, zie je de tekst `progress=X.XXXXX` voorbij komen. Dit is een getal van 0 tot 1. Nul betekent dat je nog niets gesynchroniseerd hebt, 1 betekent dat je klaar bent. Met `Ctrl + C` zet je de live feed weer stop.
 
-De initiële block download \(IBD\) zal zo'n 60 uur duren.
+De initiële block download \(IBD\) zal zo'n 60 tot 80 uur duren.
 
 Met de installatie van Core heb je ook een tool geïnstalleerd genaamd `bitcoin-cli`. Hiermee kun je met bitcoind praten.
 
@@ -145,10 +149,10 @@ bitcoin-cli getnetworkinfo
 Met dit commando krijg je wat informatie over het netwerk. Als het goed is ziet het er ongeveer zo uit als je enkel van tor gebruik maakt.
 
 {% hint style="info" %}
-Het onion-adres wijkt af van het adres dat je in [de vorige stap](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) hebt aangemaakt \(als je dat hebt aangemaakt\)! Dat het afwijkt is juist goed. Het onion-adres uit de vorige stap is enkel voor het uitvoeren van commando's op je node van buitenaf en gaat over port 8332. Het onderstaande onion-adres wordt door bitcoind zelf aangemaakt en gaat over port 8333. Dit wordt gebruikt om met andere nodes te communiceren.
+Het onion-adres wijkt af van het adres dat je in [de vorige stap](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen#onion-adres) hebt aangemaakt \(als je dat hebt aangemaakt\). Dat het afwijkt is juist goed. Het onion-adres uit de vorige stap is enkel voor het uitvoeren van commando's op je node van buitenaf en gaat over port 8332. Het onderstaande onion-adres wordt door bitcoind zelf aangemaakt en gaat over port 8333. Dit wordt gebruikt om met andere nodes te communiceren.
 {% endhint %}
 
-```javascript
+```json
 "networks": [
     {
         "name": "ipv4",
@@ -190,7 +194,7 @@ Hieraan zie je het volgende:
 
 Heb je zowel tor als clearnet aan staan, dan zal je output er zo uit zien:
 
-```javascript
+```json
 "networks": [
     {
         "name": "ipv4",
@@ -235,4 +239,3 @@ Hieraan zie je het volgende:
 * Jouw onion-adres binnen het "localaddresses" blok
 
 Wijkt jouw output af? Ga terug naar start.
-

@@ -10,7 +10,7 @@ Backup eerst voor de zekerheid je channels via Ride The Lightning, Thunderhub of
 * Kies voor "Backups" onder "Lightning"
 * Klik op "Backup All"
 
-Nu staat er in `/home/pi/RTL/backup/node-1/` een bestand dat `channel-all.bak` heet.
+Nu staat er in `/home/ubuntu/RTL/backup/node-1/` een bestand dat `channel-all.bak` heet.
 
 ## Stop services
 

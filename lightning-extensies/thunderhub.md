@@ -59,7 +59,7 @@ CURRENCY='sat'
 # -----------
 # Account Configs
 # -----------
-ACCOUNT_CONFIG_PATH='/home/pi/.thunderhub/config.yaml'
+ACCOUNT_CONFIG_PATH='/home/ubuntu/.thunderhub/config.yaml'
 ```
 
 Sla het op met `Ctrl + X` en bevestig met `Y`. Dit is een minimale setup qua configuratie. Meer parameters die je kunt gebruiken vind je in het `.env` bestand.
@@ -82,7 +82,7 @@ accounts:
   - name: '<kies_een_naam>'
     serverUrl: '127.0.0.1:10009'
     # network: Leave without network and it will use the default network
-    lndDir: '/home/pi/.lnd'
+    lndDir: '/home/ubuntu/.lnd'
 ```
 
 Sla het op met `Ctrl + X` en bevestig met `Y`. Het masterPassword kun je naar wens aanpassen en heb je nodig om in te loggen in Thunderhub in je browser straks. Nadat je Thunderhub voor de eerste keer hebt opgestart, wordt dit wachtwoord herschreven met een hashed waarde.
@@ -129,7 +129,7 @@ sudo nano /etc/systemd/system/thunderhub.service
 
 Plak er dit in.
 
-```bash
+```toml
 [Unit]
 Description=Thunderhub
 Wants=lnd.service
@@ -137,7 +137,7 @@ After=lnd.service
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/thunderhub
+WorkingDirectory=/home/ubuntu/thunderhub
 ExecStart=/usr/bin/npm start -- -p 4000
 Restart=always
 TimeoutSec=120

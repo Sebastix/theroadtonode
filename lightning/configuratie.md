@@ -4,7 +4,7 @@
 Tijd: 5 minuten
 {% endhint %}
 
-De map waar LND gebruik van wil maken, bestaat nog niet. Maak hem dus eerst aan. Let op: deze configuratie map verschilt van de map waar je LND zojuist in hebt [geïnstalleerd](https://docs.theroadtonode.com/lightning/installatie), dat was namelijk `/home/pi/lnd`.
+De map waar LND gebruik van wil maken, bestaat nog niet. Maak hem dus eerst aan. Let op: deze configuratie map verschilt van de map waar je LND zojuist in hebt [geïnstalleerd](https://docs.theroadtonode.com/lightning/installatie), dat was namelijk `/home/ubuntu/lnd`.
 
 ```bash
 mkdir ~/.lnd
@@ -39,7 +39,7 @@ bitcoin.mainnet=true
 bitcoin.node=bitcoind
 
 [bitcoind]
-bitcoind.dir=/home/pi/.bitcoin
+bitcoind.dir=/home/ubuntu/.bitcoin
 bitcoind.rpcuser=DIT_WEET_JE_A
 bitcoind.rpcpass=DIT_WEET_JE_B
 bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332

@@ -38,14 +38,7 @@ make -j $(nproc)
 
 De build zal met ongeveer een uur klaar zijn. Mooi moment voor een biertje of kopje koffie!
 
-Stop de LND service en andere services die afhankelijk zijn van Bitcoin zoals de btc-rpc-explorer en Electrum Personal Server of Electrum X mocht je die geïnstalleerd hebben.
-
-```bash
-sudo systemctl stop lnd
-sudo systemctl stop rtl
-sudo systemctl stop btc-rpc-explorer
-sudo systemctl stop eps
-```
+Stop services die afhankelijk zijn van Bitcoin Core, zoals btc-rpc-explorer, LND of Electrum. Je weet zelf het best welke je hebt draaien. Uit ervaring blijkt dat het niet uitzetten van de services die van Core afhankelijk zijn, niet echt uitmaakt. De services zullen tijdens de update van Core tijdelijk geen data van ontvangen, waarna het weer door gaat zodra Core weer aan staat.
 
 Stop de bitcoind service.
 
@@ -65,19 +58,16 @@ Start de service bitcoin. De service zal vrij snel gestart zijn maar de blockcha
 sudo systemctl start bitcoind
 ```
 
-Start de service LND \(vergeet deze niet te unlocken\) en andere services. LND unlocken zal pas kunnen nadat de blockchain van bitcoin weer synchroon is na de start. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is. Services start je weer op deze manier:
-
-```bash
-sudo systemctl start lnd
-```
-
 Check de huidige versie van bitcoin core.
 
 ```bash
 bitcoin-cli --version
 ```
 
-De output zal lijken op `Bitcoin Core RPC client v22.0`
+De output zal lijken op `Bitcoin Core RPC client v22.0` en Core is nu bijgewerkt!
 
-Bitcoin core is nu bijgewerkt!
+Start de andere services die je eventueel hebt uitgezet. Let wel op dat als je LND opstart, dat het unlocken van LND pas kan nadat de blockchain van bitcoin weer gesynchroniseerd is. Controleer met `tail -f -n 200 .bitcoin/debug.log` hoe ver deze is. Services start je op deze manier:
 
+```bash
+sudo systemctl start lnd
+```

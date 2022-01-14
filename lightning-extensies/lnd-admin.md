@@ -54,7 +54,7 @@ sudo nano /etc/systemd/system/lnd-admin.service
 
 Plak er dit in.
 
-```bash
+```toml
 [Unit]
 Description=LND Admin
 Wants=lnd.service
@@ -62,7 +62,7 @@ After=lnd.service
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/lnd-admin
+WorkingDirectory=/home/ubuntu/lnd-admin
 ExecStart=/usr/bin/npm start
 Restart=always
 TimeoutSec=120
@@ -115,8 +115,8 @@ Vul dit in:
 
 * Host: `localhost`
 * Port: `10009`
-* Admin Macaroon Filepath: `/home/pi/.lnd/data/chain/bitcoin/mainnet/admin.macaroon`
-* TLS Certificate Filepath: `/home/pi/.lnd/tls.cert`
+* Admin Macaroon Filepath: `/home/ubuntu/.lnd/data/chain/bitcoin/mainnet/admin.macaroon`
+* TLS Certificate Filepath: `/home/ubuntu/.lnd/tls.cert`
 
 Na een seconde of 20 zal er een scherm verschijnen met de melding dat het gelukt is!
 

@@ -44,7 +44,7 @@ sudo nano /etc/systemd/system/specter.service
 
 Plak er het volgende in.
 
-```bash
+```toml
 [Unit]
 Description=Specter
 Wants=bitcoind.service

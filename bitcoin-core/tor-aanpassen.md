@@ -26,12 +26,18 @@ CookieAuthFileGroupReadable 1
 
 Sla het bestand op met de toetsencombinatie `Ctrl + X`. Geef `Y` als antwoord op de vraag of je op wil slaan.
 
+Tor moet nu opnieuw opgestart worden.
+
+```bash
+sudo systemctl restart tor
+```
+
 ## RPC via tor
 
 Je kunt via het RPC protocol van bitcoind verschillende commando's uitvoeren met betrekking tot Bitcoin Core. Zo kun je bijvoorbeeld transacties ondertekenen of informatie opvragen over het netwerk. Core staat het standaard niet toe om op afstand dit soort commando's uit te voeren. Standaard mag dat alleen vanaf de Pi zelf, de localhost. Wil je de commando's kunnen uitvoeren op afstand, dan zou je bepaalde IP-adressen expliciet moeten toevoegen in de configuratie van Core. Maar een makkelijkere manier om dit mogelijk te maken is via tor. Core ziet commando's via tor aan als localhost waardoor het mogelijk is.
 
 {% hint style="warning" %}
-Ondanks dat het RPC protocol van Core beveiligd is met een wachtwoord, wordt het niet per se aangeraden om Core van buitenaf benaderbaar te maken. Het brengt simpelweg beveiligingsrisico's met zich mee. Komt het wachtwoord in handen van de verkeerde persoon, moet je er rekening mee houden dat al je funds op je node weg kunnen zijn.
+Ondanks dat het RPC protocol van Core beveiligd is met een wachtwoord, wordt het niet per se aangeraden om Core van buitenaf benaderbaar te maken. Het brengt simpelweg beveiligingsrisico's met zich mee. Komt het wachtwoord in handen van de verkeerde persoon, moet je er rekening mee houden dat al je funds op je node weg kunnen zijn. Zie deze stap daarom als optioneel.
 {% endhint %}
 
 Open het torrc bestand.
@@ -43,7 +49,7 @@ sudo nano /etc/tor/torrc
 Voeg de volgende drie regels onderaan toe:
 
 ```text
-HiddenServiceDir /var/lib/tor/bitcoin/bitcoind
+HiddenServiceDir /var/lib/tor/bitcoin/bitcoinrpc
 HiddenServiceVersion 3
 HiddenServicePort 8332 127.0.0.1:8332
 ```
@@ -55,17 +61,17 @@ sudo mkdir /var/lib/tor/bitcoin
 ```
 
 ```bash
-sudo mkdir /var/lib/tor/bitcoin/bitcoind
+sudo mkdir /var/lib/tor/bitcoin/bitcoinrpc
 ```
 
 Geef de juiste rechten met:
 
 ```bash
-sudo chown -R debian-tor:debian-tor /var/lib/tor/bitcoin/bitcoind
+sudo chown -R debian-tor:debian-tor /var/lib/tor/bitcoin/bitcoinrpc
 ```
 
 ```bash
-sudo chmod 700 /var/lib/tor/bitcoin/bitcoind
+sudo chmod 700 /var/lib/tor/bitcoin/bitcoinrpc
 ```
 
 Tor moet nu opnieuw opgestart worden.
@@ -83,6 +89,5 @@ Dit onion-adres maakt het mogelijk om vanaf buitenaf bepaalde commando's uit te 
 {% endhint %}
 
 ```bash
-sudo cat /var/lib/tor/bitcoin/bitcoind/hostname
+sudo cat /var/lib/tor/bitcoin/bitcoinrpc/hostname
 ```
-

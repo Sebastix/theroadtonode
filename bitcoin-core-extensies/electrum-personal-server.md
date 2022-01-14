@@ -18,7 +18,7 @@ sudo pip3 install setuptools
 Check dat er in `bitcoin.conf` een regel staat `disablewallet = 0`.
 
 ```bash
-nano /home/pi/.bitcoin/bitcoin.conf
+nano /home/ubuntu/.bitcoin/bitcoin.conf
 ```
 
 Als dat nog niet het geval is voeg je deze toe, sla je het bestand op \(met `Ctrl + X`\) en herstart je de bitcoind service.
@@ -63,7 +63,7 @@ nano config.cfg
 Deze config-file bevat veel commentaar en tips wat je waar moet invullen. Kijk in ieder geval even naar de volgende secties:
 
 * `[master-public-keys]` — zoek in Electrum je xpub op via het menu `Wallet` &gt; `Information`
-* `[bitcoin-rpc]` — `datadir = /home/pi/.bitcoin`
+* `[bitcoin-rpc]` — `datadir = /home/ubuntu/.bitcoin`
 * `[electrum-server]` — kies hier voor `host = 0.0.0.0` \(ipv 127.0.0.1\)
 * `wallet_filename` — maak daar `wallet_filename = electrumpersonalserver` van als je eerder hier een speciale wallet voor hebt aangemaakt. Of vul hier `wallet.dat` in als je gebruikt maakt van de default wallet van Bitcoin Core zodat het voor EPS duidelijk is welke walletfile hij moet gebruiken. Mocht je namelijk later ook `Specter` willen gebruiken dan maakt die ook wallets aan en als je dan geen `wallet_filename` hebt opgegeven start EPS niet.
 
@@ -94,7 +94,7 @@ Nu moet EPS de blockchain scannen op zoek naar adressen en transacties horend bi
 Je kunt de voorgang monitoren door de log-file van bitcoin in de gaten te houden via een tweede Putty venster:
 
 ```bash
-sudo tail -f -n 200 /home/pi/.bitcoin/debug.log
+sudo tail -f -n 200 /home/ubuntu/.bitcoin/debug.log
 ```
 
 Als deze klaar is start je EPS nog een keer.
@@ -111,15 +111,15 @@ Nu moeten we alleen nog zorgen de EPS als een Service gaat draaien. Je hebt als 
 sudo nano /etc/systemd/system/eps.service
 ```
 
-```bash
+```toml
 [Unit]
 Description=Electrum Personal Server
 After=bitcoind.service
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/.local/bin/electrum-personal-server /home/pi/.eps/config.cfg
-User=pi
-Group=pi
+ExecStart=/usr/bin/python3 /home/ubuntu/.local/bin/electrum-personal-server /home/ubuntu/.eps/config.cfg
+User=ubuntu
+Group=ubuntu
 Type=simple
 KillMode=process
 TimeoutSec=60

@@ -27,5 +27,4 @@ bitcoin-cli getnetworkinfo
 bitcoin-cli getblockchaininfo
 ```
 
-Core in continu in verandering. Het kan zijn dat bovenstaande commando's in de toekomst niet meer werken of anders heten.
-
+Core is continu in verandering. Het kan zijn dat bovenstaande commando's in de toekomst niet meer werken of anders heten.

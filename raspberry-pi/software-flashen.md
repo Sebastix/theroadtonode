@@ -4,7 +4,7 @@
 Tijd: 15 minuten
 {% endhint %}
 
-Het is tijd om iets met een beeldscherm te doen. De Pi moet een besturingssysteem hebben, namelijk [Raspberry Pi OS](https://downloads.raspberrypi.org/raspios\_lite\_armhf\_latest). Om het besturingssysteem op zowel de SSD als de microSD te krijgen, gebruiken we het programma [Balena Etcher](https://www.balena.io/etcher/). Gebruik je Windows dan zou je ook [Rufus](https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe) kunnen gebruiken.
+Het is tijd om iets met een beeldscherm te doen. De Pi moet een besturingssysteem hebben, namelijk [Ubuntu Server 20 LTS](https://ubuntu.com/download/raspberry-pi). [Raspberry Pi OS Lite](https://downloads.raspberrypi.org/raspios\_lite\_armhf\_latest) is ook nodig voor het eenmalig instellen van de Pi. Om de besturingssystemen op zowel de SSD als de microSD te krijgen, gebruiken we het programma [Balena Etcher](https://www.balena.io/etcher/). Gebruik je Windows dan zou je ook [Rufus](https://github.com/pbatard/rufus/releases/download/v3.17/rufus-3.17.exe) kunnen gebruiken.
 
 ## Raspberry Pi OS
 
@@ -28,14 +28,8 @@ cd D:\
 type ssh
 ```
 
-Met bovenstaande commando's wordt een bestand aangemaakt op de microSD. Het bestand heet "ssh" en als de Pi opstart met dit bestand aan boord, maakt de Pi het mogelijk om zich te laten aansturen van buitenaf. We gaan namelijk met behulp van SSH de Pi aansturen vanaf onze computer. Werp tot slot de microSD uit. Stop de microSD in de Pi.
+Met bovenstaande commando's wordt een bestand aangemaakt op de microSD. Het bestand heet "ssh" en als de Pi opstart met dit bestand aan boord, maakt de Pi het mogelijk om zich te laten aansturen van buitenaf. We gaan namelijk met behulp van SSH de Pi aansturen vanaf onze computer. Werp tot slot de microSD uit en stop hem in de Pi.
 
 ## SSD
 
-Herhaal al het bovenstaande voor de SSD. Dus flash het Raspberry Pi OS naar de SSD en zet het ssh bestand erin.
-
-{% hint style="info" %}
-In de guide wordt gebruik gemaakt van Raspberry Pi OS Lite 32-bit als besturingssysteem. Tijdens het uitdenken van de tutorial werd aanvankelijk uitgegaan van [Ubuntu Server 20.04.1 LTS 64-bit](https://ubuntu.com/download/raspberry-pi), aangezien de Pi ARM64 ondersteunt. Het bleek echter een vervelend proces te zijn om Ubuntu werkend te krijgen vanaf een SSD. Ook de 32-bit versie deed lastig.
-
-In de toekomst wordt de guide eventueel geüpdate om gebruik te maken van 64-bits architectuur.
-{% endhint %}
+Herhaal het bovenstaande voor de SSD, maar gebruik dan Ubuntu en laat het `ssh` bestand zitten. Dat zit standaard al aan boord van Ubuntu.

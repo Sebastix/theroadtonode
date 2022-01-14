@@ -15,10 +15,6 @@ sudo apt upgrade -y
 ```
 
 ```bash
-sudo rpi-update
-```
-
-```bash
 sudo reboot now
 ```
 

@@ -4,7 +4,7 @@
 Tijd: 20 minuten
 {% endhint %}
 
-Een eigen block explorer helpt je in het waarborgen van je privacy, omdat je nu geen publieke block explorer meer hoeft te raadplegen. Zo kun je ongestoord kijken of jouw transacties nog in de mempool zitten of al gevalideerd zijn.
+Een eigen block explorer helpt je in het waarborgen van je privacy, omdat je geen publieke block explorer meer hoeft te raadplegen. Zo kun je ongestoord kijken of jouw transacties nog in de mempool zitten of al gevalideerd zijn.
 
 De Block Explorer die we gaan gebruiken is [BTC RPC Explorer](https://github.com/janoside/btc-rpc-explorer) van Dan Janosik.
 
@@ -29,7 +29,7 @@ Je bent bezig met de road to node. Als je het in de juiste volgorde aan het doen
 Login op je Pi en open het bitcoin configuratiebestand.
 
 ```bash
-nano /home/pi/.bitcoin/bitcoin.conf
+nano /home/ubuntu/.bitcoin/bitcoin.conf
 ```
 
 Controleer of de regel `txindex=1` erin voorkomt. Zo niet, voeg deze dan toe en sla je wijzigingen op met `Ctrl + X` gevolgd door `Y`.
@@ -59,7 +59,7 @@ cd ~
 Haal de broncode binnen.
 
 ```bash
-git clone https://github.com/janoside/btc-rpc-explorer.git
+git clone https://github.com/janoside/btc-rpc-explorer
 ```
 
 Ga de BTC RPC Explorer map in.
@@ -71,21 +71,18 @@ cd btc-rpc-explorer
 Pak de nieuwste release.
 
 ```bash
-git checkout v3.2.0
+git checkout v3.3.0
 ```
 
-Installeer BTC RPC Explorer, maak het configuratie bestand `.env` en pas deze aan.
+Installeer BTC RPC Explorer en maak daarna het configuratie bestand `.env` aan.
 
 ```bash
 npm install
+
 nano .env
 ```
 
-Plak daar in de volgende regels.
-
-{% hint style="info" %}
-Open de file .env-sample om te zien welke opties er nog meer zijn.
-{% endhint %}
+Plak daar de volgende regels in.
 
 ```bash
 BTCEXP_HOST=IP-ADRES VAN PI
@@ -93,13 +90,17 @@ BTCEXP_PORT=3002
 
 BTCEXP_BITCOIND_HOST=127.0.0.1
 BTCEXP_BITCOIND_PORT=8332
-BTCEXP_BITCOIND_COOKIE=/home/pi/.bitcoin/.cookie
+BTCEXP_BITCOIND_COOKIE=/home/ubuntu/.bitcoin/.cookie
 BTCEXP_BITCOIND_RPC_TIMEOUT=5000
 
 BTCEXP_PRIVACY_MODE=true
 ```
 
 Pas de tekst `IP-ADRES VAN PI` aan naar wat voor jou van toepassing is. Vervang het dus met iets dat lijkt op `192.168.1.6`. Sla het bestand op met `Ctrl + X` gevolgd door `Y`.
+
+{% hint style="info" %}
+Open het bestand `.env-sample` om te zien welke opties er nog meer zijn.
+{% endhint %}
 
 ## Automatiseren
 
@@ -109,19 +110,19 @@ Zorg er nu voor dat de BTC-RPC-Explorer automatisch start en draait als een serv
 sudo nano /etc/systemd/system/btc-rpc-explorer.service
 ```
 
-De inhoud van het bestand moet er zo uit zien. Met name het pad naar de workingdirectory is belangrijk.
+De inhoud van het bestand moet er zo uit zien. Met name het pad naar de `WorkingDirectory` is belangrijk.
 
-```bash
+```toml
 [Unit]
 Description=BTC-RPC-Explorer
-Wants=bitcoind.service
+Requires=bitcoind.service
 After=bitcoind.service
 
 [Service]
-WorkingDirectory=/home/pi/btc-rpc-explorer
+WorkingDirectory=/home/ubuntu/btc-rpc-explorer
 ExecStart=npm run start
-User=pi
-Group=pi
+User=ubuntu
+Group=ubuntu
 Type=simple
 Restart=on-failure
 TimeoutSec=120
@@ -145,7 +146,7 @@ Open nu in Firefox op je PC een tabblad naar `http://IP-ADRES VAN PI:3002` om te
 
 ## Updaten
 
-Als er een nieuwe versie beschikbaar is voor BTC RPC Explorer, kun je eenvoudig updaten door de nieuwe source uit git op te halen en deze te installeren. Wel eerst even de service stoppen en naderhand weer starten zoals hieronder staat aangegeven.
+Als er een nieuwe versie beschikbaar is voor BTC RPC Explorer kun je eenvoudig updaten door de nieuwe source met Git op te halen en deze te installeren. Wel eerst even de service stoppen en naderhand weer starten zoals hieronder staat aangegeven.
 
 ```
 sudo systemctl stop btc-rpc-explorer
@@ -172,7 +173,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.2.0
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v3.3.0
 ```
 
 Installeer via NPM.
@@ -225,9 +226,9 @@ sudo cat /var/lib/tor/btc-rpc-explorer/hostname
 
 Vul deze (met portnummer) in in je tor browser. De BTC RPC Explorer homepage zou moeten verschijnen.
 
-## Koppeling met Electrum X
+## Koppeling met Electrum Server
 
-Als je de [Electrum X](https://docs.theroadtonode.com/bitcoin-core-extensies/electrum-x) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
+Als je de Electrum Server (Electrs, Electrum X, of Electrum Personal Server) guide gevolgd hebt, kun je BTC RPC Explorer meteen hierop aansluiten voor verbeterde privacy. Pas het configuratie bestand van BTC RPC Explorer aan.
 
 ```bash
 nano ~/btc-rpc-explorer/.env

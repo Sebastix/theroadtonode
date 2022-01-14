@@ -12,7 +12,7 @@ sudo nano /etc/systemd/system/lnd.service
 
 Plak er dit in.
 
-```bash
+```toml
 [Unit]
 Description=Lightning Network Daemon
 Requires=bitcoind.service
@@ -20,8 +20,8 @@ After=bitcoind.service
 
 [Service]
 User=pi
-ExecStart=/home/pi/go/bin/lnd
-PIDFile=/home/pi/.lnd/lnd.pid
+ExecStart=/home/ubuntu/go/bin/lnd
+PIDFile=/home/ubuntu/.lnd/lnd.pid
 Restart=always
 TimeoutSec=180
 RestartSec=60
@@ -57,7 +57,7 @@ De output zou er ongeveer zo uit moeten zien:
  Main PID: 2980 (lnd)
     Tasks: 9 (limit: 4915)
    CGroup: /system.slice/lnd.service
-           └─2980 /home/pi/go/bin/lnd
+           └─2980 /home/ubuntu/go/bin/lnd
 
 Nov 25 17:45:10 raspberrypi systemd[1]: Started Lightning Network Daemon.
 ```

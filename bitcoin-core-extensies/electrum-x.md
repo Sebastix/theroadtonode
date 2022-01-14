@@ -91,10 +91,10 @@ NET=mainnet
 COIN=Bitcoin
 CACHE_MB=500
 DB_ENGINE=leveldb
-DB_DIRECTORY=/home/pi/.electrumx/db
+DB_DIRECTORY=/home/ubuntu/.electrumx/db
 DAEMON_URL=http://USERNAME:PASSWORD@127.0.0.1
-SSL_CERTFILE=/home/pi/.electrumx/server.crt
-SSL_KEYFILE=/home/pi/.electrumx/server.key
+SSL_CERTFILE=/home/ubuntu/.electrumx/server.crt
+SSL_KEYFILE=/home/ubuntu/.electrumx/server.key
 SERVICES=tcp://:50001,ssl://:50002,wss://:50004,rpc://
 ```
 
@@ -121,14 +121,14 @@ sudo nano /etc/systemd/system/electrumx.service
 
 Zet daar de volgende tekst in.
 
-```bash
+```toml
 [Unit]
 Description=Electrum X Server
 After=network.target
 
 [Service]
-User=pi
-EnvironmentFile=/home/pi/.electrumx/electrumx.conf
+User=ubuntu
+EnvironmentFile=/home/ubuntu/.electrumx/electrumx.conf
 ExecStart=/usr/local/bin/electrumx_server
 Restart=always
 TimeoutSec=120

@@ -24,14 +24,12 @@ Verder is uit het boodschappenlijstje op te maken dat we gebruik maken van bedra
 Ga voor een [Samsung T5](https://tweakers.net/pricewatch/942129/samsung-portable-ssd-t5-1tb-zwart.html). Echt waar. Doe het. Het zal je veel gezeik schelen.
 {% endhint %}
 
-Iedere node moet het grote Bitcoin kasboek bijhouden. In de afgelopen jaren is dat uitgegroeid tot 360 GB. Hier komt de SSD om de hoek kijken. Het is verstandig om ruim te gaan zitten en voor 1 TB te gaan. De blockchain blijft immers groeien en later in het proces komen de nodige gigabytes hier bovenop. Je hebt een paar opties:
+Iedere node moet het grote Bitcoin kasboek bijhouden. In de afgelopen jaren is dat uitgegroeid tot 360 GB. Hier komt de SSD om de hoek kijken. Het is verstandig om ruim te zitten en voor 1 TB te gaan. De blockchain blijft immers groeien en later in het proces komen de nodige gigabytes hier bovenop. Je hebt een paar opties:
 
 * Een externe SSD. Zo'n apparaat kost rond de **€110,00**.
 * Een losse SSD met een adapter naar USB-A 3.0. De combinatie zit ergens tussen de **€80,00** en **€120,00**.
 
-Een kant en klare externe SSD is het simpelst. Zoek een beetje rond op je favoriete vergelijkingssite en je vindt een mooi exemplaar.
-
-Maar het is ook mogelijk om voor een losse SSD te gaan en daar een [adapter](https://www.bol.com/nl/p/professional-sata-naar-usb-3-0-kabel-adapter-2-5-inch-ssd-harde-schijf-uitbreiden-connector/9200000104702554/) bij te kopen à **€3,85**. De losse SSD kun je nieuw aanschaffen voor **€100,00** of tweedehands scoren via marktplaats. Dat laatste is helemaal geen verkeerde optie, gezien een SSD [tientallen jaren mee kan](https://youtu.be/__ebnRd3TEQ?t=723) gaan. Koop je tweedehands moet je rekening houden met een bedrag van **€75,00**.
+Een kant en klare externe SSD is het simpelst en als je voor de Samsug T5 gaat, weet je zeker dat hij werkt in combinatie met de Pi. Maar het is ook mogelijk om voor een losse SSD te gaan en daar een [adapter](https://www.bol.com/nl/p/professional-sata-naar-usb-3-0-kabel-adapter-2-5-inch-ssd-harde-schijf-uitbreiden-connector/9200000104702554/) bij te kopen à **€3,85**. De losse SSD kun je nieuw aanschaffen voor **€100,00** of tweedehands scoren via marktplaats. Dat laatste is helemaal geen verkeerde optie, gezien een SSD [tientallen jaren mee kan](https://youtu.be/__ebnRd3TEQ?t=723). Koop je tweedehands moet je rekening houden met een bedrag van **€75,00**.
 
 ## Totaal
 

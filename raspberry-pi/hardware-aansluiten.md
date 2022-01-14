@@ -14,7 +14,7 @@ De simpelste taak van de guide: het aansluiten van de hardware. Hier heb je de R
 
 Nadat je alles in elkaar hebt geschroefd, kun je de ventilatoren aansluiten op de pinnen. De rode draad moet op GPIO PIN 04 en de zwarte op GPIO PIN 06. De pinnen staan respectievelijk voor [5V en ground](https://www.raspberrypi.org/documentation/usage/gpio/). Na het voltooien zou dit het eindresultaat moeten zijn.
 
-![Raspberry Pi met heatsink](../.gitbook/assets/aangesloten.png)
+![Raspberry Pi met heatsink](../.gitbook/assets/connected.png)
 
 Tijdens het synchroniseren van de Bitcoin blockchain is met deze opzet de temperatuur van de CPU niet boven de 47 graden gekomen.
 

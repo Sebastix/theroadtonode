@@ -29,10 +29,11 @@ We gaan uit van de default waardes voor alle tools, met uitzondering van Thunder
 | :--- | :--- |
 | **3002** | De BTC RPC Explorer is benaderbaar via deze port. |
 
-### Electrum \(zowel X als Personal Server\)
+### Electrum \(voor Electrs, Electrum X en Electrum Personal Server\)
 
 | Port | Functionaliteit |
 | :--- | :--- |
+| **4224** | Monitoring van Electrs. |
 | **8000** | Standaard RPC port van het Electrum protocol. |
 | **50001** | Standaard port voor TCP verbindingen. |
 | **50002** | Standaard port voor SSL verbindingen. |
@@ -44,7 +45,7 @@ We gaan uit van de default waardes voor alle tools, met uitzondering van Thunder
 | :--- | :--- |
 | **25441** | Voer je deze port in dan zie je het Specter overzicht. |
 
-### Lightning Network Daemon
+### Lightning Network Daemon (LND)
 
 | Port | Functionaliteit |
 | :--- | :--- |

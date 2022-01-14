@@ -10,5 +10,5 @@ Onder Lightning vallen de volgende vijf hoofdstukken.
 
 {% page-ref page="starten-en-cli.md" %}
 
-{% page-ref page="automatisering.md" %}
+{% page-ref page="automatiseren.md" %}
 

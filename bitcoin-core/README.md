@@ -8,7 +8,7 @@ Onder Bitcoin Core vallen de volgende zes hoofdstukken.
 
 {% page-ref page="configuratie-en-starten.md" %}
 
-{% page-ref page="automatisering.md" %}
+{% page-ref page="automatiseren.md" %}
 
 {% page-ref page="command-line-interface.md" %}
 
