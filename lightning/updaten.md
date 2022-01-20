@@ -6,6 +6,8 @@ Backup eerst voor de zekerheid je channels via Ride The Lightning, Thunderhub of
 
 ### RTL
 
+Als je [RTL](https://docs.theroadtonode.com/lightning-extensies/ride-the-lightning) hebt draaien kun je gemakkelijk een backup maken.
+
 * Ga naar je RTL dashboard op bijvoorbeeld `192.168.1.6:3000`. 
 * Kies voor "Backups" onder "Lightning"
 * Klik op "Backup All"
@@ -43,13 +45,13 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.13.0-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.14.1-beta
 ```
 
 Installeer nu de software.
 
 ```bash
-make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc"
+make install tags="autopilotrpc signrpc walletrpc chainrpc invoicesrpc routerrpc watchtowerrpc monitoring"
 ```
 
 ## Start de services
@@ -75,7 +77,7 @@ Check de huidige versie van LND.
 lncli --version
 ```
 
-De output zal lijken op `lncli version 0.12.1-beta commit=v0.12.1-beta`
+De output zal lijken op `lncli version 0.14.1-beta commit=v0.14.1-beta`
 
 LND is nu bijgewerkt! Start nu de andere services die afhankelijk zijn van LND zoals RTL of Thunderhub.
 

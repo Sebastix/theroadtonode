@@ -15,7 +15,7 @@ cd ~
 Haal de broncode van lndconnect binnen.
 
 ```bash
-git clone https://github.com/LN-Zap/lndconnect.git
+git clone https://github.com/LN-Zap/lndconnect
 ```
 
 Na het binnenhalen moeten we naar de juiste map. We moeten ook een paar extra go-commando's geven, omdat de sourcecode nog niet is aangepast voor recente versies van go.
@@ -23,9 +23,11 @@ Na het binnenhalen moeten we naar de juiste map. We moeten ook een paar extra go
 ```bash
 cd lndconnect
 
+rm go.mod
+
 go mod init github.com/LN-Zap/lndconnect
 
-go get github.com/lightningnetwork/lnd/tor@v0.12.1-beta
+go get github.com/lightningnetwork/lnd/tor@v0.14.1-beta
 
 go mod tidy
 ```
@@ -39,12 +41,13 @@ make
 En testen of het werkt.
 
 ```bash
-lndconnect --host test123.onion --port=8080 --nocert -j
+lndconnect --host IP-ADRES-VAN-JE-PI -j
 ```
 
 Als het goed is, krijg je output die lijkt op het volgende.
 
 ```bash
-lndconnect://test123.onion:8080?macaroon=[EEN_LANGE_REGEL_MET_WILLEKEURIG_AANDOENDE_LETTERS_EN_CIJFERS]
+lndconnect://192.168.1.6:10009?macaroon=[EEN_LANGE_REGEL_MET_WILLEKEURIG_AANDOENDE_LETTERS_EN_CIJFERS]
 ```
 
+Met deze output kun je naar Zap wallet om te verbinden met je node.

@@ -20,7 +20,7 @@ Je komt een proces in waarbij je een wachtwoord moet opgeven van minimaal 8 kara
 
 Nadat je een wallet geïnitialiseerd hebt, zal op het eerste terminal scherm meer tekst verschijnen.
 
-Druk in het eerste terminal scherm op `control + C` om LND af te sluiten.
+Druk in het eerste terminal scherm op `Ctrl + C` om LND af te sluiten.
 
 ## Opnieuw opstarten
 

@@ -114,6 +114,7 @@ sudo nano /etc/systemd/system/eps.service
 ```toml
 [Unit]
 Description=Electrum Personal Server
+Requires=bitcoind.service
 After=bitcoind.service
 
 [Service]

@@ -92,7 +92,7 @@ cd ~
 Download de broncode.
 
 ```text
-git clone https://github.com/lightninglabs/loop.git
+git clone https://github.com/lightninglabs/loop
 ```
 
 Ga de map in.
@@ -144,7 +144,7 @@ cd ~
 Download de broncode.
 
 ```text
-git clone https://github.com/lightninglabs/faraday.git
+git clone https://github.com/lightninglabs/faraday
 ```
 
 Ga naar de faraday map.
@@ -232,7 +232,7 @@ cd ~
 Download de broncode van Lightning Terminal.
 
 ```text
-git clone https://github.com/lightninglabs/lightning-terminal.git
+git clone https://github.com/lightninglabs/lightning-terminal
 ```
 
 Duik de code in.
@@ -419,7 +419,7 @@ Requires=bitcoind.service
 After=bitcoind.service
 
 [Service]
-User=pi
+User=ubuntu
 ExecStart=/home/ubuntu/go/bin/litd
 PIDFile=/home/ubuntu/.lit/lit.pid
 Restart=always

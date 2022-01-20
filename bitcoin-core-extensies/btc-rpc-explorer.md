@@ -45,7 +45,7 @@ sudo systemctl restart bitcoind
 Ook hier dient de firewall geüpdate te worden. De port waarover BTC RPC Explorer zich toont is 3002.
 
 ```bash
-sudo ufw allow 3002 comment "Maak BTC-RPC-Explorer bereikbaar"
+sudo ufw allow 3002 comment "Port voor BTC-RPC-Explorer"
 ```
 
 ## Installatie
@@ -236,12 +236,44 @@ nano ~/btc-rpc-explorer/.env
 
 Voeg onderaan de volgende twee regels toe:
 
-```bash
-BTCEXP_ADDRESS_API=electrumx
-BTCEXP_ELECTRUMX_SERVERS=tcp://127.0.0.1:50001,ssl://127.0.0.1:50002,wss://127.0.0.1:50004,rpc://127.0.0.1:8000
+```toml
+BTCEXP_ADDRESS_API=electrum
+BTCEXP_ELECTRUM_SERVERS=tcp://127.0.0.1:50001
 ```
 
-Herstart de service om de nieuwe configuratie van kracht te laten zijn.
+Als je er zeker van wil zijn dat de explorer enkel gebruik maakt van jouw eigen backend, kun je ook de service aanpassen en meegeven dat hij enkel mag draaien als de Electrum Server draait. In het onderstaande voorbeeld staat Electrs als voorbeeld, maar pas dit aan wat voor jou van toepassing is.
+
+```bash
+sudo nano /etc/systemd/system/btc-rpc-explorer.service
+```
+
+De aangepaste service ziet er dan zo uit:
+
+```toml
+[Unit]
+Description=BTC-RPC-Explorer
+Requires=electrs.service
+After=electrs.service
+
+[Service]
+WorkingDirectory=/home/ubuntu/btc-rpc-explorer
+ExecStart=npm run start
+User=ubuntu
+Group=ubuntu
+Type=simple
+Restart=on-failure
+TimeoutSec=120
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Op deze manier wacht Electrs op Bitcoin Core en wacht BTC RPC Explorer op Electrs.
+
+Na het aanpassen van services moet systemctl even opnieuw geladen worden met `systemctl daemon-reload`. Hier is je wachtwoord voor nodig.
+
+Herstart de tot slot de explorer service om de nieuwe configuratie van kracht te laten zijn en gebruik te maken van je eigen backend.
 
 ```bash
 sudo systemctl restart btc-rpc-explorer

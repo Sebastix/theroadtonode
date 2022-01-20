@@ -31,7 +31,7 @@ sudo pip3 install plyvel
 Clone de broncode voor Electrum X.
 
 ```bash
-git clone https://github.com/spesmilo/electrumx.git
+git clone https://github.com/spesmilo/electrumx
 ```
 
 Navigeer de zojuist geclonede map in.
@@ -124,6 +124,7 @@ Zet daar de volgende tekst in.
 ```toml
 [Unit]
 Description=Electrum X Server
+Requires=bitcoind.service
 After=network.target
 
 [Service]

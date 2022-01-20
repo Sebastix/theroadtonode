@@ -18,7 +18,7 @@ nano ~/.lnd/lnd.conf
 
 En plak er de instellingen in.
 
-```bash
+```toml
 [Application Options]
 tlsautorefresh=true
 restlisten=0.0.0.0:8080
@@ -39,7 +39,7 @@ bitcoin.mainnet=true
 bitcoin.node=bitcoind
 
 [bitcoind]
-bitcoind.dir=/home/ubuntu/.bitcoin
+bitcoind.dir=~/.bitcoin
 bitcoind.rpcuser=DIT_WEET_JE_A
 bitcoind.rpcpass=DIT_WEET_JE_B
 bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
@@ -51,7 +51,6 @@ In de tekst hierboven staan vier dingen die je zelf moet regelen.
 * **color**, verander ZELF\_VERZINNEN\_A naar een kleur naar keuze. Het is een hexadecimale waarde. Bijvoorbeeld `color=#123ABC` voor de kleur blauw.
 * **alias**, verander ZELF\_VERZINNEN\_B naar een naam naar keuze. Je krijgt dan `alias=nickname`.
 * **bitcoind.rpcuser**, verander DIT\_WEET\_JE\_A naar [de juiste user](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#authenticatie).
-* **bitcoind.rpcpass**, verander DIT\_WEET\_JE\_B naar [het juiste wachtwoord](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#authenticatie). Dit wachtwoord heb je dus toebedeeld gekregen.
+* **bitcoind.rpcpass**, verander DIT\_WEET\_JE\_B naar [het juiste wachtwoord](https://docs.theroadtonode.com/bitcoin-core/configuratie-en-starten#authenticatie). Dit wachtwoord heb je toebedeeld gekregen.
 
 Sla het bestand op met `Ctrl + X` en `Y`.
-

@@ -19,7 +19,7 @@ Requires=bitcoind.service
 After=bitcoind.service
 
 [Service]
-User=pi
+User=ubuntu
 ExecStart=/home/ubuntu/go/bin/lnd
 PIDFile=/home/ubuntu/.lnd/lnd.pid
 Restart=always
@@ -52,12 +52,12 @@ De output zou er ongeveer zo uit moeten zien:
 
 ```bash
 ● lnd.service - Lightning Network Daemon
-   Loaded: loaded (/etc/systemd/system/lnd.service; enabled; vendor preset: enabled)
-   Active: active (running) since Wed 2020-11-25 17:45:10 GMT; 6s ago
- Main PID: 2980 (lnd)
-    Tasks: 9 (limit: 4915)
-   CGroup: /system.slice/lnd.service
-           └─2980 /home/ubuntu/go/bin/lnd
+     Loaded: loaded (/etc/systemd/system/lnd.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2022-01-15 11:19:18 UTC; 1min 24s ago
+   Main PID: 73287 (lnd)
+      Tasks: 9 (limit: 4203)
+     CGroup: /system.slice/lnd.service
+             └─73287 /home/ubuntu/go/bin/lnd
 
 Nov 25 17:45:10 raspberrypi systemd[1]: Started Lightning Network Daemon.
 ```
@@ -69,4 +69,6 @@ Wil je een overzicht van de status over meerdere sessie, gebruik dan dit:
 ```bash
 sudo journalctl -f -u lnd
 ```
+
+Om het geheel af te ronden moet je LND unlocken met je wachtwoord net als voorheen. Het fijne is dat je nu niet twee terminal open hoeft te hebben. Met `lncli unlock` is alles afgerond.
 

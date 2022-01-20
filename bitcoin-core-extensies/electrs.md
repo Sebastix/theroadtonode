@@ -1,7 +1,7 @@
 # Electrs
 
 {% hint style="info" %}
-Tijd: 30 minuten
+Tijd: 30 minuten en na een uur of 12 zou alles geindexeerd moeten zijn.
 {% endhint %}
 
 The Road to Node geeft je de keuze tussen drie verschillende implementaties van Electrum Server. Met alle drie de implementaties bereik je hetzelfde, namelijk dat je een Electrum Server host. Ze verschillen van elkaar in ontwikkeltaal, performance en hoe publiek de servers zijn. [Electrs](https://github.com/romanz/electrs/) onderscheidt zich van de rest omdat het geschreven is in Rust. Performance-wise zou je even moeten opzoeken wat de verschillen zijn tussen Electrum Personal Server, Elctrum X en Electrs.
@@ -83,7 +83,7 @@ Zet daar de volgende tekst in.
 ```toml
 [Unit]
 Description=electrs
-Wants=bitcoind.service
+Requires=bitcoind.service
 After=bitcoind.service
 
 [Service]
