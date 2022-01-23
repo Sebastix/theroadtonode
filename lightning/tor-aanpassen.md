@@ -18,7 +18,7 @@ sudo nano /etc/tor/torrc
 
 In het torrc bestand zijn we [eerder geweest](https://docs.theroadtonode.com/bitcoin-core/tor-aanpassen). Voeg de volgende regels toe aan hetgeen dat er al staat.
 
-```text
+```bash
 SOCKSPort 9050
 
 HiddenServiceDir /var/lib/tor/lightning/rest

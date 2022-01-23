@@ -18,7 +18,7 @@ sudo nano /etc/tor/torrc
 
 Eenmaal in dit bestand voeg je deze regels toe:
 
-```text
+```bash
 ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
@@ -48,7 +48,7 @@ sudo nano /etc/tor/torrc
 
 Voeg de volgende drie regels onderaan toe:
 
-```text
+```bash
 HiddenServiceDir /var/lib/tor/bitcoin/bitcoinrpc
 HiddenServiceVersion 3
 HiddenServicePort 8332 127.0.0.1:8332

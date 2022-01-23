@@ -1,15 +1,24 @@
 # Changelog
 
-## 3.0.0 - 2022 / januari / 06
+## 3.0.0 - 2022 / januari / 23 - Breaking changes
 
 ### Aanpassingen
 
-* OS aangepast van 32-bit Raspberry OS naar 64-bit Ubuntu
-* User aangepast van `pi` naar `ubuntu`
+* OS aangepast van 32-bit Raspberry OS naar 64-bit Ubuntu met [dank aan Thomas](https://github.com/0xthomas/succotash)
+* User door heel de gids aangepast van `pi` naar `ubuntu`
+* Wallet hoofdstuk anders ingedeeld met dank aan Dirk
+* Github opgeruimd in verband met vertalingen
+* Faraday, Loop en Pool losgetrokken van Lightning Terminal
+* Lightning Terminal maakt enkel gebruik van remote tools in plaats van internal tools
 
 ### Toevoegingen
 
 * [Electrs](https://docs.theroadtonode.com/bitcoin-core-extensies/electrs) \(Bitcoin Core Extensies\)
+
+### Verwijderd
+
+* Dynamic DNS hoofdstuk
+* LND Admin hoofdstuk
 
 ## 2.5.0 - 2021 / juni / 06
 

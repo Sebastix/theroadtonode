@@ -221,7 +221,7 @@ git fetch --all
 
 Toon de laatste versie/tag/release.
 
-```text
+```bash
 git describe --tags `git rev-list --tags --max-count=1`
 ```
 
@@ -233,7 +233,7 @@ git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld 1.16.0
 
 Installeer de software.
 
-```text
+```bash
 sudo python3 setup.py install
 ```
 

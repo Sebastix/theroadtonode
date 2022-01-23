@@ -26,7 +26,7 @@ cd RTL
 
 Pak de laatste versie/tag/release.
 
-```text
+```bash
 git checkout v0.12.1
 ```
 
@@ -160,7 +160,7 @@ git fetch --all
 
 Toon de laatste versie/tag/release.
 
-```text
+```bash
 git describe --tags `git rev-list --tags --max-count=1`
 ```
 
@@ -172,7 +172,7 @@ git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld v0.12.1
 
 Installeer de software.
 
-```text
+```bash
 npm install --only=prod
 ```
 

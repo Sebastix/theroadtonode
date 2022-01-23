@@ -29,7 +29,7 @@ sudo systemctl restart bitcoind
 
 EPS heeft een wallet nodig in Bitcoin Core. Maak deze aan als deze nog niet aanwezig is.
 
-```text
+```bash
 bitcoin-cli createwallet electrumpersonalserver true
 ```
 
@@ -172,23 +172,28 @@ Hier zie je nu dat je bent verbonden met een EPS en jouw Bitcoin Node!
 
 Stop de service.
 
-```text
+```bash
 sudo systemctl stop eps
 ```
 
 Download vanaf de Github de tarball van de [nieuwste release](https://github.com/chris-belcher/electrum-personal-server/releases) van Electrum Personal Server. Kopiëer de link van source code \(tar.gz\), pak deze uit en gooi de download weg. **Vervang hier natuurlijk de versienummers met de meest recente.**
 
-```text
+```bash
 cd ~/.eps
+
 wget https://github.com/chris-belcher/electrum-personal-server/archive/eps-v0.2.2.tar.gz
+
 tar -xvf eps-v0.2.2.tar.gz
+
 rm eps-v0.2.2.tar.gz
-cd electrum-personal-server-eps-v0.2.2/
+
+cd electrum-personal-server-eps-v0.2.2
+
 pip3 install use .
 ```
 
 Start de service weer.
 
-```text
+```bash
 sudo systemctl start eps
 ```

@@ -26,7 +26,7 @@ cd thunderhub
 
 Pak de laatste versie/tag/release.
 
-```text
+```bash
 git checkout v0.12.31
 ```
 
@@ -167,7 +167,7 @@ git fetch --all
 
 Toon de laatste versie/tag/release.
 
-```text
+```bash
 git describe --tags `git rev-list --tags --max-count=1`
 ```
 
@@ -179,7 +179,7 @@ git checkout -f <OUTPUT VAN DE VORIGE STAP> # Bijvoorbeeld v0.12.31
 
 Installeer de software.
 
-```text
+```bash
 npm install
 
 npm run build

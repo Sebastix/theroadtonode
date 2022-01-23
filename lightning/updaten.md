@@ -38,7 +38,7 @@ git fetch --all
 
 Toon de laatste versie/tag/release.
 
-```text
+```bash
 git describe --tags `git rev-list --tags --max-count=1`
 ```
 

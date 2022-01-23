@@ -90,10 +90,3 @@ We gaan uit van de default waardes voor alle tools, met uitzondering van Thunder
 | Port | Functionaliteit |
 | :--- | :--- |
 | **4000** | Standaard staat deze tool ingesteld op port 3000. Maar aangezien Ride The Lightning daar al gebruik van maakt, kiezen we in deze guide voor port 4000. |
-
-### LND Admin
-
-| Port | Functionaliteit |
-| :--- | :--- |
-| **3004** | LND Admin werkt op deze port. |
-
