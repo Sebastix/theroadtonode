@@ -50,7 +50,7 @@ daemon_rpc_addr = "127.0.0.1:8332"
 daemon_p2p_addr = "127.0.0.1:8333"
 db_dir = "/home/ubuntu/.electrs/db"
 network = "bitcoin"
-electrum_rpc_addr = "127.0.0.1:50001"
+electrum_rpc_addr = "0.0.0.0:50001"
 log_filters = "INFO"
 ```
 
