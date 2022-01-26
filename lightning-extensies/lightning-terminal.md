@@ -102,7 +102,7 @@ cd lightning-terminal
 Pak de laatste versie/tag/release.
 
 ```bash
-git checkout v0.6.1-alpha
+git checkout v0.6.2-alpha
 ```
 
 Installeer Lightning Terminal. Dit kan ongeveer een kwartier duren.
@@ -264,7 +264,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.6.1-alpha
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.6.2-alpha
 ```
 
 Installeer Lightning Terminal.
