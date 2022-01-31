@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.0 - 2022 / januari / 31
+
+### Toevoegingen
+
+* [Mempool.space](https://docs.theroadtonode.com/bitcoin-core-extensies/mempool-space) \(Bitcoin Core Extensies\)
+
 ## 3.0.0 - 2022 / januari / 23 - Breaking changes
 
 ### Aanpassingen

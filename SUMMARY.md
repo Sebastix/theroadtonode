@@ -28,6 +28,7 @@
   * [Electrs](bitcoin-core-extensies/electrs.md)
   * [Electrum Personal Server](bitcoin-core-extensies/electrum-personal-server.md)
   * [Electrum X](bitcoin-core-extensies/electrum-x.md)
+  * [Mempool.space](bitcoin-core-extensies/mempool.space.md)
   * [Specter](bitcoin-core-extensies/specter.md)
 * [Lightning](lightning/README.md)
   * [Tor aanpassen](lightning/tor-aanpassen.md)
