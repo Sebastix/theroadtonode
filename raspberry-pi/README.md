@@ -8,7 +8,7 @@ Onder Raspberry Pi vallen de volgende elf hoofdstukken.
 
 {% page-ref page="boot-vanaf-ssd.md" %}
 
-{% page-ref page="wachtwoord-wijzigen.md" %}
+{% page-ref page="public-key-overzetten.md" %}
 
 {% page-ref page="updaten.md" %}
 
@@ -21,8 +21,3 @@ Onder Raspberry Pi vallen de volgende elf hoofdstukken.
 {% page-ref page="firewall.md" %}
 
 {% page-ref page="port-overzicht.md" %}
-
-{% page-ref page="uitleg-van-commandos.md" %}
-
-
-

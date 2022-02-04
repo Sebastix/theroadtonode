@@ -1,10 +1,18 @@
 # Changelog
 
+## 3.1.1 - 2022 / februari / 04
+
+### Aanpassingen
+
+* Breaking changes toegevoegd aan [Thunderhub v0.13.0+](https://docs.theroadtonode.com/lightning-extensies/thunderhub) \(Lightning Extensies\) in verband met de port
+* Tekst van de homepage en mempool.space aangepast
+* Cleanup van oude meuk
+
 ## 3.1.0 - 2022 / januari / 31
 
 ### Toevoegingen
 
-* [Mempool.space](https://docs.theroadtonode.com/bitcoin-core-extensies/mempool-space) \(Bitcoin Core Extensies\)
+* [Mempool.space](https://docs.theroadtonode.com/bitcoin-core-extensies/mempool.space) \(Bitcoin Core Extensies\)
 
 ## 3.0.0 - 2022 / januari / 23 - Breaking changes
 

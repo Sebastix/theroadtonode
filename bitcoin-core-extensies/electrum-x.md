@@ -102,7 +102,7 @@ Voordat je het opslaat moet je een tweetal aanpassingen maken. Vul op de plekken
 
 ## Firewall en router
 
-In principe kun je [BTC RPC Explorer](https://docs.theroadtonode.com/bitcoin-core-extensies/btc-rpc-explorer#koppeling-met-electrum-x) direct aansluiten op Electrum X. Hier hoef je geen ports voor open te zetten, aangezien lokale connectie \(dus van de Pi naar de Pi\) altijd worden toegestaan. Wil je echter gebruik maken van Electrum X in een app zoals BlueWallet, dan dien je de volgende commando's uit te voeren om twee ports open te zetten.
+In principe kun je een lokale tool zoals [BTC RPC Explorer](https://docs.theroadtonode.com/bitcoin-core-extensies/btc-rpc-explorer#koppeling-met-electrum-x) direct aansluiten op Electrum X. Hier hoef je geen ports voor open te zetten, aangezien lokale connecties \(dus van de Pi naar de Pi\) altijd worden toegestaan. Wil je echter gebruik maken van Electrum X in een app zoals BlueWallet, dan dien je de volgende commando's uit te voeren om twee ports open te zetten.
 
 ```bash
 sudo ufw allow 50001

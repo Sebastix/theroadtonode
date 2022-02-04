@@ -27,7 +27,7 @@ cd thunderhub
 Pak de laatste versie/tag/release.
 
 ```bash
-git checkout v0.13.4
+git checkout v0.13.6
 ```
 
 Haal alle benodigde software dependencies binnen.
@@ -48,6 +48,7 @@ Plak het volgende erin:
 
 ```toml
 ACCOUNT_CONFIG_PATH='/home/ubuntu/.thunderhub/config.yaml'
+PORT=4000
 ```
 
 Sla het op met `Ctrl + X` en bevestig met `Y`. Dit is een minimale setup qua configuratie. Meer parameters die je kunt gebruiken vind je in het `.env` bestand.
@@ -113,7 +114,7 @@ After=lnd.service
 [Service]
 User=ubuntu
 WorkingDirectory=/home/ubuntu/thunderhub
-ExecStart=npm start -- -p 4000
+ExecStart=npm start
 Restart=always
 TimeoutSec=120
 RestartSec=30
@@ -153,6 +154,10 @@ Gebruik het wachtwoord `password` om in te loggen tenzij je een ander wachtwoord
 
 ## Updaten
 
+{% hint style="warning" %}
+Bij het upgraden van een Thuderhub van voor v0.13.0 naar v0.13.0+, zijn wijzigingen aan het `.env.local` bestand nodig. Neem even een kijkje bij de [paragraaf "configuratie"](#configuratie).
+{% endhint %}
+
 Ga naar de applicatie directory.
 
 ```bash
@@ -174,7 +179,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout -f <OUTPUT VAN DE VORIGE STAP> # Bijvoorbeeld v0.13.4
+git checkout -f <OUTPUT VAN DE VORIGE STAP> # Bijvoorbeeld v0.13.6
 ```
 
 Installeer de software.

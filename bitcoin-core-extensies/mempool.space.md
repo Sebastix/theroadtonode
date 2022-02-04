@@ -4,12 +4,12 @@
 Tijd: 20 minuten.
 {% endhint %}
 
-Zelf mempool in de gaten houden.
+Met mempool.space kun je zelf de mempool van bitcoin in de gaten houden. Dat is handig om te bepalen hoeveel fee je moet betalen of om te zien of je transactie er al doorheen is. Door het zelf te hosten geef je geen data uit handen aan derden.
 
 ## Voorbereiding
 
-1. Electrs
-2. NodeJS
+1. [Electrs](https://docs.theroadtonode.com/bitcoin-core-extensies/electrs)
+2. [NodeJS](https://docs.theroadtonode.com/raspberry-pi/algemene-dependencies-installeren#nodejs)
 
 ## Installatie
 
@@ -181,6 +181,14 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
 Om het Nginx verhaal af te ronden herstart je Nginx met `sudo systemctl restart nginx`.
+
+## Firewall
+
+Het bereiken van mempool.space loopt via het normale internetverkeer. Dat is poort 80. Nginx handelt verder af waar het verkeer naartoe gaat.
+
+```bash
+sudo ufw allow 80 comment "Port voor normaal internetverkeer"
+```
 
 ## Automatiseren
 

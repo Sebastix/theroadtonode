@@ -15,7 +15,6 @@
   * [Algemene dependencies installeren](raspberry-pi/algemene-dependencies-installeren.md)
   * [Firewall](raspberry-pi/firewall.md)
   * [Port overzicht](raspberry-pi/port-overzicht.md)
-  * [Uitleg van commando's](raspberry-pi/uitleg-van-commandos.md)
 * [Bitcoin Core](bitcoin-core/README.md)
   * [Installatie](bitcoin-core/installatie.md)
   * [Tor aanpassen](bitcoin-core/tor-aanpassen.md)
