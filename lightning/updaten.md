@@ -64,7 +64,7 @@ sudo systemctl start lnd
 sudo journalctl -f -u lnd
 ```
 
-Zodra je in de output voorbij ziet komen dat je de wallet kunt unlocken, start je een tweede putty venster.
+Zodra je in de output voorbij ziet komen dat je de wallet kunt unlocken, start je een tweede terminal venster.
 
 ```bash
 lncli unlock

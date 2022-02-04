@@ -34,7 +34,7 @@ Installeer tot slot Electrs met Cargo.
 cargo build --locked --release
 ```
 
-Test of het werkt. De verwachte output is `v0.9.4`.
+Test of het werkt. De verwachte output is `v0.9.5`.
 
 ```bash
 ./target/release/electrs --version
@@ -121,3 +121,43 @@ Met `sudo systemctl status electrs` kun je zien of alles goed draait en krijg je
      CGroup: /system.slice/electrs.service
              └─67163 /home/ubuntu/electrs/target/release/electrs
 ```
+
+## Updaten
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/electrs
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```bash
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout <OUTPUT VAN DE VORIGE STAP> # bijvoorbeeld 0.9.5
+```
+
+Installeer de software.
+
+```bash
+cargo build --locked --release
+```
+
+Herstart de Electrs service.
+
+```bash
+sudo systemctl restart electrs
+```
+
+Electrs is nu bijgewerkt!

@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.2 - 2022 / februari / 04
+
+### Toevoegingen
+
+* Updaten van [Electrs](https://docs.theroadtonode.com/bitcoin-core-extensies/electrs) \(Bitcoin Core Extensies\)
+
 ## 3.1.1 - 2022 / februari / 04
 
 ### Aanpassingen
