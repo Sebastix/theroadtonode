@@ -64,7 +64,7 @@ Het Electrum protocol communiceert over een vaste set poorten. Je kunt 50001 ope
 sudo ufw allow 50001 comment "Port voor Electrum Server"
 ```
 
-Wil je van afstand Electrs monitoren dien je ook 4224 open te zetten.
+Wil je van afstand Electrs monitoren dien je ook 4224 open te zetten. Dit is optioneel.
 
 ```bash
 sudo ufw allow 4224 comment "Port voor monitoring van Electrs"
@@ -160,4 +160,4 @@ Herstart de Electrs service.
 sudo systemctl restart electrs
 ```
 
-Electrs is nu bijgewerkt!
+Electrs is nu bijgewerkt! Het kan zijn dat tijdens het herstarten - iets dat enkele minuten kan duren - je node niks anders kan doen.
