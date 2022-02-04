@@ -31,7 +31,7 @@ cd lnd
 Stap over naar de laatste release.
 
 ```bash
-git checkout v0.14.1-beta
+git checkout v0.14.2-beta
 ```
 
 En installeer LND. De tags zijn handig om alvast mee te geven, mocht je later gebruik willen maken van [Lightning Terminal](https://docs.theroadtonode.com/lightning-extensies/lightning-terminal) en andere tools.

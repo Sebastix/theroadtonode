@@ -45,7 +45,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.14.1-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #voorbeeld: v0.14.2-beta
 ```
 
 Installeer nu de software.
@@ -60,6 +60,7 @@ Start de service `lnd` en monitor de voortgang van het opstarten. Wees geduldig 
 
 ```bash
 sudo systemctl start lnd
+
 sudo journalctl -f -u lnd
 ```
 
@@ -77,7 +78,7 @@ Check de huidige versie van LND.
 lncli --version
 ```
 
-De output zal lijken op `lncli version 0.14.1-beta commit=v0.14.1-beta`
+De output zal lijken op `lncli version 0.14.2-beta commit=v0.14.2-beta`
 
 LND is nu bijgewerkt! Start nu de andere services die afhankelijk zijn van LND zoals RTL of Thunderhub.
 
