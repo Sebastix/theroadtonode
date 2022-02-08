@@ -33,7 +33,7 @@ cd loop
 Pak de laatste versie/tag/release.
 
 ```bash
-git checkout v0.16.0-beta
+git checkout v0.17.0-beta
 ```
 
 Ga naar `loop/cmd`.
@@ -146,7 +146,7 @@ git describe --tags `git rev-list --tags --max-count=1`
 Haal de wijzigingen op van de laatste versie.
 
 ```bash
-git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.16.0-beta
+git checkout <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.17.0-beta
 ```
 
 Ga naar `cmd`.
