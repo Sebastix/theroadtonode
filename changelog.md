@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.3 - 2022 / maart / 07
+
+### Toevoegingen
+
+* Updaten van [Pool](https://docs.theroadtonode.com/lightning-extensies/pool) \(Lightning Extensies\)
+* Updaten van [Faraday](https://docs.theroadtonode.com/lightning-extensies/daraday) \(Lightning Extensies\)
+* Updaten van [Mempool.space](https://docs.theroadtonode.com/bitcoin-core-extensies/mempool.space) \(Bitcoin Core Extensies\)
+
 ## 3.1.2 - 2022 / februari / 04
 
 ### Toevoegingen

@@ -116,3 +116,43 @@ Wil je een overzicht van de status over meerdere sessies, gebruik dan dit comman
 ```bash
 sudo journalctl -f -u pool
 ```
+
+## Updaten
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/pool
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```bash
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.5.4-alpha
+```
+
+Installeer de `poold` software.
+
+```bash
+make install
+```
+
+Herstart de services van Pool en LiT (als je dat hebt draaien).
+
+```bash
+sudo systemctl restart pool
+
+sudo systemctl restart lit
+```

@@ -120,3 +120,43 @@ Wil je een overzicht van de status over meerdere sessies, gebruik dan dit comman
 ```bash
 sudo journalctl -f -u faraday
 ```
+
+## Updaten
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/faraday
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Toon de laatste versie/tag/release.
+
+```bash
+git describe --tags `git rev-list --tags --max-count=1`
+```
+
+Haal de wijzigingen op van de laatste versie.
+
+```bash
+git checkout -f <OUTPUT VAN DE VORIGE STAP> #bijvoorbeeld v0.2.7-alpha
+```
+
+Installeer de faraday software.
+
+```bash
+make && make install
+```
+
+Herstart de services van Faraday en LiT (als je dat hebt draaien).
+
+```bash
+sudo systemctl restart faraday
+
+sudo systemctl restart lit
+```

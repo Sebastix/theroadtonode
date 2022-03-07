@@ -150,10 +150,10 @@ cp mempool-frontend-config.sample.json mempool-frontend-config.json
 ```
 
 {% hint style="info" %}
-Het kan voor komen dat de onderstaande build faalt. Probeer het dan later nog een keer.
+Het kan voor komen dat de onderstaande build faalt. Probeer het dan later nog een keer. Hier is helaas geen betere oplossing voor.
 {% endhint %}
 
-De backend kun je builden met `npm run build` (kan vrij lang duren) en tot slot de output van de build verplaatsen naar een andere map. Nginx zal verkeer doorsturen naar die map.
+De frontend kun je builden met `npm run build` (kan vrij lang duren) en tot slot de output van de build verplaatsen naar een andere map. Nginx zal verkeer doorsturen naar die map.
 
 ```bash
 sudo rsync -av --delete dist/ /var/www/
@@ -249,3 +249,51 @@ Jan 31 10:00:15 ubuntu npm[209203]: Jan 31 10:00:15 [209203] DEBUG: Fetched tran
 Jan 31 10:00:15 ubuntu npm[209203]: Jan 31 10:00:15 [209203] DEBUG: Fetched transaction 15 / 19
 Jan 31 10:00:15 ubuntu npm[209203]: Jan 31 10:00:15 [209203] DEBUG: Fetched transaction 16 / 19
 ```
+
+## Updaten
+
+Ga naar de applicatie directory.
+
+```bash
+cd ~/mempool
+```
+
+Update de repository met de laatste wijzigingen via Git.
+
+```bash
+git fetch --all
+```
+
+Zet daarna de laatste release in een tijdelijke variabele genaamd `latestrelease` in je terminal.
+
+```bash
+latestrelease=$(curl -s https://api.github.com/repos/mempool/mempool/releases/latest|grep tag_name|head -1|cut -d '"' -f4)
+```
+
+Pak de laatste versie met `git checkout $latestrelease`.
+
+### Update backend
+
+Ga de backend map in met `cd backend`. Installeer dan de backend afhankelijkheden met `npm install --prod` waarna je een build maakt `npm run build`.
+
+Start de mempool service opnieuw op.
+
+```bash
+sudo systemctl restart mempool
+```
+
+### Update frontend
+
+Ga eerst naar de map met de frontend code.
+
+```bash
+cd ../frontend
+```
+
+Ook hier moet je de afhankelijkheden installeren met `npm install --prod`.
+
+{% hint style="info" %}
+Het kan voor komen dat de onderstaande build faalt. Probeer het dan later nog een keer. Hier is helaas geen betere oplossing voor.
+{% endhint %}
+
+De frontend kun je builden met `npm run build` (kan vrij lang duren). Als het goed is wordt de Nginx map met de productie versie automatisch geupdate.
