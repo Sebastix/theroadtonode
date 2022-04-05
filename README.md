@@ -51,3 +51,12 @@ Wil je ook iets toevoegen aan de guide? Dat kan! En graag zelfs. Om het zo gestr
 * Maak een fork van de repository en tak een branch af van `nl`.
 * Is je feature of hotfix klaar? Maak hem dan kenbaar middels een pull request. Koppel deze meteen aan de eerder aangemaakte issue.
 
+## Build documentatie
+
+Wil je de documentatie zelf builden en deployen? Deze documenatie is opgezet met [Gitbook](https://docs.gitbook.com/).
+1. Installeer [NPM](/raspberry-pi/algemene-dependencies-installeren#nodejs)
+2. Installeer [Yarn](/raspberry-pi/algemene-dependencies-installeren#yarn)
+3. Installeer [Gitbook-cli](https://www.npmjs.com/package/gitbook): `npm install gitbook-cli -g`
+4. Voer `gitbook install` uit
+5. Voer `gitbook serve` uit om lokaal de documentatie te bekijken via http://localhost:4000.
+6. Voer `gitbook build` om de statische website te builden. Alle bestanden hiervoor staan in de map `_book`.
